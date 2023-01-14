@@ -10,9 +10,11 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 >    - HTTP Responses
 >    - What should I send as Response
 > 1. Introduction to .NET Minimal API
-> 1. Two Ways to create Minimal API
+> 1. Two Ways to create Minimal API using `VS 2022`
 >    - Web API with UnCheck Controllers
 >    - Web App Empty
+> 1. Creating Minimal API using dotnet CLI
+>    - `dotnet new webapi -minimal`
 > 1. Executing it using IIS Express, and Kestrel Server (http, https)
 > 1. Exploring Swagger
 > 1. Exposing 4 `Hello World` API Endpoints
