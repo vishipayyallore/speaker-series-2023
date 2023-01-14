@@ -35,7 +35,7 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. GetAllStudents(), AddStudent() API Endpoints
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 
-## Session 3 - Minimal API in .NET 7
+## Session 3 - Minimal API in .NET 7 with Entities, Dtos
 
 > 1. Enhancing GetAllStudents(), AddStudent() API Endpoints
 > 1. Dtos using record, and returning Dtos
