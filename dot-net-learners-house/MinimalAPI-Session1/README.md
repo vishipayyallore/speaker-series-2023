@@ -62,21 +62,79 @@
 
 ---
 
-## 1. Deploy Web App(s) inside IIS on Azure VM (IaaS)
+## 1. 30,000 foot view of REST, and HTTP
 
 > 1. Discussion and Demo
 
-## 2. Deploy Web App(s) on App Service on Azure (PaaS)
+### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
 
 > 1. Discussion and Demo
 
-## 3. Implement task processing logic by using Azure Functions
+### HTTP Methods
 
 > 1. Discussion and Demo
 
-## 4. Retrieve Azure Storage resources and metadata by using the Azure Storage
+### HTTP Responses
 
 > 1. Discussion and Demo
+
+### What should I send as Response
+
+> 1. Discussion and Demo
+
+## 2. Introduction to .NET Minimal API
+
+> 1. Discussion and Demo
+
+## 3. Two Ways to create Minimal API using `VS 2022`
+
+> 1. Discussion and Demo
+
+### Web API with UnCheck Controllers
+
+> 1. Discussion and Demo
+
+### Web App Empty
+
+> 1. Discussion and Demo
+
+## 4. Creating Minimal API using dotnet CLI
+
+> 1. Discussion and Demo
+
+### `dotnet new webapi -minimal`
+
+> 1. Discussion and Demo
+
+## 5. Executing it using IIS Express, and Kestrel Server (http, https)
+
+> 1. Discussion and Demo. This is part of Section 3 and 4.
+
+## 6. Exploring Swagger
+
+> 1. Discussion and Demo. This is part of Section 3.1.
+
+## 7. Exposing 4 `Hello World` API Endpoints
+
+> 1. Discussion and Demo
+
+## 8. Creating Unified Response Dto, and Constants
+
+> 1. Discussion and Demo
+
+## 9. Using Postman to test the API (Environment Variables, and Collections)
+
+> 1. Discussion and Demo
+
+## 10. Layered Architecture
+
+> 1. Discussion and Demo
+
+## 11. Testing using - Swagger, Postman, and Browser Dev Tools
+
+> 1. Discussion and Demo
+
+---
 
 ## SUMMARY / RECAP / Q&A
 
