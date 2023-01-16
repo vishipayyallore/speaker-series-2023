@@ -32,16 +32,27 @@
 
 ## What are we doing today?
 
-> 1. Lab 04: Construct a polyglot data solution
-> 1. Lab 05: Deploy compute workloads by using images and containers
-> 1. Lab 07: Access resource secrets more securely across services.
-> 1. SUMMARY / RECAP / Q&A
-
-### Please refer AZ-204 MS Learn Module(s) for more details
-
-> 1. [https://aka.ms/AZ-204-cloudsolutions](https://aka.ms/AZ-204-cloudsolutions)
-> 1. [https://aka.ms/AZ-204-servicesolutions](https://aka.ms/AZ-204-servicesolutions)
-> 1. [https://aka.ms/AZ-204-CosmosDB](https://aka.ms/AZ-204-CosmosDB)
+> 1. 30,000 foot view of REST, and HTTP
+>    - REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
+>    - HTTP Methods
+>    - HTTP Responses
+>    - What should I send as Response
+> 1. Introduction to .NET Minimal API
+> 1. Two Ways to create Minimal API using `VS 2022`
+>    - Web API with UnCheck Controllers
+>    - Web App Empty
+> 1. Creating Minimal API using dotnet CLI
+>    - `dotnet new webapi -minimal`
+> 1. Executing it using IIS Express, and Kestrel Server (http, https)
+> 1. Exploring Swagger
+> 1. Exposing 4 `Hello World` API Endpoints
+> 1. Creating Unified Response Dto, and Constants
+> 1. Using Postman to test the API (Environment Variables, and Collections)
+> 1. Layered Architecture
+> 1. Testing using
+>    - Swagger
+>    - Postman
+>    - Browser Dev Tools
 
 ### Please refer to the [**Source Code**](https://github.com/vishipayyallore/learn-azure-in-2022) of today's session for more details
 
@@ -54,50 +65,6 @@
 ## 1. Deploy Web App(s) inside IIS on Azure VM (IaaS)
 
 > 1. Discussion and Demo
-
-### Install IIS on Azure VM
-
-![Install IIS | 100x100](./Documentation/Images/IISRole_1.PNG)
-
-### Install Brave Browser on Azure VM
-
-![Install Brave Browser | 100x100](./Documentation/Images/BraveBrowser.PNG)
-
-### Enable Remote Connections and Start Management Service inside IIS
-
-![Enable Remote Connections and Start Management Service | 100x100](./Documentation/Images/IISManagementService.PNG)
-
-### Install .NET 6 Hosting Bundle on Azure VM
-
-![.NET 6 Hosting Bundle | 100x100](./Documentation/Images/DotNet6Hosting.PNG)
-
-### Install Web Deploy on Azure VM
-
-![Install Web Deploy | 100x100](./Documentation/Images/WebDeploy.PNG)
-
-### Install URL Rewrite on Azure VM
-
-![URL Rewrite | 100x100](./Documentation/Images/URLReWrite.PNG)
-
-### Update the VM DNS Name on Azure VM
-
-![VM DNS Name | 100x100](./Documentation/Images/VMDNSName.PNG)
-
-### Without 8172 Port Enabled on Azure VM
-
-![Without 8172 Port Enabled | 100x100](./Documentation/Images/Without8172Port.PNG)
-
-### Enable 8172 Port on Azure VM
-
-![Enable 8172 Port | 100x100](./Documentation/Images/Enable8172Port.PNG)
-
-### Security Certificate Error/Validation
-
-![Security Certificate Error | 100x100](./Documentation/Images/VMCertificate.PNG)
-
-### VM Connection Validated
-
-![VM Connection Validated | 100x100](./Documentation/Images/VMConnectionValidated.PNG)
 
 ## 2. Deploy Web App(s) on App Service on Azure (PaaS)
 
@@ -118,8 +85,17 @@
 
 ---
 
-## What is Next? Workshop `3` of `5` Sessions on Dec, 2022
+## What is Next? session `2` of `9` Sessions on 05 Feb, 2023
 
-> 1. To be done
-> 1. To be done
-> 1. To be done
+> 1. Tour of .NET 7 Minimal API Project (Web API, and Web App Empty Template)
+> 1. Dependency Injection
+>    - Web App Empty
+>    - Web API with UnCheck Controllers
+>    - Web API with Controllers
+> 1. Logging using Serilog
+> 1. Base Entity, and Inherit other Entities
+> 1. Student Entity
+> 1. Entity Framework Core (In Memory)
+> 1. Dependency Injection of DbContext
+> 1. GetAllStudents(), AddStudent() API Endpoints
+> 1. Update Postman Collections to test the API (Environment Variables, and Collections)
