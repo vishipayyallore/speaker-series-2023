@@ -114,43 +114,47 @@
 
 > 1. Discussion and Demo
 
-## 4. Two Ways to create Minimal API using `VS 2022`
+### Executing it using IIS Express, and Kestrel Server
 
 > 1. Discussion and Demo
 
-### Web API with UnCheck Controllers
+## 4. Create Minimal API using `VS 2022` - Web App Empty Template
 
 > 1. Discussion and Demo
 
-### Web App Empty
+### Executing it using IIS Express, and Kestrel Server (http, https)
+
+> 1. Discussion and Demo.
+
+## 5. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
 
 > 1. Discussion and Demo
 
-## 5. Executing it using IIS Express, and Kestrel Server (http, https)
-
-> 1. Discussion and Demo. This is part of Section 3 and 4.
-
-## 6. Exploring Swagger
-
-> 1. Discussion and Demo. This is part of Section 3.1.
-
-## 7. Exposing 4 `Hello World` API Endpoints
+### Executing it using IIS Express / Kestrel Server
 
 > 1. Discussion and Demo
 
-## 8. Creating Unified Response Dto, and Constants
+### Exploring Swagger
+
+> 1. Discussion and Demo.
+
+## 6. Exposing `4 Basic` API Endpoints
 
 > 1. Discussion and Demo
 
-## 9. Using Postman to test the API (Environment Variables, and Collections)
+## 7. Using Postman to test the API (Environment Variables, and Collections)
 
 > 1. Discussion and Demo
 
-## 10. Layered Architecture
+## 8. Layered Architecture
 
 > 1. Discussion and Demo
 
-## 11. Testing using - Swagger, Postman, and Browser Dev Tools
+## 9. Creating Unified Response Dto, and Constants
+
+> 1. Discussion and Demo
+
+## 10. Testing using - Swagger, Postman, and Browser Dev Tools
 
 > 1. Discussion and Demo
 
