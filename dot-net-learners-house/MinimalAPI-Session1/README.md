@@ -62,7 +62,7 @@
 
 ---
 
-## 1. 30,000 foot view of REST, and HTTP
+## 1. 30,000 foot view of HTTP, and REST
 
 > 1. Discussion and Demo
 
@@ -102,7 +102,19 @@
 
 > 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
 
-## 3. Two Ways to create Minimal API using `VS 2022`
+## 3. Creating Minimal API using dotnet CLI
+
+> 1. Discussion and Demo
+
+### Create Minimal API using `dotnet new webapi -minimal`
+
+> 1. Discussion and Demo
+
+### Executing it using VS Code (dotnet CLI)
+
+> 1. Discussion and Demo
+
+## 4. Two Ways to create Minimal API using `VS 2022`
 
 > 1. Discussion and Demo
 
@@ -111,14 +123,6 @@
 > 1. Discussion and Demo
 
 ### Web App Empty
-
-> 1. Discussion and Demo
-
-## 4. Creating Minimal API using dotnet CLI
-
-> 1. Discussion and Demo
-
-### `dotnet new webapi -minimal`
 
 > 1. Discussion and Demo
 
