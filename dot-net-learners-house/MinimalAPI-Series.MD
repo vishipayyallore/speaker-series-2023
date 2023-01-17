@@ -21,6 +21,10 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Creating Unified Response Dto, and Constants
 > 1. Using Postman to test the API (Environment Variables, and Collections)
 > 1. Layered Architecture
+> 1. Testing using
+>    - Swagger
+>    - Postman
+>    - Browser Dev Tools
 
 ## Session 2 - Hands on to Minimal API with Dynamic data in .NET 7
 
