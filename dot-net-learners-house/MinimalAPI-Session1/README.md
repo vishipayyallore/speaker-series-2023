@@ -66,9 +66,13 @@
 
 > 1. Discussion and Demo
 
-### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
+**References:**
 
-> 1. Discussion and Demo
+> 1. [https://rapidapi.com/blog/rest-api-vs-web-api](https://rapidapi.com/blog/rest-api-vs-web-api)
+> 1. [https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.](https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT)
 
 ### HTTP Methods
 
@@ -82,9 +86,21 @@
 
 > 1. Discussion and Demo
 
+### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
+
+> 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://en.wikipedia.org/wiki/Representational_state_transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
+
 ## 2. Introduction to .NET Minimal API
 
 > 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
 
 ## 3. Two Ways to create Minimal API using `VS 2022`
 
