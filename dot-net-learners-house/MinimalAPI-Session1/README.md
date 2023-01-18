@@ -62,13 +62,17 @@
 
 ---
 
-## 1. 30,000 foot view of REST, and HTTP
+## 1. 30,000 foot view of HTTP, and REST
 
 > 1. Discussion and Demo
 
-### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
+**References:**
 
-> 1. Discussion and Demo
+> 1. [https://rapidapi.com/blog/rest-api-vs-web-api](https://rapidapi.com/blog/rest-api-vs-web-api)
+> 1. [https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.](https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT)
 
 ### HTTP Methods
 
@@ -82,55 +86,75 @@
 
 > 1. Discussion and Demo
 
+### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
+
+> 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://en.wikipedia.org/wiki/Representational_state_transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
+
 ## 2. Introduction to .NET Minimal API
 
 > 1. Discussion and Demo
 
-## 3. Two Ways to create Minimal API using `VS 2022`
+**References:**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
+
+## 3. Creating Minimal API using dotnet CLI
 
 > 1. Discussion and Demo
 
-### Web API with UnCheck Controllers
+### Create Minimal API using `dotnet new webapi -minimal`
 
 > 1. Discussion and Demo
 
-### Web App Empty
+### Executing it using VS Code (dotnet CLI)
 
 > 1. Discussion and Demo
 
-## 4. Creating Minimal API using dotnet CLI
+### Executing it using IIS Express, and Kestrel Server
 
 > 1. Discussion and Demo
 
-### `dotnet new webapi -minimal`
+## 4. Create Minimal API using `VS 2022` - Web App Empty Template
 
 > 1. Discussion and Demo
 
-## 5. Executing it using IIS Express, and Kestrel Server (http, https)
+### Executing it using IIS Express, and Kestrel Server (http, https)
 
-> 1. Discussion and Demo. This is part of Section 3 and 4.
+> 1. Discussion and Demo.
 
-## 6. Exploring Swagger
-
-> 1. Discussion and Demo. This is part of Section 3.1.
-
-## 7. Exposing 4 `Hello World` API Endpoints
+## 5. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
 
 > 1. Discussion and Demo
 
-## 8. Creating Unified Response Dto, and Constants
+### Executing it using IIS Express / Kestrel Server
 
 > 1. Discussion and Demo
 
-## 9. Using Postman to test the API (Environment Variables, and Collections)
+### Exploring Swagger
+
+> 1. Discussion and Demo.
+
+## 6. Exposing `4 Basic` API Endpoints
 
 > 1. Discussion and Demo
 
-## 10. Layered Architecture
+## 7. Using Postman to test the API (Environment Variables, and Collections)
 
 > 1. Discussion and Demo
 
-## 11. Testing using - Swagger, Postman, and Browser Dev Tools
+## 8. Layered Architecture
+
+> 1. Discussion and Demo
+
+## 9. Creating Unified Response Dto, and Constants
+
+> 1. Discussion and Demo
+
+## 10. Testing using - Swagger, Postman, and Browser Dev Tools
 
 > 1. Discussion and Demo
 
