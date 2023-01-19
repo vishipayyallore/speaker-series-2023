@@ -1,0 +1,53 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (firstsample)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/dot-net-learners-house/MinimalAPI-Session1/Source/firstsample/bin/Debug/net7.0/firstsample.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/dot-net-learners-house/MinimalAPI-Session1/Source/firstsample",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch (secondsample)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build2",
+            "program": "${workspaceFolder}/dot-net-learners-house/MinimalAPI-Session1/Source/secondsample/bin/Debug/net7.0/secondsample.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/dot-net-learners-house/MinimalAPI-Session1/Source/secondsample",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
