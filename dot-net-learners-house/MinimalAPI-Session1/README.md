@@ -41,9 +41,11 @@
 > 1. Creating Minimal API using dotnet CLI
 >    - `dotnet new web`
 >    - `dotnet new webapi -minimal`
-> 1. Two Ways to create Minimal API using `VS 2022`
->    - Web API with UnCheck Controllers
->    - Web App Empty
+> 1. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
+>    - Executing it using IIS Express / Kestrel Server
+>    - Exploring Swagger
+> 1. Create Minimal API using `VS 2022` - Web App Empty Template
+>    - Executing it using IIS Express / Kestrel Server
 > 1. Executing it using IIS Express, and Kestrel Server (http, https)
 > 1. Exploring Swagger
 > 1. Exposing 4 `Hello World` API Endpoints
@@ -135,15 +137,7 @@ dotnet new webapi -minimal -o secondsample --dry-run
 
 ![Dotnet New WebApi | 100x100](./Documentation/Images/DotNetNew_CLI_2.PNG)
 
-## 4. Create Minimal API using `VS 2022` - Web App Empty Template
-
-> 1. Discussion and Demo
-
-### Executing it using IIS Express, and Kestrel Server (http, https)
-
-> 1. Discussion and Demo.
-
-## 5. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
+## 4. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
 
 > 1. Discussion and Demo
 
@@ -152,6 +146,14 @@ dotnet new webapi -minimal -o secondsample --dry-run
 > 1. Discussion and Demo
 
 ### Exploring Swagger
+
+> 1. Discussion and Demo.
+
+## 5. Create Minimal API using `VS 2022` - Web App Empty Template
+
+> 1. Discussion and Demo
+
+### Executing it using IIS Express, and Kestrel Server (http, https)
 
 > 1. Discussion and Demo.
 
