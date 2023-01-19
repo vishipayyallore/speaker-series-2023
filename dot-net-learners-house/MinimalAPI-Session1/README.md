@@ -137,7 +137,7 @@ dotnet new webapi -minimal -o secondsample --dry-run
 
 ![Dotnet New WebApi | 100x100](./Documentation/Images/DotNetNew_CLI_2.PNG)
 
-## 4. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
+## 4. Create Minimal API using `VS 2022` - Web API Template - UnCheck Controllers
 
 > 1. Discussion and Demo
 
@@ -149,6 +149,8 @@ dotnet new webapi -minimal -o secondsample --dry-run
 
 > 1. Discussion and Demo.
 
+![Web Api Template | 100x100](./Documentation/Images/WebAPITemplate.PNG)
+
 ## 5. Create Minimal API using `VS 2022` - Web App Empty Template
 
 > 1. Discussion and Demo
@@ -156,6 +158,8 @@ dotnet new webapi -minimal -o secondsample --dry-run
 ### Executing it using IIS Express, and Kestrel Server (http, https)
 
 > 1. Discussion and Demo.
+
+![Web App Empty Template | 100x100](./Documentation/Images/WebAppEmptyTemplate.PNG)
 
 ## 6. Exposing `4 Basic` API Endpoints
 
