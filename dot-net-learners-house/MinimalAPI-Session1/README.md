@@ -38,11 +38,14 @@
 >    - HTTP Responses
 >    - What should I send as Response
 > 1. Introduction to .NET Minimal API
-> 1. Two Ways to create Minimal API using `VS 2022`
->    - Web API with UnCheck Controllers
->    - Web App Empty
 > 1. Creating Minimal API using dotnet CLI
+>    - `dotnet new web`
 >    - `dotnet new webapi -minimal`
+> 1. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
+>    - Executing it using IIS Express / Kestrel Server
+>    - Exploring Swagger
+> 1. Create Minimal API using `VS 2022` - Web App Empty Template
+>    - Executing it using IIS Express / Kestrel Server
 > 1. Executing it using IIS Express, and Kestrel Server (http, https)
 > 1. Exploring Swagger
 > 1. Exposing 4 `Hello World` API Endpoints
@@ -106,27 +109,35 @@
 
 > 1. Discussion and Demo
 
+```dotnetcli
+dotnet new list
+```
+
+![Dotnet New List | 100x100](./Documentation/Images/DotnetNewList.PNG)
+
+### Create Minimal API using `dotnet new web`
+
+> 1. Discussion and Demo
+> 1. Executing it using dotnet CLI / VS Code
+
+```dotnetcli
+dotnet new web -o firstsample --dry-run
+```
+
+![Dotnet New Web | 100x100](./Documentation/Images/DotNetNew_CLI_1.PNG)
+
 ### Create Minimal API using `dotnet new webapi -minimal`
 
 > 1. Discussion and Demo
+> 1. Executing it using dotnet CLI / VS Code
 
-### Executing it using VS Code (dotnet CLI)
+```dotnetcli
+dotnet new webapi -minimal -o secondsample --dry-run
+```
 
-> 1. Discussion and Demo
+![Dotnet New WebApi | 100x100](./Documentation/Images/DotNetNew_CLI_2.PNG)
 
-### Executing it using IIS Express, and Kestrel Server
-
-> 1. Discussion and Demo
-
-## 4. Create Minimal API using `VS 2022` - Web App Empty Template
-
-> 1. Discussion and Demo
-
-### Executing it using IIS Express, and Kestrel Server (http, https)
-
-> 1. Discussion and Demo.
-
-## 5. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
+## 4. Create Minimal API using `VS 2022` - Web API Template - UnCheck Controllers
 
 > 1. Discussion and Demo
 
@@ -137,6 +148,18 @@
 ### Exploring Swagger
 
 > 1. Discussion and Demo.
+
+![Web Api Template | 100x100](./Documentation/Images/WebAPITemplate.PNG)
+
+## 5. Create Minimal API using `VS 2022` - Web App Empty Template
+
+> 1. Discussion and Demo
+
+### Executing it using IIS Express, and Kestrel Server (http, https)
+
+> 1. Discussion and Demo.
+
+![Web App Empty Template | 100x100](./Documentation/Images/WebAppEmptyTemplate.PNG)
 
 ## 6. Exposing `4 Basic` API Endpoints
 
