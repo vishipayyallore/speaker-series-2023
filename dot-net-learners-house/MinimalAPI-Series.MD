@@ -33,45 +33,51 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 >    - Web App Empty
 >    - Web API with UnCheck Controllers
 >    - Web API with Controllers
-> 1. Logging using Serilog
-> 1. Base Entity, and Inherit other Entities
-> 1. Student Entity
+> 1. Comparision on Services & Request Pipeline
+> 1. Model Binding
+>    - From Query | From Route | From Body
+> 1. Base Entity
+> 1. Student Entity inheriting Base Entity
 > 1. Entity Framework Core (In Memory)
 > 1. Dependency Injection of DbContext
-> 1. GetAllStudents(), AddStudent() API Endpoints
+> 1. GetAllStudents() API Endpoint
+> 1. .Produces(200);
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
+> 1. GitHub Actions to build API
 
 ## Session 3 - Minimal API in .NET 7 with Entities, Dtos
 
-> 1. Enhancing GetAllStudents(), AddStudent() API Endpoints
-> 1. Dtos using record, and returning Dtos
-> 1. Creating Repository Layer
-> 1. Creating Business Layer
+> 1. Logging using Serilog
+> 1. Adding new AddStudent() API Endpoint
+> 1. .Produces(200).ProducesProblem(500);
+> 1. Model Validation
 > 1. Auto Mapper
-> 1. CORS
-> 1. Dependency Injection of Repository Layer, Business Layer, Auto Mapper, and CORS
+> 1. Dtos using record, and returning Dtos
+> 1. Dependency Injection of Auto Mapper, and CORS
+> 1. Enhancing GetAllStudents() API Endpoint to return Dtos
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
-> 1. Angular 15 (SPA) integration with Minimal API Only GetAllStudents() API Endpoint
 
 ## Session 4 - Minimal API in .NET 7
 
+> 1. Dependency Injection of CORS
+> 1. Angular 15 (SPA) integration with Minimal API Only GetAllStudents() API Endpoint
+> 1. Creating Repository Layer
+> 1. Creating Business Layer
+> 1. Dependency Injection of Repository Layer, Business Layer, Auto Mapper, and CORS
 > 1. Docker
-> 1. Blazor WASM  integration with Minimal API
 
 ## Session 5 - Minimal API in .NET 7
 
 > 1. Terraform IaC
-> 1. Web App in Azure (App Service & Docker)
-> 1. GitHub Actions
-> 1. React 18 SPA integration with Minimal API
 
 ## Session 6 - Minimal API in .NET 7
 
-> 1. Client (SPAs) Application Integrations Blazor / Angular 15 / Reactjs
+> 1. Web App in Azure (App Service & Docker)
+> 1. GitHub Actions
 
 ## Session 7 - Minimal API in .NET 7
 
-> 1. Continer App
+> 1. To be done
 
 ## Session 8 - Authentication and Authorization
 
@@ -80,3 +86,11 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 ## Session 9 - Deploying the entire Microservices solution to Kubernetes
 
 > 1. K8s
+
+## Future Sessions
+
+> 1. React 18 SPA integration with Minimal API
+> 1. Continer App
+> 1. API Gateway using Ocelot
+> 1. Client (SPAs) Application Integrations Blazor / Angular 15 / Reactjs
+> 1. Blazor WASM  integration with Minimal API
