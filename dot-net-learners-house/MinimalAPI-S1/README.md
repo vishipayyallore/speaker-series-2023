@@ -41,8 +41,9 @@
 >    - REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
 > 1. Introduction to .NET Minimal API
 > 1. Creating Minimal API using dotnet CLI
->    - `dotnet new web`
->    - `dotnet new webapi -minimal`
+>    - `dotnet new list`
+>    - Create Minimal API using `dotnet new web`
+>    - Create Minimal API using `dotnet new webapi -minimal`
 > 1. Create Minimal API using `VS 2022` - Web API Templated - Uncheck Controllers
 >    - Executing it using IIS Express / Kestrel Server
 >    - Exploring Swagger
