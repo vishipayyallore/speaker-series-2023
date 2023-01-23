@@ -119,9 +119,11 @@ dotnet new list
 
 > 1. Discussion and Demo
 > 1. Executing it using dotnet CLI / VS Code
+> 1. Debugging in VS Code
 
 ```dotnetcli
 dotnet new web -o firstsample --dry-run
+dotnet run -lp https
 ```
 
 ![Dotnet New Web | 100x100](./Documentation/Images/DotNetNew_CLI_1.PNG)
@@ -130,9 +132,11 @@ dotnet new web -o firstsample --dry-run
 
 > 1. Discussion and Demo
 > 1. Executing it using dotnet CLI / VS Code
+> 1. Debugging in VS Code
 
 ```dotnetcli
 dotnet new webapi -minimal -o secondsample --dry-run
+dotnet run -lp https
 ```
 
 ![Dotnet New WebApi | 100x100](./Documentation/Images/DotNetNew_CLI_2.PNG)
