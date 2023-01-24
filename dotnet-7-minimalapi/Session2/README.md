@@ -4,8 +4,6 @@
 
 ## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/290536063](https://www.meetup.com/dot-net-learners-house-hyderabad/events/290536063)
 
-## YouTube URL: [https://www.youtube.com/watch?v=guVmjIP7Azs](https://www.youtube.com/watch?v=guVmjIP7Azs)
-
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
 ---
@@ -35,27 +33,31 @@
 ## What are we doing today?
 
 > 1. 30,000 foot view of REST, and HTTP
+>    - REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
 >    - HTTP Methods
 >    - HTTP Responses
 >    - What should I send as Response
->    - REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
 > 1. Introduction to .NET Minimal API
 > 1. Creating Minimal API using dotnet CLI
 >    - `dotnet new web`
 >    - `dotnet new webapi -minimal`
-> 1. Create Minimal API using `VS 2022` - Web API Templated - Uncheck Controllers
+> 1. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
 >    - Executing it using IIS Express / Kestrel Server
 >    - Exploring Swagger
 > 1. Create Minimal API using `VS 2022` - Web App Empty Template
 >    - Executing it using IIS Express / Kestrel Server
+> 1. Executing it using IIS Express, and Kestrel Server (http, https)
+> 1. Exploring Swagger
 > 1. Exposing 4 `Hello World` API Endpoints
+> 1. Creating Unified Response Dto, and Constants
 > 1. Using Postman to test the API (Environment Variables, and Collections)
 > 1. Layered Architecture
-> 1. Creating Unified Response Dto, and Constants
 > 1. Testing using
->    - Swagger | Postman Browser Dev Tools
+>    - Swagger
+>    - Postman
+>    - Browser Dev Tools
 
-### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/vishipayyallore/learn-azure-in-2022) of today's session for more details
 
 ---
 
@@ -117,9 +119,11 @@ dotnet new list
 
 > 1. Discussion and Demo
 > 1. Executing it using dotnet CLI / VS Code
+> 1. Debugging in VS Code
 
 ```dotnetcli
 dotnet new web -o firstsample --dry-run
+dotnet run -lp https
 ```
 
 ![Dotnet New Web | 100x100](./Documentation/Images/DotNetNew_CLI_1.PNG)
@@ -128,14 +132,16 @@ dotnet new web -o firstsample --dry-run
 
 > 1. Discussion and Demo
 > 1. Executing it using dotnet CLI / VS Code
+> 1. Debugging in VS Code
 
 ```dotnetcli
 dotnet new webapi -minimal -o secondsample --dry-run
+dotnet run -lp https
 ```
 
 ![Dotnet New WebApi | 100x100](./Documentation/Images/DotNetNew_CLI_2.PNG)
 
-## 4. Create Minimal API using `VS 2022` - Web API Template - Uncheck Controllers
+## 4. Create Minimal API using `VS 2022` - Web API Template - UnCheck Controllers
 
 > 1. Discussion and Demo
 
