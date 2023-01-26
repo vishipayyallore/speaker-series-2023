@@ -1,20 +1,24 @@
 ﻿using DataReaderPoc.Lib;
 using System.Data;
 using System.Data.SqlClient;
+using static System.Console;
 
 IDbConnection connection;
 IDataRepository dataRepository = new DataRepository();
 
 // First use a SqlClient connection
+ForegroundColor = ConsoleColor.Green;
 connection = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=MoviesAPI;Trusted_Connection=True;MultipleActiveResultSets=True");
-Console.WriteLine("SqlClient\r\n{0}", dataRepository.GetServerVersion(connection));
+WriteLine("SqlClient\r\n{0}", dataRepository.GetServerVersion(connection));
 
+ForegroundColor= ConsoleColor.Cyan;
 var moviesList = dataRepository.GetAllMovies(connection);
 foreach(var movie in moviesList)
 {
-    Console.WriteLine($"{movie.Id} - {movie.Title} - {movie.InTheaters}");
+    WriteLine($"{movie.Id} - {movie.Title} - {movie.InTheaters}");
 }
 
+ForegroundColor = ConsoleColor.Yellow;
 IDataReader dataReader = dataRepository.GetMoviesList(connection);
 //Call Read before accessing data.
 while (dataReader.Read())
@@ -24,8 +28,13 @@ while (dataReader.Read())
 
 static void ReadSingleRow(IDataRecord dataRecord)
 {
-    Console.WriteLine(String.Format("{0}, {1}", dataRecord[0], dataRecord[1]));
+    WriteLine(String.Format("{0} - {1} - {2}", dataRecord[0], dataRecord[1], dataRecord[2]));
 }
+ResetColor();
+ReadKey();
+
+
+
 
 //static string GetServerVersion(IDbConnection connection)
 //{

@@ -24,29 +24,49 @@ namespace DataReaderPoc.Lib.Tests
         [Fact]
         public void When_GetMoviesList_Returns_Rows()
         {
-            DataTable EmployeeDetails = new("EmployeeDetails");
-            //to create the column and schema
-            DataColumn EmployeeID = new("EmpID", typeof(Int32));
-            EmployeeDetails.Columns.Add(EmployeeID);
-            DataColumn EmployeeName = new("EmpName", typeof(string));
-            EmployeeDetails.Columns.Add(EmployeeName);
-            DataColumn EmployeeMobile = new("EmpMobile", typeof(string));
-            EmployeeDetails.Columns.Add(EmployeeMobile);
+            DataTable MoviesList = GetDummyMoviesList();
 
-            //to add the Data rows into the EmployeeDetails table
-            EmployeeDetails.Rows.Add(1001, "Andrew", "9000322579");
-            EmployeeDetails.Rows.Add(1002, "Briddan", "9081223457");
-
-            //to create the object for DataSet
             DataSet dataSet = new();
-            //Adding DataTables into DataSet
-            dataSet.Tables.Add(EmployeeDetails);
+            dataSet.Tables.Add(MoviesList);
 
             _connectionMock.Setup(x => x.CreateCommand()).Returns(_commandMock.Object);
             _commandMock.Setup(x => x.ExecuteReader()).Returns(dataSet.CreateDataReader());
 
             var rowsReturned = _dataRepository.GetMoviesList(_connectionMock.Object);
-            // Assert.Equal(sqlVersion, sqlVersionReturned);
+            Assert.Equal(3, rowsReturned.FieldCount);
+        }
+
+        [Fact]
+        public void When_GetAllMovies_Returns_Rows()
+        {
+            DataTable MoviesList = GetDummyMoviesList();
+
+            DataSet dataSet = new();
+            dataSet.Tables.Add(MoviesList);
+
+            _connectionMock.Setup(x => x.CreateCommand()).Returns(_commandMock.Object);
+            _commandMock.Setup(x => x.ExecuteReader()).Returns(dataSet.CreateDataReader());
+
+            var movies = _dataRepository.GetAllMovies(_connectionMock.Object);
+
+            Assert.True(movies.Any());
+            Assert.Equal(2, movies.Count());
+        }
+
+        private static DataTable GetDummyMoviesList()
+        {
+            DataTable MoviesList = new("MoviesDetails");
+            
+            //to create the column and schema
+            MoviesList.Columns.Add(new DataColumn("Id", typeof(Int32)));
+            MoviesList.Columns.Add(new DataColumn("Title", typeof(string)));
+            MoviesList.Columns.Add(new DataColumn("InTheaters", typeof(bool)));
+
+            //to add the Data rows into the MoviesDetails table
+            MoviesList.Rows.Add(1001, "Movie 1", true);
+            MoviesList.Rows.Add(1002, "Movie 2", false);
+
+            return MoviesList;
         }
     }
 }
