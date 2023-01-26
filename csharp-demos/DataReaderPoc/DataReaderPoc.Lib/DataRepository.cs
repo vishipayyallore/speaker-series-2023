@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using DataReaderPoc.Data;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DataReaderPoc.Lib
 {
@@ -35,7 +37,7 @@ namespace DataReaderPoc.Lib
             try
             {
                 IDbCommand command = connection.CreateCommand();
-                command.CommandText = "SELECT * FROM Movies;";
+                command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
 
                 return command.ExecuteReader();
             }
@@ -45,6 +47,34 @@ namespace DataReaderPoc.Lib
                 // if (originalState == ConnectionState.Closed)
                 //    connection.Close();
             }
+        }
+
+        public IEnumerable<Movie> GetAllMovies(IDbConnection connection)
+        {
+            IList<Movie> movies = new List<Movie>();
+
+            ConnectionState originalState = connection.State;
+            if (originalState != ConnectionState.Open)
+                connection.Open();
+            try
+            {
+                IDbCommand command = connection.CreateCommand();
+                command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
+
+                SqlDataReader reader =  (SqlDataReader)command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Console.WriteLine($"{reader.GetValue(0)}");
+                }
+            }
+            finally
+            {
+                // Close the connection if that's how we got it
+                // if (originalState == ConnectionState.Closed)
+                //    connection.Close();
+            }
+
+            return movies;
         }
 
     }

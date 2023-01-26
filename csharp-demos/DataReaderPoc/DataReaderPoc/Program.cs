@@ -9,6 +9,8 @@ IDataRepository dataRepository = new DataRepository();
 connection = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=MoviesAPI;Trusted_Connection=True;MultipleActiveResultSets=True");
 Console.WriteLine("SqlClient\r\n{0}", dataRepository.GetServerVersion(connection));
 
+var moviesList = dataRepository.GetAllMovies(connection);
+
 IDataReader dataReader = dataRepository.GetMoviesList(connection);
 //Call Read before accessing data.
 while (dataReader.Read())
