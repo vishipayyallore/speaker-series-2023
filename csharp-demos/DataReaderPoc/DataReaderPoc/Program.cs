@@ -10,6 +10,10 @@ connection = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=MoviesAP
 Console.WriteLine("SqlClient\r\n{0}", dataRepository.GetServerVersion(connection));
 
 var moviesList = dataRepository.GetAllMovies(connection);
+foreach(var movie in moviesList)
+{
+    Console.WriteLine($"{movie.Id} - {movie.Title} - {movie.InTheaters}");
+}
 
 IDataReader dataReader = dataRepository.GetMoviesList(connection);
 //Call Read before accessing data.

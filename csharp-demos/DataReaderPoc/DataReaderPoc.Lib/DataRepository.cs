@@ -64,7 +64,7 @@ namespace DataReaderPoc.Lib
                 SqlDataReader reader =  (SqlDataReader)command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Console.WriteLine($"{reader.GetValue(0)}");
+                    movies.Add(new Movie { Id= reader.GetInt32("id"), Title = reader.GetString("title"), InTheaters = reader.GetBoolean("inTheaters") });
                 }
             }
             finally
