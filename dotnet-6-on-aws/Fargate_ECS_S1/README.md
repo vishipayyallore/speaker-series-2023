@@ -1,10 +1,10 @@
-# .NET 7 - Hands-on Minimal API with ASP.NET Core and Static data
+# C# - .NET 6 on AWS - Getting Started With Docker, Fargate and ECS
 
-## Date Time: 20-Jan-2023 at 06:30 AM IST
+## Date Time: 29-Jan-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/290536063](https://www.meetup.com/dot-net-learners-house-hyderabad/events/290536063)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/290133360](https://www.meetup.com/dot-net-learners-house-hyderabad/events/290133360)
 
-## YouTube URL: [https://www.youtube.com/watch?v=guVmjIP7Azs](https://www.youtube.com/watch?v=guVmjIP7Azs)
+## YouTube URL: [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -26,7 +26,7 @@
 
 ## Technology Stack
 
-> 1. .NET 7, Azure
+> 1. .NET 5/6/7, AWS
 
 ## Information
 
@@ -34,11 +34,11 @@
 
 ## What are we doing today?
 
-> 1. 30,000 foot view of REST, and HTTP
->    - HTTP Methods
->    - HTTP Responses
->    - What should I send as Response
->    - REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
+> 1. 30,000 foot view of Docker
+>    - Topic 1
+>    - Topic 1
+>    - Topic 1
+>    - Topic 1
 > 1. Introduction to .NET Minimal API
 > 1. Creating Minimal API using dotnet CLI
 >    - `dotnet new list`
