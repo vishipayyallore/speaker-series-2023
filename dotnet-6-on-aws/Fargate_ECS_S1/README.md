@@ -41,11 +41,9 @@
 >    - The Docker Images
 >    - The Docker Containers
 >    - The Docker Images Registry
-> 1. Hands-on with Docker using nginx on Local Machine
-> 1. Creating Minimal API using dotnet CLI
->    - `dotnet new list`
->    - Create Minimal API using `dotnet new web`
->    - Create Minimal API using `dotnet new webapi -minimal`
+> 1. Hands-on with Docker using `nginx` on Local Machine
+> 1. Hands-on with Docker using `Razor Web App` on Local Machine
+> 1. 30,000 foot view of ECS / Just Enough ECS
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -89,13 +87,53 @@
 
 > 1. Discussion and Demo
 
-## 2. Hands-on with Docker using nginx on Local Machine
+## 2. Hands-on with Docker using `nginx` on Local Machine
 
 > 1. Discussion and Demo
 
 **References:**
 
 > 1. [https://hub.docker.com/_/nginx](https://hub.docker.com/_/nginx)
+
+![Local Nginx 1 | 100x100](./Documentation/Images/Local_Nginx_1.PNG)
+
+![Local Nginx 2 | 100x100](./Documentation/Images/Local_Nginx_2.PNG)
+
+## 3. Hands-on with Docker using `Razor Web App` on Local Machine
+
+> 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://hub.docker.com/repository/docker/vishipayyallore/booksstoreweb/general](https://hub.docker.com/repository/docker/vishipayyallore/booksstoreweb/general)
+
+![Docker Hub | 100x100](./Documentation/Images/Docker_Hub.PNG)
+
+```dockercmd
+docker pull vishipayyallore/booksstoreweb:latest
+```
+
+![Docker Pull | 100x100](./Documentation/Images/Docker_Pull.PNG)
+
+![Local BooksStore 1 | 100x100](./Documentation/Images/Local_BooksStore_1.PNG)
+
+![Local BooksStore 2 | 100x100](./Documentation/Images/Local_BooksStore_2.PNG)
+
+## 4. 30,000 foot view of ECS / Just Enough ECS
+
+> 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://docs.aws.amazon.com/ecs/index.html](https://docs.aws.amazon.com/ecs/index.html)
+> 1. [https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
+
+
+## To be done
+
+> 1. Discussion and Demo
+
+![DotNetRazor_AWS_ALB | 100x100](./Documentation/Images/DotNetRazor_AWS_ALB.PNG)
 
 ---
 
