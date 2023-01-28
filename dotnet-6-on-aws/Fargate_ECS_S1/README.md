@@ -39,7 +39,7 @@
 >    - Topic 1
 >    - Topic 1
 >    - Topic 1
-> 1. Introduction to .NET Minimal API
+> 1. Hands-on with Docker using nginx
 > 1. Creating Minimal API using dotnet CLI
 >    - `dotnet new list`
 >    - Create Minimal API using `dotnet new web`
