@@ -44,6 +44,8 @@
 > 1. Hands-on with Docker using `nginx` on Local Machine
 > 1. Hands-on with Docker using `Razor Web App` on Local Machine
 > 1. 30,000 foot view of ECS / Just Enough ECS
+> 1. Hands-on with FarGate/ECD using `nginx` on AWS Console
+> 1. Hands-on with FarGate/ECD using `Razor Web App` on AWS Console
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -128,8 +130,11 @@ docker pull vishipayyallore/booksstoreweb:latest
 > 1. [https://docs.aws.amazon.com/ecs/index.html](https://docs.aws.amazon.com/ecs/index.html)
 > 1. [https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
 
+## Hands-on with FarGate/ECS using `nginx` on AWS Console
 
-## To be done
+> 1. Discussion and Demo
+
+## Hands-on with FarGate/ECS using `Razor Web App` on AWS Console
 
 > 1. Discussion and Demo
 
