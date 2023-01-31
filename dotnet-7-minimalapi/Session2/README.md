@@ -35,11 +35,11 @@
 ## What are we doing today?
 
 > 1. Tour of .NET 7 Minimal API Project (Web API, and Web App Empty Template)
-> 1. Dependency Injection
+> 1. Dependency Injection, and Comparision of Services
 >    - Web App Empty
 >    - Web API with Uncheck Controllers
 >    - Web API with Controllers
-> 1. Comparision on Services & Request Pipeline
+> 1. Comparision of Request Pipeline
 > 1. Model Binding
 >    - From Query | From Route | From Body
 > 1. Base Entity
