@@ -1,8 +1,10 @@
-# .NET 7 - Hands-on Minimal API with ASP.NET Core and Static data
+# .NET 7 - Minimal API with Model Binding, Entity, DI, EF Core, and Seed Data
 
-## Date Time: 20-Jan-2023 at 06:30 AM IST
+## Date Time: 05-Feb-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/290536063](https://www.meetup.com/dot-net-learners-house-hyderabad/events/290536063)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/290692815](https://www.meetup.com/dot-net-learners-house-hyderabad/events/290692815)
+
+## YouTube URL: [https://www.youtube.com/watch?v=GxIuDp0d1uE](https://www.youtube.com/watch?v=GxIuDp0d1uE)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
