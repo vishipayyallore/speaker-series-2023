@@ -31,7 +31,7 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Tour of .NET 7 Minimal API Project (Web API, and Web App Empty Template)
 > 1. Dependency Injection
 >    - Web App Empty
->    - Web API with UnCheck Controllers
+>    - Web API with Uncheck Controllers
 >    - Web API with Controllers
 > 1. Comparision on Services & Request Pipeline
 > 1. Model Binding
@@ -41,13 +41,11 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Entity Framework Core (In Memory)
 > 1. Dependency Injection of DbContext
 > 1. GetAllStudents() API Endpoint
-> 1. .Produces(200);
+> 1. Seed Data
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
-> 1. GitHub Actions to build API
 
 ## Session 3 - Minimal API in .NET 7 with Entities, Dtos
 
-> 1. Logging using Serilog
 > 1. Adding new AddStudent() API Endpoint
 > 1. .Produces(200).ProducesProblem(500);
 > 1. Model Validation
@@ -59,19 +57,21 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 
 ## Session 4 - Minimal API in .NET 7
 
+> 1. Logging using Serilog
 > 1. Dependency Injection of CORS
 > 1. Angular 15 (SPA) integration with Minimal API Only GetAllStudents() API Endpoint
 > 1. Creating Repository Layer
 > 1. Creating Business Layer
 > 1. Dependency Injection of Repository Layer, Business Layer, Auto Mapper, and CORS
-> 1. Docker
 
 ## Session 5 - Minimal API in .NET 7
 
-> 1. Terraform IaC
+> 1. GitHub Actions to build API
+> 1. Docker
 
 ## Session 6 - Minimal API in .NET 7
 
+> 1. Terraform IaC
 > 1. Web App in Azure (App Service & Docker)
 > 1. GitHub Actions
 

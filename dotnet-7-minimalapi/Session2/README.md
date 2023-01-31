@@ -32,30 +32,21 @@
 
 ## What are we doing today?
 
-> 1. 30,000 foot view of REST, and HTTP
->    - REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
->    - HTTP Methods
->    - HTTP Responses
->    - What should I send as Response
-> 1. Introduction to .NET Minimal API
-> 1. Creating Minimal API using dotnet CLI
->    - `dotnet new web`
->    - `dotnet new webapi -minimal`
-> 1. Create Minimal API using `VS 2022` - Web API Templated - UnCheck Controllers
->    - Executing it using IIS Express / Kestrel Server
->    - Exploring Swagger
-> 1. Create Minimal API using `VS 2022` - Web App Empty Template
->    - Executing it using IIS Express / Kestrel Server
-> 1. Executing it using IIS Express, and Kestrel Server (http, https)
-> 1. Exploring Swagger
-> 1. Exposing 4 `Hello World` API Endpoints
-> 1. Creating Unified Response Dto, and Constants
-> 1. Using Postman to test the API (Environment Variables, and Collections)
-> 1. Layered Architecture
-> 1. Testing using
->    - Swagger
->    - Postman
->    - Browser Dev Tools
+> 1. Tour of .NET 7 Minimal API Project (Web API, and Web App Empty Template)
+> 1. Dependency Injection
+>    - Web App Empty
+>    - Web API with Uncheck Controllers
+>    - Web API with Controllers
+> 1. Comparision on Services & Request Pipeline
+> 1. Model Binding
+>    - From Query | From Route | From Body
+> 1. Base Entity
+> 1. Student Entity inheriting Base Entity
+> 1. Entity Framework Core (In Memory)
+> 1. Dependency Injection of DbContext
+> 1. GetAllStudents() API Endpoint
+> 1. Seed Data
+> 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 
 ### Please refer to the [**Source Code**](https://github.com/vishipayyallore/learn-azure-in-2022) of today's session for more details
 
