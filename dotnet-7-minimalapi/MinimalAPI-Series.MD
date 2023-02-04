@@ -70,8 +70,11 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 
 > 1. Logging using Serilog
 > 1. Dependency Injection of CORS
-> 1. Moving the Logic into separate Library Project - Sepration of Concerns
-> 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() API Endpoint
+> 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Local API Endpoint
+> 1. Deploy to Azure App Service
+> 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Azure Hosted API Endpoint
+
+---
 
 ## Session 6 - Minimal API in .NET 7
 
@@ -92,6 +95,7 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 
 ## Session 9 - Deploying the entire Microservices solution to Kubernetes
 
+> 1. Moving the Logic into separate Library Project - Sepration of Concerns
 > 1. K8s
 
 ## Future Sessions

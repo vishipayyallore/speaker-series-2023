@@ -50,7 +50,7 @@
 > 1. Seed Data
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 
-### Please refer to the [**Source Code**](https://github.com/vishipayyallore/learn-azure-in-2022) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
 
 ---
 
