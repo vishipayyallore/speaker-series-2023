@@ -53,32 +53,30 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Auto Mapper Configuration
 > 1. Dependency Injection of Auto Mapper
 > 1. Enhancing GetAllCourses() API Endpoint to return Dtos
-> 1. Adding new GetCourseById() API Endpoint
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
-
 
 ## Session 4 - Minimal API in .NET 7
 
 > 1. Adding Swagger Dependencies
 > 1. WithTags().WithName().Produces(200).ProducesProblem(500);
-> 1. Logging using Serilog
-> 1. Adding New Endpoint AddCourse()
 > 1. Creating Repository Layer
 > 1. Creating Business Layer
-> 1. Dependency Injection of Repository Layer, Business Layer
+> 1. Dependency Injection of Swagger, Repository Layer, Business Layer
 > 1. Move Service Dependencies into a Extension Class
-> 1. Moving all the Endpoints into a Extension Class
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 > 1. GitHub Actions to build API
 
 ## Session 5 - Minimal API in .NET 7
 
+> 1. Logging using Serilog
 > 1. Dependency Injection of CORS
 > 1. Moving the Logic into separate Library Project - Sepration of Concerns
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() API Endpoint
 
 ## Session 6 - Minimal API in .NET 7
 
+> 1. Adding new GetCourseById() API Endpoint
+> 1. Adding New Endpoint AddCourse()
 > 1. Docker, Docker Compo
 > 1. Terraform IaC
 > 1. Web App in Azure (App Service & Docker)
