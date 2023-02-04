@@ -33,8 +33,8 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 >    - Web App Empty
 >    - Web API with Uncheck Controllers
 >    - Web API with Controllers
-> 1. Comparision on Services & Request Pipeline
-> 1. Model Binding
+> 1. Comparision on Services Container & Http Request Pipeline
+> 1. Parameter Binding
 >    - From Query | From Route | From Body | From Services
 > 1. Base Entity
 > 1. Course Entity inheriting Base Entity

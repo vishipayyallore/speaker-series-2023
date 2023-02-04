@@ -39,8 +39,8 @@
 >    - Web App Empty
 >    - Web API with Uncheck Controllers
 >    - Web API with Controllers
-> 1. Comparision of Request Pipeline
-> 1. Model Binding
+> 1. Comparision on Services Container & Http Request Pipeline
+> 1. Parameter Binding
 >    - From Query | From Route | From Body | From Services
 > 1. Base Entity
 > 1. Course Entity inheriting Base Entity
@@ -58,9 +58,40 @@
 
 ---
 
-## 1. 30,000 foot view of HTTP, and REST
+## 1. Tour of .NET 7 Minimal API Project (Web API, and Web App Empty Template)
 
 > 1. Discussion and Demo
+
+## 2. Dependency Injection
+
+> 1. Discussion and Demo
+
+### Web App Empty |  Web API with Uncheck Controllers |  Web API with Controllers
+
+> 1. Discussion and Demo
+
+## 3. Comparision on Services Container & Http Request Pipeline
+
+> 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0)
+
+## 4. Parameter Binding
+
+> 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-7.0)
+
+### From Query | From Route | From Body | From Services
+
+> 1. Discussion and Demo
+
+![Parameter Binding | 100x100](./Documentation/Images/ParameterBinding.PNG)
 
 **References:**
 
@@ -105,8 +136,6 @@
 ```dotnetcli
 dotnet new list
 ```
-
-![Dotnet New List | 100x100](./Documentation/Images/DotnetNewList.PNG)
 
 ### Create Minimal API using `dotnet new web`
 
