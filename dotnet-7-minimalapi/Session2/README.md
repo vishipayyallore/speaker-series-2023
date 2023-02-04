@@ -39,7 +39,7 @@
 >    - Web App Empty
 >    - Web API with Uncheck Controllers
 >    - Web API with Controllers
-> 1. Comparision on Services Container & Http Request Pipeline
+> 1. Comparison of Services Container & HTTP Request Pipeline
 > 1. Parameter Binding
 >    - From Query | From Route | From Body | From Services
 > 1. Base Entity
@@ -93,119 +93,82 @@
 
 ![Parameter Binding | 100x100](./Documentation/Images/ParameterBinding.PNG)
 
-**References:**
-
-> 1. [https://rapidapi.com/blog/rest-api-vs-web-api](https://rapidapi.com/blog/rest-api-vs-web-api)
-> 1. [https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.](https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.)
-> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)
-> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT)
-
-### HTTP Methods
+## 5. Base Entity
 
 > 1. Discussion and Demo
 
-### HTTP Responses
+```csharp
+public class BaseEntity
+{
+    [Key]
+    public Guid Id { get; set; }
 
-> 1. Discussion and Demo
-
-### What should I send as Response
-
-> 1. Discussion and Demo
-
-### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://en.wikipedia.org/wiki/Representational_state_transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
-
-## 2. Introduction to .NET Minimal API
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
-
-## 3. Creating Minimal API using dotnet CLI
-
-> 1. Discussion and Demo
-
-```dotnetcli
-dotnet new list
+    [Required]
+    public DateTime CreatedDate { get; set; }
+    
+    [Required]
+    public string? CreatedBy { get; set; }
+    
+    [Required]
+    public DateTime ModifiedDate { get; set; }
+    
+    [Required]
+    public string? ModifiedBy { get; set; }
+}
 ```
 
-### Create Minimal API using `dotnet new web`
+## 6. Course Entity inheriting Base Entity
 
 > 1. Discussion and Demo
-> 1. Executing it using dotnet CLI / VS Code
-> 1. Debugging in VS Code
 
-```dotnetcli
-dotnet new web -o firstsample --dry-run
-dotnet run -lp https
+```csharp
+public class Course : BaseEntity
+{
+    public string? CourseId { get; set; }
+
+    public string? Name { get; set; }
+    
+    public int Duration { get; set; }
+    
+    public string? Description { get; set; }
+}
 ```
 
-![Dotnet New Web | 100x100](./Documentation/Images/DotNetNew_CLI_1.PNG)
-
-### Create Minimal API using `dotnet new webapi -minimal`
+## 7. Just enough `Entity Framework` Core (In Memory)
 
 > 1. Discussion and Demo
-> 1. Executing it using dotnet CLI / VS Code
-> 1. Debugging in VS Code
 
-```dotnetcli
-dotnet new webapi -minimal -o secondsample --dry-run
-dotnet run -lp https
+```xml
+<ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.2" />
+</ItemGroup>
 ```
 
-![Dotnet New WebApi | 100x100](./Documentation/Images/DotNetNew_CLI_2.PNG)
-
-## 4. Create Minimal API using `VS 2022` - Web API Template - UnCheck Controllers
+## 8. Dependency Injection of DbContext
 
 > 1. Discussion and Demo
 
-### Executing it using IIS Express / Kestrel Server
+```csharp
+_ = builder.Services.AddDbContext<SchoolDbContext>(options =>
+                options.UseInMemoryDatabase(InMemoryDatabase.Name));
+```
+
+## 10. GetAllCourses() API Endpoint
 
 > 1. Discussion and Demo
 
-### Exploring Swagger
+![Get All Courses | 100x100](./Documentation/Images/GetAllCourses.PNG)
 
-> 1. Discussion and Demo.
-
-![Web Api Template | 100x100](./Documentation/Images/WebAPITemplate.PNG)
-
-## 5. Create Minimal API using `VS 2022` - Web App Empty Template
+## 10. Seed Data
 
 > 1. Discussion and Demo
 
-### Executing it using IIS Express, and Kestrel Server (http, https)
-
-> 1. Discussion and Demo.
-
-![Web App Empty Template | 100x100](./Documentation/Images/WebAppEmptyTemplate.PNG)
-
-## 6. Exposing `4 Basic` API Endpoints
+## 11. Update Postman Collections to test the API (Environment Variables, and Collections)
 
 > 1. Discussion and Demo
 
-## 7. Using Postman to test the API (Environment Variables, and Collections)
-
-> 1. Discussion and Demo
-
-## 8. Layered Architecture
-
-> 1. Discussion and Demo
-
-## 9. Creating Unified Response Dto, and Constants
-
-> 1. Discussion and Demo
-
-## 10. Testing using - Swagger, Postman, and Browser Dev Tools
-
-> 1. Discussion and Demo
+![Postman Collections | 100x100](./Documentation/Images/PostmanCollections.PNG)
 
 ---
 
@@ -216,17 +179,14 @@ dotnet run -lp https
 
 ---
 
-## What is Next? session `2` of `9` Sessions on 05 Feb, 2023
+## What is Next? session `3` of `9` Sessions on 19 Feb, 2023
 
-> 1. Tour of .NET 7 Minimal API Project (Web API, and Web App Empty Template)
-> 1. Dependency Injection
->    - Web App Empty
->    - Web API with UnCheck Controllers
->    - Web API with Controllers
-> 1. Logging using Serilog
-> 1. Base Entity, and Inherit other Entities
-> 1. Student Entity
-> 1. Entity Framework Core (In Memory)
-> 1. Dependency Injection of DbContext
-> 1. GetAllStudents(), AddStudent() API Endpoints
+> 1. Enhancing GetAllCourses() API Endpoint to return Unified Response
+> 1. Move the Hello World Endpoints into an Extension Class
+> 1. Move the User Endpoints into an Extension Class
+> 1. Move the Course Endpoints into an Extension Class
+> 1. Dtos using record, and returning Dtos
+> 1. Auto Mapper Configuration
+> 1. Dependency Injection of Auto Mapper
+> 1. Enhancing GetAllCourses() API Endpoint to return Dtos
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)

@@ -33,7 +33,7 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 >    - Web App Empty
 >    - Web API with Uncheck Controllers
 >    - Web API with Controllers
-> 1. Comparision on Services Container & Http Request Pipeline
+> 1. Comparison of Services Container & HTTP Request Pipeline
 > 1. Parameter Binding
 >    - From Query | From Route | From Body | From Services
 > 1. Base Entity
@@ -46,6 +46,7 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 
 ## Session 3 - Minimal API in .NET 7 with Entities, Dtos
 
+> 1. Enhancing GetAllCourses() API Endpoint to return Unified Response
 > 1. Move the Hello World Endpoints into an Extension Class
 > 1. Move the User Endpoints into an Extension Class
 > 1. Move the Course Endpoints into an Extension Class
