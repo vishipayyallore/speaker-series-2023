@@ -35,11 +35,11 @@
 ## What are we doing today?
 
 > 1. Tour of .NET 7 Minimal API Project (Web API, and Web App Empty Template)
-> 1. Dependency Injection, and Comparision of Services
+> 1. Dependency Injection, and Comparision of Service Collections
 >    - Web App Empty
 >    - Web API with Uncheck Controllers
 >    - Web API with Controllers
-> 1. Comparison of Services Container & HTTP Request Pipeline
+> 1. Comparison of HTTP Request Pipeline
 > 1. Parameter Binding
 >    - From Query | From Route | From Body | From Services
 > 1. Base Entity
@@ -62,7 +62,7 @@
 
 > 1. Discussion and Demo
 
-## 2. Dependency Injection
+## 2. Dependency Injection, and Comparision of Service Collections
 
 > 1. Discussion and Demo
 
@@ -70,7 +70,7 @@
 
 > 1. Discussion and Demo
 
-## 3. Comparision on Services Container & Http Request Pipeline
+## 3. Comparison of HTTP Request Pipeline
 
 > 1. Discussion and Demo
 
@@ -181,6 +181,7 @@ _ = builder.Services.AddDbContext<SchoolDbContext>(options =>
 
 ## What is Next? session `3` of `9` Sessions on 19 Feb, 2023
 
+> 1. Dependency Injection and Inversion of Control - Deep Dive
 > 1. Enhancing GetAllCourses() API Endpoint to return Unified Response
 > 1. Move the Hello World Endpoints into an Extension Class
 > 1. Move the User Endpoints into an Extension Class
