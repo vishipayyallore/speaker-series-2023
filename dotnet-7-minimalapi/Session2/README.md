@@ -41,12 +41,12 @@
 >    - Web API with Controllers
 > 1. Comparision of Request Pipeline
 > 1. Model Binding
->    - From Query | From Route | From Body
+>    - From Query | From Route | From Body | From Services
 > 1. Base Entity
-> 1. Student Entity inheriting Base Entity
-> 1. Entity Framework Core (In Memory)
+> 1. Course Entity inheriting Base Entity
+> 1. Just enough `Entity Framework` Core (In Memory)
 > 1. Dependency Injection of DbContext
-> 1. GetAllStudents() API Endpoint
+> 1. GetAllCourses() API Endpoint
 > 1. Seed Data
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 

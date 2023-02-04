@@ -19,7 +19,7 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 >    - Exploring Swagger
 > 1. Create Minimal API using `VS 2022` - Web App Empty Template
 >    - Executing it using IIS Express / Kestrel Server
-> 1. Exposing 4 Hello World API Endpoints
+> 1. Exposing 4 `Hello World` API Endpoints
 > 1. Using Postman to test the API (Environment Variables, and Collections)
 > 1. Layered Architecture
 > 1. Creating Unified Response Dto, and Constants
@@ -35,10 +35,10 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 >    - Web API with Controllers
 > 1. Comparision on Services & Request Pipeline
 > 1. Model Binding
->    - From Query | From Route | From Body
+>    - From Query | From Route | From Body | From Services
 > 1. Base Entity
 > 1. Course Entity inheriting Base Entity
-> 1. Entity Framework Core (In Memory)
+> 1. Just enough `Entity Framework` Core (In Memory)
 > 1. Dependency Injection of DbContext
 > 1. GetAllCourses() API Endpoint
 > 1. Seed Data
@@ -46,18 +46,21 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 
 ## Session 3 - Minimal API in .NET 7 with Entities, Dtos
 
+> 1. Move the Hello World Endpoints into an Extension Class
+> 1. Move the User Endpoints into an Extension Class
+> 1. Move the Course Endpoints into an Extension Class
 > 1. Dtos using record, and returning Dtos
 > 1. Auto Mapper Configuration
 > 1. Dependency Injection of Auto Mapper
 > 1. Enhancing GetAllCourses() API Endpoint to return Dtos
 > 1. Adding new GetCourseById() API Endpoint
-> 1. Adding Swagger Dependencies
-> 1. WithTags().WithName().Produces(200).ProducesProblem(500);
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
-> 1. Move the Hello World Endpoints into an Extension Class
+
 
 ## Session 4 - Minimal API in .NET 7
 
+> 1. Adding Swagger Dependencies
+> 1. WithTags().WithName().Produces(200).ProducesProblem(500);
 > 1. Logging using Serilog
 > 1. Adding New Endpoint AddCourse()
 > 1. Creating Repository Layer
