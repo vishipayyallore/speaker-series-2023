@@ -54,7 +54,7 @@
 > 1. Layered Architecture
 > 1. Creating Unified Response Dto, and Constants
 > 1. Testing using
->    - Swagger | Postman Browser Dev Tools
+>    - Swagger | Postman | Browser Dev Tools
 
 ### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
 

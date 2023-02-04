@@ -5,26 +5,26 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 ## Session 1 - Hands on Minimal API with Static data in .NET 7
 
 > 1. 30,000 foot view of REST, and HTTP
->    - REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
 >    - HTTP Methods
 >    - HTTP Responses
 >    - What should I send as Response
+>    - REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
 > 1. Introduction to .NET Minimal API
-> 1. Two Ways to create Minimal API using `VS 2022`
->    - Web API with UnCheck Controllers
->    - Web App Empty
 > 1. Creating Minimal API using dotnet CLI
->    - `dotnet new webapi -minimal`
-> 1. Executing it using IIS Express, and Kestrel Server (http, https)
-> 1. Exploring Swagger
-> 1. Exposing 4 `Hello World` API Endpoints
-> 1. Creating Unified Response Dto, and Constants
+>    - `dotnet new list`
+>    - Create Minimal API using `dotnet new web`
+>    - Create Minimal API using `dotnet new webapi -minimal`
+> 1. Create Minimal API using `VS 2022` - Web API Templated - Uncheck Controllers
+>    - Executing it using IIS Express / Kestrel Server
+>    - Exploring Swagger
+> 1. Create Minimal API using `VS 2022` - Web App Empty Template
+>    - Executing it using IIS Express / Kestrel Server
+> 1. Exposing 4 Hello World API Endpoints
 > 1. Using Postman to test the API (Environment Variables, and Collections)
 > 1. Layered Architecture
+> 1. Creating Unified Response Dto, and Constants
 > 1. Testing using
->    - Swagger
->    - Postman
->    - Browser Dev Tools
+>    - Swagger | Postman | Browser Dev Tools
 
 ## Session 2 - Hands on to Minimal API with Dynamic data in .NET 7
 
