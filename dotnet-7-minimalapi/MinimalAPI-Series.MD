@@ -44,8 +44,9 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Seed Data
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 
-## Session 3 - Minimal API in .NET 7 with Entities, Dtos
+## Session 3 - .NET 7 Minimal API DI, IOC, record, DTOs, AutoMapper, and Extension Methods
 
+> 1. Create responses in Minimal API
 > 1. Dependency Injection and Inversion of Control - Deep Dive
 > 1. Enhancing GetAllCourses() API Endpoint to return Unified Response
 > 1. Move the Hello World Endpoints into an Extension Class
@@ -57,6 +58,8 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Enhancing GetAllCourses() API Endpoint to return Dtos
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 
+<https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/responses?view=aspnetcore-7.0>
+
 ## Session 4 - Minimal API in .NET 7
 
 > 1. Adding Swagger Dependencies
@@ -65,6 +68,7 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Creating Business Layer
 > 1. Dependency Injection of Swagger, Repository Layer, Business Layer
 > 1. Move Service Dependencies into a Extension Class
+> 1. Move Http Request Pipeline Dependencies into a Extension Class
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 > 1. GitHub Actions to build API
 
@@ -73,7 +77,7 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Logging using Serilog
 > 1. Dependency Injection of CORS
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Local API Endpoint
-> 1. Deploy to Azure App Service
+> 1. Deploy Minimal API to Azure App Service using VS 2022
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Azure Hosted API Endpoint
 
 ---
