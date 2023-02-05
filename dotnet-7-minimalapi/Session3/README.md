@@ -40,10 +40,10 @@
 > 1. Move the Hello World Endpoints into an Extension Class
 > 1. Move the User Endpoints into an Extension Class
 > 1. Move the Course Endpoints into an Extension Class
-> 1. Dtos using record, and returning Dtos
+> 1. Creating Course Dtos using record
 > 1. Auto Mapper Configuration
 > 1. Dependency Injection of Auto Mapper
-> 1. Enhancing GetAllCourses() API Endpoint to return Dtos
+> 1. Enhancing GetAllCourses() API Endpoint to return Course Dtos
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 
 ### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
