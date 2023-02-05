@@ -62,41 +62,117 @@
 
 > 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/responses?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/responses?view=aspnetcore-7.0)
 
-## 1. Dependency Injection and Inversion of Control - Deep Dive
+## 2. Dependency Injection and Inversion of Control - Deep Dive
 
 > 1. Discussion and Demo
->
-## 2. Enhancing GetAllCourses() API Endpoint to return Unified Response
+
+**References:**
+
+> 1. [https://en.wikipedia.org/wiki/Dependency_injection](https://en.wikipedia.org/wiki/Dependency_injection)
+> 1. [https://en.wikipedia.org/wiki/Inversion_of_control](https://en.wikipedia.org/wiki/Inversion_of_control)
+
+```csharp
+public static class ServiceCollectionExtensions
+{
+    public static IServiceCollection ConfigureServices(this IServiceCollection services)
+    {
+        _ = services.AddTransient<IFooter, Footer>();
+        _ = services.AddTransient<IHeader, Header>();
+        
+        _ = services.AddTransient<IGenerateNames, GenerateNames>();
+        
+        _ = services.AddTransient<INamesArray, NamesArray.Lib.NamesArray>();
+        _ = services.AddTransient<IPrintHelper, PrintHelper>();
+
+        // IMPORTANT! Register the application entry point
+        _ = services.AddTransient<NamesArrayDemoApp>();
+        
+        return services;
+    }
+}
+```
+
+## 4. Enhancing GetAllCourses() API Endpoint to return Unified Response
 
 > 1. Discussion and Demo
->
-## 3. Move the Hello World Endpoints into an Extension Class
+
+```csharp
+app.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbContext) =>
+{
+    var coursesResponse = ApiResponseDto<IEnumerable<Course>>.Create(
+            await schoolDbContext.Courses.ToListAsync());
+    
+    return Results.Ok(coursesResponse);
+});
+```
+
+![Returning Course Entities | 100x100](./Documentation/Images/ReturningCourseEntities.PNG)
+
+## 5. Move the Hello World Endpoints into an Extension Class
 
 > 1. Discussion and Demo
->
-## 4. Move the User Endpoints into an Extension Class
+
+**Reference(s):**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/route-handlers?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/route-handlers?view=aspnetcore-7.0)
+
+## 6. Move the User Endpoints into an Extension Class
 
 > 1. Discussion and Demo
->
-## 5. Move the Course Endpoints into an Extension Class
+
+## 7. Move the Course Endpoints into an Extension Class
 
 > 1. Discussion and Demo
->
-## 6. Dtos using record, and returning Dtos
+
+## 8. Creating Course Dtos using record
 
 > 1. Discussion and Demo
->
-## 7. Auto Mapper Configuration
+
+```csharp
+public class CourseDto : CreateCourseDto
+{
+    public Guid Id { get; set; }
+}
+```
+
+## 9. Auto Mapper Configuration
 
 > 1. Discussion and Demo
->
-## 8. Dependency Injection of Auto Mapper
+
+```csharp
+public class AutoMapperConfig : Profile
+{
+    public AutoMapperConfig()
+    {
+        _ = CreateMap<Course, CourseDto>().ReverseMap();
+        _ = CreateMap<Course, CreateCourseDto>().ReverseMap();
+    }
+}
+```
+
+## 10. Dependency Injection of Auto Mapper
 
 > 1. Discussion and Demo
->
+
+```csharp
+_ = builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
+```
+
 ## 9. Enhancing GetAllCourses() API Endpoint to return Dtos
 
 > 1. Discussion and Demo
+
+```csharp
+_ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbContext, IMapper mapper) =>
+{
+    var coursesResponse = ApiResponseDto<IEnumerable<CourseDto>>.Create(
+            mapper.Map<IEnumerable<CourseDto>>(await schoolDbContext.Courses.ToListAsync())
+        );
+    return Results.Ok(coursesResponse);
+});
+```
+
+![Returning Course Dtos | 100x100](./Documentation/Images/ReturningCourseDtos.PNG)
 
 ## 10. Update Postman Collections to test the API (Environment Variables, and Collections)
 
