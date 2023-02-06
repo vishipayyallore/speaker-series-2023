@@ -1,6 +1,12 @@
 # A Microservices Series - Minimal API in .NET 7
 
-This is a series of video course on the Minimal API in .NET 7. The series is divided into **`9 sessions`**.
+This is a series of video course on the Minimal API in .NET 7. The series is divided into **`18 sessions`**.
+
+---
+
+Season 1
+
+---
 
 ## Session 1 - Hands on Minimal API with Static data in .NET 7
 
@@ -44,20 +50,21 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Seed Data
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 
-## Session 3 - Minimal API in .NET 7 with Entities, Dtos
+## Session 3 - .NET 7 Minimal API DI, IOC, record, DTOs, AutoMapper, and Extension Methods
 
+> 1. Create responses in Minimal API
 > 1. Dependency Injection and Inversion of Control - Deep Dive
 > 1. Enhancing GetAllCourses() API Endpoint to return Unified Response
 > 1. Move the Hello World Endpoints into an Extension Class
 > 1. Move the User Endpoints into an Extension Class
 > 1. Move the Course Endpoints into an Extension Class
-> 1. Dtos using record, and returning Dtos
+> 1. Creating Course Dtos using record
 > 1. Auto Mapper Configuration
 > 1. Dependency Injection of Auto Mapper
-> 1. Enhancing GetAllCourses() API Endpoint to return Dtos
+> 1. Enhancing GetAllCourses() API Endpoint to return Course Dtos
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 
-## Session 4 - Minimal API in .NET 7
+## Session 4 - .NET 7 Minimal API Swagger, Repository, Business Layer, and GitHub Actions
 
 > 1. Adding Swagger Dependencies
 > 1. WithTags().WithName().Produces(200).ProducesProblem(500);
@@ -65,16 +72,21 @@ This is a series of video course on the Minimal API in .NET 7. The series is div
 > 1. Creating Business Layer
 > 1. Dependency Injection of Swagger, Repository Layer, Business Layer
 > 1. Move Service Dependencies into a Extension Class
+> 1. Move Http Request Pipeline Dependencies into a Extension Class
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 > 1. GitHub Actions to build API
 
-## Session 5 - Minimal API in .NET 7
+## Session 5 - .NET 7 Minimal API Serilog, CORS, Angular 15, and Azure App Service
 
 > 1. Logging using Serilog
 > 1. Dependency Injection of CORS
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Local API Endpoint
-> 1. Deploy to Azure App Service
+> 1. Deploy Minimal API to Azure App Service using VS 2022
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Azure Hosted API Endpoint
+
+---
+
+Season 2
 
 ---
 
