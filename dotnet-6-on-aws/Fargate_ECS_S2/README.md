@@ -26,7 +26,7 @@
 
 ## Technology Stack
 
-> 1. .NET 5/6/7, AWS
+> 1. .NET 6/7, AWS
 
 ## Information
 
@@ -57,35 +57,28 @@
 
 ---
 
-## 1. 30,000 foot view of Docker
+## 1. Dockerize Static Web Site
 
 > 1. Discussion and Demo
 
-**References:**
+```dockercmd
+TAG=latest
+VERSION_TAG=$(git log -1 --pretty=format:%h)
+echo "version tag: $VERSION_TAG"
 
-> 1. [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
+REPOSITORY=vishipayyallore/static-website
 
-### Docker architecture
+docker login
 
-> 1. Discussion and Demo
+docker build -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG .
 
-### The Docker daemon
+docker push $REPOSITORY:$TAG
+docker push $REPOSITORY:$VERSION_TAG
 
-> 1. Discussion and Demo
+docker run --name static-website-10feb -p 8080:80 vishipayyallore/static-website
+```
 
-### The Docker client
-
-> 1. Discussion and Demo
-
-### The Docker Images
-
-> 1. Discussion and Demo
-
-### The Docker Containers
-
-> 1. Discussion and Demo
-
-### The Docker Images Registry
+## 2. Hands-on Static Web Site Docker Image with ECS/Fargate on AWS Console
 
 > 1. Discussion and Demo
 
