@@ -1,10 +1,10 @@
-# C# - .NET 6 on AWS - Getting Started With Docker, Fargate and ECS
+# .NET 6 on AWS - Creating Docker Images, Deploying to ECS using Fargate
 
-## Date Time: 29-Jan-2023 at 09:00 AM IST
+## Date Time: 12-Feb-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/290133360](https://www.meetup.com/dot-net-learners-house-hyderabad/events/290133360)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/291262858](https://www.meetup.com/dot-net-learners-house-hyderabad/events/291262858)
 
-## YouTube URL: [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
+## YouTube URL: [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
