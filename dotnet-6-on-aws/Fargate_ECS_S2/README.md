@@ -1,10 +1,10 @@
-# C# - .NET 6 on AWS - Getting Started With Docker, Fargate and ECS
+# .NET 6 on AWS - Creating Docker Images, Deploying to ECS using Fargate
 
-## Date Time: 29-Jan-2023 at 09:00 AM IST
+## Date Time: 12-Feb-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/290133360](https://www.meetup.com/dot-net-learners-house-hyderabad/events/290133360)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/291262858](https://www.meetup.com/dot-net-learners-house-hyderabad/events/291262858)
 
-## YouTube URL: [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
+## YouTube URL: [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -26,7 +26,7 @@
 
 ## Technology Stack
 
-> 1. .NET 5/6/7, AWS
+> 1. .NET 6/7, AWS
 
 ## Information
 
@@ -57,88 +57,48 @@
 
 ---
 
-## 1. 30,000 foot view of Docker
+## 1. Dockerize Static Web Site
 
 > 1. Discussion and Demo
 
-**References:**
+**Reference(s):**
 
-> 1. [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
+> 1. [https://www.nginx.com/resources/wiki/start/topics/examples/full/](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-### Docker architecture
+### Build and Push the Docker Image to Docker Hub
 
-> 1. Discussion and Demo
+```dockercmd
+TAG=latest
+VERSION_TAG=$(git log -1 --pretty=format:%h)
+echo "version tag: $VERSION_TAG"
 
-### The Docker daemon
+REPOSITORY=vishipayyallore/static-website
 
-> 1. Discussion and Demo
+docker login
 
-### The Docker client
+docker build -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG .
 
-> 1. Discussion and Demo
+docker push $REPOSITORY:$TAG
+docker push $REPOSITORY:$VERSION_TAG
+```
 
-### The Docker Images
+![Information | 100x100](./Documentation/Images/BuildAndPushStaticWebSite.PNG)
 
-> 1. Discussion and Demo
+### Execute Docker Image from Docker Hub on Local Machine
 
-### The Docker Containers
+```dockercmd
+docker run -d --rm --name static-website-10feb -p 8009:80 vishipayyallore/static-website
+```
 
-> 1. Discussion and Demo
+![Information | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_1.PNG)
 
-### The Docker Images Registry
+## 2. Hands-on Static Web Site Docker Image with ECS/Fargate on AWS Console
 
 > 1. Discussion and Demo
 
 ## 2. Hands-on with Docker using `nginx` on Local Machine
 
 > 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://hub.docker.com/_/nginx](https://hub.docker.com/_/nginx)
-
-![Local Nginx 1 | 100x100](./Documentation/Images/Local_Nginx_1.PNG)
-
-![Local Nginx 2 | 100x100](./Documentation/Images/Local_Nginx_2.PNG)
-
-## 3. Hands-on with Docker using `Razor Web App` on Local Machine
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://hub.docker.com/repository/docker/vishipayyallore/booksstoreweb/general](https://hub.docker.com/repository/docker/vishipayyallore/booksstoreweb/general)
-
-![Docker Hub | 100x100](./Documentation/Images/Docker_Hub.PNG)
-
-```dockercmd
-docker pull vishipayyallore/booksstoreweb:latest
-```
-
-![Docker Pull | 100x100](./Documentation/Images/Docker_Pull.PNG)
-
-![Local BooksStore 1 | 100x100](./Documentation/Images/Local_BooksStore_1.PNG)
-
-![Local BooksStore 2 | 100x100](./Documentation/Images/Local_BooksStore_2.PNG)
-
-## 4. 30,000 foot view of ECS / Just Enough ECS
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://docs.aws.amazon.com/ecs/index.html](https://docs.aws.amazon.com/ecs/index.html)
-> 1. [https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
-
-## Hands-on with FarGate/ECS using `nginx` on AWS Console
-
-> 1. Discussion and Demo
-
-## Hands-on with FarGate/ECS using `Razor Web App` on AWS Console
-
-> 1. Discussion and Demo
-
-![DotNetRazor_AWS_ALB | 100x100](./Documentation/Images/DotNetRazor_AWS_ALB.PNG)
 
 ---
 
