@@ -61,6 +61,12 @@
 
 > 1. Discussion and Demo
 
+**Reference(s):**
+
+> 1. [https://www.nginx.com/resources/wiki/start/topics/examples/full/](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
+
+### Build and Push the Docker Image to Docker Hub
+
 ```dockercmd
 TAG=latest
 VERSION_TAG=$(git log -1 --pretty=format:%h)
@@ -74,9 +80,17 @@ docker build -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG .
 
 docker push $REPOSITORY:$TAG
 docker push $REPOSITORY:$VERSION_TAG
-
-docker run --name static-website-10feb -p 8080:80 vishipayyallore/static-website
 ```
+
+![Information | 100x100](./Documentation/Images/BuildAndPushStaticWebSite.PNG)
+
+### Execute Docker Image from Docker Hub on Local Machine
+
+```dockercmd
+docker run -d --rm --name static-website-10feb -p 8009:80 vishipayyallore/static-website
+```
+
+![Information | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_1.PNG)
 
 ## 2. Hands-on Static Web Site Docker Image with ECS/Fargate on AWS Console
 
@@ -85,53 +99,6 @@ docker run --name static-website-10feb -p 8080:80 vishipayyallore/static-website
 ## 2. Hands-on with Docker using `nginx` on Local Machine
 
 > 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://hub.docker.com/_/nginx](https://hub.docker.com/_/nginx)
-
-![Local Nginx 1 | 100x100](./Documentation/Images/Local_Nginx_1.PNG)
-
-![Local Nginx 2 | 100x100](./Documentation/Images/Local_Nginx_2.PNG)
-
-## 3. Hands-on with Docker using `Razor Web App` on Local Machine
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://hub.docker.com/repository/docker/vishipayyallore/booksstoreweb/general](https://hub.docker.com/repository/docker/vishipayyallore/booksstoreweb/general)
-
-![Docker Hub | 100x100](./Documentation/Images/Docker_Hub.PNG)
-
-```dockercmd
-docker pull vishipayyallore/booksstoreweb:latest
-```
-
-![Docker Pull | 100x100](./Documentation/Images/Docker_Pull.PNG)
-
-![Local BooksStore 1 | 100x100](./Documentation/Images/Local_BooksStore_1.PNG)
-
-![Local BooksStore 2 | 100x100](./Documentation/Images/Local_BooksStore_2.PNG)
-
-## 4. 30,000 foot view of ECS / Just Enough ECS
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://docs.aws.amazon.com/ecs/index.html](https://docs.aws.amazon.com/ecs/index.html)
-> 1. [https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
-
-## Hands-on with FarGate/ECS using `nginx` on AWS Console
-
-> 1. Discussion and Demo
-
-## Hands-on with FarGate/ECS using `Razor Web App` on AWS Console
-
-> 1. Discussion and Demo
-
-![DotNetRazor_AWS_ALB | 100x100](./Documentation/Images/DotNetRazor_AWS_ALB.PNG)
 
 ---
 
