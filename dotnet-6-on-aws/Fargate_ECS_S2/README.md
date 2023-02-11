@@ -34,18 +34,11 @@
 
 ## What are we doing today?
 
-> 1. 30,000 foot view of Docker / Just Enough Docker
->    - Docker architecture
->    - The Docker daemon
->    - The Docker client
->    - The Docker Images
->    - The Docker Containers
->    - The Docker Images Registry
-> 1. Hands-on with Docker using `nginx` on Local Machine
-> 1. Hands-on with Docker using `Razor Web App` on Local Machine
-> 1. 30,000 foot view of ECS / Just Enough ECS
-> 1. Hands-on with FarGate/ECD using `nginx` on AWS Console
-> 1. Hands-on with FarGate/ECD using `Razor Web App` on AWS Console
+> 1. Quick Recap of the [previous session](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
+> 1. Hands-on with Dockerize Static Web Site
+>    - Build and Push the Docker Image to Docker Hub
+>    - Execute Docker Image from Docker Hub on Local Machine
+> 1. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -57,7 +50,11 @@
 
 ---
 
-## 1. Dockerize Static Web Site
+## 1. Quick Recap of the [previous session](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
+
+> 1. Discussion and Demo
+
+## 2. Hands-on with Dockerize Static Web Site
 
 > 1. Discussion and Demo
 
@@ -65,7 +62,7 @@
 
 > 1. [https://www.nginx.com/resources/wiki/start/topics/examples/full/](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
 
-### Build and Push the Docker Image to Docker Hub
+### 2.1. Build and Push the Docker Image to Docker Hub
 
 ```dockercmd
 TAG=latest
@@ -84,7 +81,7 @@ docker push $REPOSITORY:$VERSION_TAG
 
 ![Information | 100x100](./Documentation/Images/BuildAndPushStaticWebSite.PNG)
 
-### Execute Docker Image from Docker Hub on Local Machine
+### 2.2. Execute Docker Image from Docker Hub on Local Machine
 
 ```dockercmd
 docker run -d --rm --name static-website-10feb -p 8009:80 vishipayyallore/static-website
@@ -92,11 +89,53 @@ docker run -d --rm --name static-website-10feb -p 8009:80 vishipayyallore/static
 
 ![Information | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_1.PNG)
 
-## 2. Hands-on Static Web Site Docker Image with ECS/Fargate on AWS Console
+## 3. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
 
 > 1. Discussion and Demo
 
-## 2. Hands-on with Docker using `nginx` on Local Machine
+## 4. Hands-on with Dockerize Angular 15 Single Page Application
+
+> 1. Discussion and Demo
+
+## 5. Hands-on with Fargate/ECS using Angular 15 SPA Docker Image on AWS Console
+
+> 1. Discussion and Demo
+
+## 6. Hands-on with Dockerize .NET 7 Minimal API
+
+> 1. Discussion and Demo
+
+**Path:** [C:\LordKrishna\GitHub\services-school](C:\LordKrishna\GitHub\services-school)
+
+### 6.1. Build and Push the Docker Image to Docker Hub
+
+```dockercmd
+TAG=latest
+VERSION_TAG=$(git log -1 --pretty=format:%h)
+echo "version tag: $VERSION_TAG"
+
+# The name of the repository on Docker Hub should be in lowercase
+REPOSITORY=vishipayyallore/school-api
+
+docker login
+
+docker build -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG -f Source/School.Api/Dockerfile .
+
+docker push $REPOSITORY:$TAG
+docker push $REPOSITORY:$VERSION_TAG
+```
+
+![Build And Push .NET 7 Minimal API | 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI.PNG)
+
+### 6.2. Execute Docker Image from Docker Hub on Local Machine
+
+```dockercmd
+docker run -d --rm --name School-Api-12feb -p 8010:80 vishipayyallore/school-api
+```
+
+![Execute .NET 7 Minimal API Docker Image| 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI_1.PNG)
+
+## 7. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
 
 > 1. Discussion and Demo
 
