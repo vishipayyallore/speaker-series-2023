@@ -38,11 +38,11 @@
 > 1. Hands-on with Dockerize Static Web Site
 >    - Build and Push the Docker Image to Docker Hub
 >    - Execute Docker Image from Docker Hub on Local Machine
-> 1. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS
+> 1. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
 > 1. Hands-on with Dockerize .NET 7 Minimal API
 >    - Build and Push the Docker Image to Docker Hub
 >    - Execute Docker Image from Docker Hub on Local Machine
-> 1. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
+> 1. Hands-on with Fargate/ECS using .NET 7 Minimal API Docker Image on AWS Console
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
