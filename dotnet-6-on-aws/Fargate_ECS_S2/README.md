@@ -79,19 +79,21 @@ docker push $REPOSITORY:$TAG
 docker push $REPOSITORY:$VERSION_TAG
 ```
 
-![Information | 100x100](./Documentation/Images/BuildAndPushStaticWebSite.PNG)
+![Build And Push Static Web Site | 100x100](./Documentation/Images/BuildAndPushStaticWebSite.PNG)
 
 ### 2.2. Execute Docker Image from Docker Hub on Local Machine
 
 ```dockercmd
-docker run -d --rm --name static-website-10feb -p 8009:80 vishipayyallore/static-website
+docker run -d --rm --name static-website-12feb -p 8009:80 vishipayyallore/static-website:latest
 ```
 
-![Information | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_1.PNG)
+![Static Web Site in local docker | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_1.PNG)
 
 ## 3. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
 
 > 1. Discussion and Demo
+
+![Static Web Site in AWS ECS | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_2.PNG)
 
 ## 4. Hands-on with Dockerize Angular 15 Single Page Application
 
@@ -130,7 +132,7 @@ docker push $REPOSITORY:$VERSION_TAG
 ### 6.2. Execute Docker Image from Docker Hub on Local Machine
 
 ```dockercmd
-docker run -d --rm --name School-Api-12feb -p 8010:80 vishipayyallore/school-api
+docker run -d --rm --name School-Api-12feb -p 8010:80 vishipayyallore/school-api:latest
 ```
 
 ![Execute .NET 7 Minimal API Docker Image| 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI_1.PNG)
