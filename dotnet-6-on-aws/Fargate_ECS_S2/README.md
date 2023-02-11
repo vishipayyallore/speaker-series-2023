@@ -1,4 +1,4 @@
-# .NET 6 on AWS - Creating Docker Images, Deploying to ECS using Fargate
+# .NET 7 on AWS - Creating Docker Images, Deploying to ECS using Fargate
 
 ## Date Time: 12-Feb-2023 at 09:00 AM IST
 
@@ -20,13 +20,13 @@
 ### Prior Knowledge
 
 > 1. Programming knowledge in C#
-> 1. Azure
+> 1. Azure / AWS
 > 1. Angular 15
 > 1. .NET Razor/Blazor WASM
 
 ## Technology Stack
 
-> 1. .NET 6/7, AWS
+> 1. .NET 7, AWS
 
 ## Information
 
