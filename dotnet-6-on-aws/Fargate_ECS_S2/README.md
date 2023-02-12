@@ -1,4 +1,4 @@
-# .NET 6 on AWS - Creating Docker Images, Deploying to ECS using Fargate
+# .NET 7 on AWS - Creating Docker Images, Deploying to ECS using Fargate
 
 ## Date Time: 12-Feb-2023 at 09:00 AM IST
 
@@ -20,13 +20,13 @@
 ### Prior Knowledge
 
 > 1. Programming knowledge in C#
-> 1. Azure
+> 1. Azure / AWS
 > 1. Angular 15
 > 1. .NET Razor/Blazor WASM
 
 ## Technology Stack
 
-> 1. .NET 6/7, AWS
+> 1. .NET 7, AWS
 
 ## Information
 
@@ -39,6 +39,10 @@
 >    - Build and Push the Docker Image to Docker Hub
 >    - Execute Docker Image from Docker Hub on Local Machine
 > 1. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
+> 1. Hands-on with Dockerize .NET 7 Minimal API
+>    - Build and Push the Docker Image to Docker Hub
+>    - Execute Docker Image from Docker Hub on Local Machine
+> 1. Hands-on with Fargate/ECS using .NET 7 Minimal API Docker Image on AWS Console
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -87,29 +91,26 @@ docker push $REPOSITORY:$VERSION_TAG
 docker run -d --rm --name static-website-12feb -p 8009:80 vishipayyallore/static-website:latest
 ```
 
+[http://localhost:8009](http://localhost:8009)
+
 ![Static Web Site in local docker | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_1.PNG)
 
 ## 3. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
 
 > 1. Discussion and Demo
+> 1. View the `CloudFormation` stack for the same
+
+[http://Yourhost.us-east-1.elb.amazonaws.com](http://Yourhost.us-east-1.elb.amazonaws.com)
 
 ![Static Web Site in AWS ECS | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_2.PNG)
 
-## 4. Hands-on with Dockerize Angular 15 Single Page Application
-
-> 1. Discussion and Demo
-
-## 5. Hands-on with Fargate/ECS using Angular 15 SPA Docker Image on AWS Console
-
-> 1. Discussion and Demo
-
-## 6. Hands-on with Dockerize .NET 7 Minimal API
+## 4. Hands-on with Dockerize .NET 7 Minimal API
 
 > 1. Discussion and Demo
 
 **Path:** [C:\LordKrishna\GitHub\services-school](C:\LordKrishna\GitHub\services-school)
 
-### 6.1. Build and Push the Docker Image to Docker Hub
+### 4.1. Build and Push the Docker Image to Docker Hub
 
 ```dockercmd
 TAG=latest
@@ -129,17 +130,24 @@ docker push $REPOSITORY:$VERSION_TAG
 
 ![Build And Push .NET 7 Minimal API | 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI.PNG)
 
-### 6.2. Execute Docker Image from Docker Hub on Local Machine
+### 4.2. Execute Docker Image from Docker Hub on Local Machine
 
 ```dockercmd
 docker run -d --rm --name School-Api-12feb -p 8010:80 vishipayyallore/school-api:latest
 ```
 
+[http://localhost:8010/api/courses](http://localhost:8010/api/users/U101?name=SriVaru)
+
 ![Execute .NET 7 Minimal API Docker Image| 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI_1.PNG)
 
-## 7. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
+## 5. Hands-on with Fargate/ECS using .NET 7 Minimal API Docker Image on AWS Console
 
 > 1. Discussion and Demo
+> 1. View the `CloudFormation` stack for the same
+
+[http://Yourhost.us-east-1.elb.amazonaws.com/api/courses](http://Yourhost.us-east-1.elb.amazonaws.com/api/courses)
+
+![.NET 7 Minimal API Docker Image on AWS ECS | 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI_2.PNG)
 
 ---
 
@@ -152,6 +160,7 @@ docker run -d --rm --name School-Api-12feb -p 8010:80 vishipayyallore/school-api
 
 ## What is Next? session?
 
-> 1. Creating our own Docker Image
+> 1. Hands-on with Dockerize Angular 15 Single Page Application
 > 1. Pushing it to Docker Hub
-> 1. Working with FarGate and ECS
+> 1. Hands-on with Fargate/ECS using Angular 15 SPA Docker Image on AWS Console
+> 1. Working with Multi Container in ECS using Fargate (`Microservices`)
