@@ -174,8 +174,8 @@ _ = builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
 ```csharp
 _ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbContext, IMapper mapper) =>
 {
-    var coursesResponse = ApiResponseDto<IEnumerable<CourseDto>>.Create(
-            mapper.Map<IEnumerable<CourseDto>>(await schoolDbContext.Courses.ToListAsync())
+    var coursesResponse = ApiResponseDto<IReadOnlyCollection<CourseDto>>.Create(
+            mapper.Map<IReadOnlyCollection<CourseDto>>(await schoolDbContext.Courses.ToListAsync())
         );
     return Results.Ok(coursesResponse);
 });
@@ -198,7 +198,7 @@ _ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoo
 
 ---
 
-## What is Next? session `4` of `9` Sessions on XX Mar, 2023
+## What is Next? session `4` of `9` Sessions on 05 Mar, 2023
 
 > 1. Adding Swagger Dependencies
 > 1. WithTags().WithName().Produces(200).ProducesProblem(500);
