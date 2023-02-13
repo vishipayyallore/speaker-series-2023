@@ -70,6 +70,8 @@
 
 > 1. [https://en.wikipedia.org/wiki/Dependency_injection](https://en.wikipedia.org/wiki/Dependency_injection)
 > 1. [https://en.wikipedia.org/wiki/Inversion_of_control](https://en.wikipedia.org/wiki/Inversion_of_control)
+> 1. [https://dotnettutorials.net/lesson/introduction-to-inversion-of-control](https://dotnettutorials.net/lesson/introduction-to-inversion-of-control)
+> 1. [https://alexalvess.medium.com/dependency-injection-and-inversion-of-control-on-net-core-3136fe98b72](https://alexalvess.medium.com/dependency-injection-and-inversion-of-control-on-net-core-3136fe98b72)
 
 ```csharp
 public static class ServiceCollectionExtensions
@@ -78,15 +80,15 @@ public static class ServiceCollectionExtensions
     {
         _ = services.AddTransient<IFooter, Footer>();
         _ = services.AddTransient<IHeader, Header>();
-        
+
         _ = services.AddTransient<IGenerateNames, GenerateNames>();
-        
-        _ = services.AddTransient<INamesArray, NamesArray.Lib.NamesArray>();
+
+        _ = services.AddTransient<INamesArray, NamesArray>();
         _ = services.AddTransient<IPrintHelper, PrintHelper>();
 
         // IMPORTANT! Register the application entry point
-        _ = services.AddTransient<NamesArrayDemoApp>();
-        
+        _ = services.AddTransient<NamesArrayApp>();
+
         return services;
     }
 }
