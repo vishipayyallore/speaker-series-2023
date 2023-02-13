@@ -101,8 +101,7 @@ public static class ServiceCollectionExtensions
 ```csharp
 app.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbContext) =>
 {
-    var coursesResponse = ApiResponseDto<IEnumerable<Course>>.Create(
-            await schoolDbContext.Courses.ToListAsync());
+    var coursesResponse = ApiResponseDto<IReadOnlyCollection<Course>>.Create(await schoolDbContext.Courses.ToListAsync());
     
     return Results.Ok(coursesResponse);
 });
@@ -131,10 +130,18 @@ app.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbCon
 > 1. Discussion and Demo
 
 ```csharp
-public class CourseDto : CreateCourseDto
+public record CreateCourseDto
 {
-    public Guid Id { get; set; }
+    public Guid CourseId { get; set; }
+
+    public string? Name { get; set; }
+
+    public int Duration { get; set; }
+
+    public string? Description { get; set; }
 }
+
+public record CourseDto(Guid Id) : CreateCourseDto;
 ```
 
 ## 9. Auto Mapper Configuration
