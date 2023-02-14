@@ -70,6 +70,8 @@
 
 > 1. [https://en.wikipedia.org/wiki/Dependency_injection](https://en.wikipedia.org/wiki/Dependency_injection)
 > 1. [https://en.wikipedia.org/wiki/Inversion_of_control](https://en.wikipedia.org/wiki/Inversion_of_control)
+> 1. [https://dotnettutorials.net/lesson/introduction-to-inversion-of-control](https://dotnettutorials.net/lesson/introduction-to-inversion-of-control)
+> 1. [https://alexalvess.medium.com/dependency-injection-and-inversion-of-control-on-net-core-3136fe98b72](https://alexalvess.medium.com/dependency-injection-and-inversion-of-control-on-net-core-3136fe98b72)
 
 ```csharp
 public static class ServiceCollectionExtensions
@@ -78,15 +80,15 @@ public static class ServiceCollectionExtensions
     {
         _ = services.AddTransient<IFooter, Footer>();
         _ = services.AddTransient<IHeader, Header>();
-        
+
         _ = services.AddTransient<IGenerateNames, GenerateNames>();
-        
-        _ = services.AddTransient<INamesArray, NamesArray.Lib.NamesArray>();
+
+        _ = services.AddTransient<INamesArray, NamesArray>();
         _ = services.AddTransient<IPrintHelper, PrintHelper>();
 
         // IMPORTANT! Register the application entry point
-        _ = services.AddTransient<NamesArrayDemoApp>();
-        
+        _ = services.AddTransient<NamesArrayApp>();
+
         return services;
     }
 }
@@ -99,8 +101,7 @@ public static class ServiceCollectionExtensions
 ```csharp
 app.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbContext) =>
 {
-    var coursesResponse = ApiResponseDto<IEnumerable<Course>>.Create(
-            await schoolDbContext.Courses.ToListAsync());
+    var coursesResponse = ApiResponseDto<IReadOnlyCollection<Course>>.Create(await schoolDbContext.Courses.ToListAsync());
     
     return Results.Ok(coursesResponse);
 });
@@ -129,10 +130,18 @@ app.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbCon
 > 1. Discussion and Demo
 
 ```csharp
-public class CourseDto : CreateCourseDto
+public record CreateCourseDto
 {
-    public Guid Id { get; set; }
+    public Guid CourseId { get; set; }
+
+    public string? Name { get; set; }
+
+    public int Duration { get; set; }
+
+    public string? Description { get; set; }
 }
+
+public record CourseDto(Guid Id) : CreateCourseDto;
 ```
 
 ## 9. Auto Mapper Configuration
@@ -165,8 +174,8 @@ _ = builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
 ```csharp
 _ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbContext, IMapper mapper) =>
 {
-    var coursesResponse = ApiResponseDto<IEnumerable<CourseDto>>.Create(
-            mapper.Map<IEnumerable<CourseDto>>(await schoolDbContext.Courses.ToListAsync())
+    var coursesResponse = ApiResponseDto<IReadOnlyCollection<CourseDto>>.Create(
+            mapper.Map<IReadOnlyCollection<CourseDto>>(await schoolDbContext.Courses.ToListAsync())
         );
     return Results.Ok(coursesResponse);
 });
@@ -189,7 +198,7 @@ _ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoo
 
 ---
 
-## What is Next? session `4` of `9` Sessions on XX Mar, 2023
+## What is Next? session `4` of `9` Sessions on 05 Mar, 2023
 
 > 1. Adding Swagger Dependencies
 > 1. WithTags().WithName().Produces(200).ProducesProblem(500);
