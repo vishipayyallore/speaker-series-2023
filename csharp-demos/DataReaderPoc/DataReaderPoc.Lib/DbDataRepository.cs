@@ -6,7 +6,7 @@ namespace DataReaderPoc.Lib
 {
     public class DbDataRepository : IDbDataRepository
     {
-        public DbDataReader GetMoviesList(SqlConnection connection)
+        public async Task<DbDataReader> GetMoviesList(SqlConnection connection)
         {
             ConnectionState originalState = connection.State;
             if (originalState != ConnectionState.Open)
@@ -16,7 +16,7 @@ namespace DataReaderPoc.Lib
                 SqlCommand command = connection.CreateCommand();
                 command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
 
-                return command.ExecuteReader();
+                return await command.ExecuteReaderAsync();
             }
             finally
             {

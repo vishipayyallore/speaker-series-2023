@@ -1,11 +1,13 @@
 using Moq;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace DataReaderPoc.Lib.Tests
 {
     public class DataRepositoryTests
     {
         private readonly DataRepository _dataRepository = new();
+        private readonly DbDataRepository _dbDataRepository = new();
         private readonly Mock<IDbConnection> _connectionMock = new();
         private readonly Mock<IDbCommand> _commandMock = new();
 
@@ -19,6 +21,25 @@ namespace DataReaderPoc.Lib.Tests
 
             var sqlVersionReturned = _dataRepository.GetServerVersion(_connectionMock.Object);
             Assert.Equal(sqlVersion, sqlVersionReturned);
+        }
+
+        [Fact]
+        public void When_Db_GetMoviesList_Returns_Rows()
+        {
+            DataTable MoviesList = GetDummyMoviesList();
+
+            DataSet dataSet = new();
+            dataSet.Tables.Add(MoviesList);
+
+            // _dbDataRepository = new();
+            Mock<SqlConnection> _connectionMock = new();
+            Mock<SqlCommand> _commandMock = new();
+
+            _connectionMock.Setup(x => x.CreateCommand()).Returns(_commandMock.Object);
+            _commandMock.Setup(x => x.ExecuteReader()).Returns(dataSet.CreateDataReader());
+
+            var rowsReturned = _dbDataRepository.GetMoviesList(_connectionMock.Object);
+            Assert.Equal(3, rowsReturned.FieldCount);
         }
 
         [Fact]

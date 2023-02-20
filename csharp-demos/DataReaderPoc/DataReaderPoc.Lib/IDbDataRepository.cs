@@ -5,7 +5,7 @@ namespace DataReaderPoc.Lib
 {
     public interface IDbDataRepository
     {
-        DbDataReader GetMoviesList(SqlConnection connection);
+        Task<DbDataReader> GetMoviesList(SqlConnection connection);
     }
 
 

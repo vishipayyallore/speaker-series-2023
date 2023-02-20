@@ -12,8 +12,8 @@ ForegroundColor = ConsoleColor.Green;
 connection = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=MoviesAPI;Trusted_Connection=True;MultipleActiveResultSets=True");
 WriteLine("SqlClient\r\n{0}", dataRepository.GetServerVersion(connection));
 
-ForegroundColor = ConsoleColor.Red;
-var movies = dbDataRepository.GetMoviesList((SqlConnection)connection);
+ForegroundColor = ConsoleColor.Blue;
+var movies = await dbDataRepository.GetMoviesList((SqlConnection)connection);
 while (movies.Read())
 {
     WriteLine($"{movies.GetInt32(0)} | {movies.GetString(1)} | {movies.GetBoolean(2)}");
