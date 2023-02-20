@@ -6,6 +6,13 @@ namespace DataReaderPoc.Lib
 {
     public class DbDataRepository : IDbDataRepository
     {
+        private readonly ITelemetery _telemetery;
+
+        public DbDataRepository(ITelemetery telemetery)
+        {
+            _telemetery = telemetery ?? throw new ArgumentNullException(nameof(telemetery));
+        }
+
         public async Task<DbDataReader> GetMoviesList(SqlConnection connection)
         {
             ConnectionState originalState = connection.State;
@@ -16,7 +23,7 @@ namespace DataReaderPoc.Lib
                 SqlCommand command = connection.CreateCommand();
                 command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
 
-                return await command.ExecuteReaderAsync();
+                return await _telemetery.GetMoviesList(command);
             }
             finally
             {

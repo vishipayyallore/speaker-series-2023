@@ -5,7 +5,7 @@ using static System.Console;
 
 IDbConnection connection;
 IDataRepository dataRepository = new DataRepository();
-IDbDataRepository dbDataRepository = new DbDataRepository();
+IDbDataRepository dbDataRepository = new DbDataRepository(new Telemetery());
 
 // First use a SqlClient connection
 ForegroundColor = ConsoleColor.Green;
