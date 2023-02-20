@@ -1,5 +1,6 @@
 using Moq;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 
 namespace DataReaderPoc.Lib.Tests
@@ -7,7 +8,8 @@ namespace DataReaderPoc.Lib.Tests
     public class DataRepositoryTests
     {
         private readonly DataRepository _dataRepository = new();
-        // private readonly DbDataRepository _dbDataRepository = new();
+        private Mock<ITelemetery> _mockTelemetery = new();
+        private IDbDataRepository _dbDataRepository;
         private readonly Mock<IDbConnection> _connectionMock = new();
         private readonly Mock<IDbCommand> _commandMock = new();
 
@@ -31,14 +33,13 @@ namespace DataReaderPoc.Lib.Tests
             DataSet dataSet = new();
             dataSet.Tables.Add(MoviesList);
 
-            // _dbDataRepository = new();
-            Mock<SqlConnection> _connectionMock = new();
-            Mock<SqlCommand> _commandMock = new();
+            _dbDataRepository = new DbDataRepository(_mockTelemetery.Object);
 
-            //_connectionMock.Setup(x => x.CreateCommand()).Returns(_commandMock.Object);
-            //_commandMock.Setup(x => x.ExecuteReader()).Returns(dataSet.CreateDataReader());
+            _connectionMock.Setup(x => x.CreateCommand()).Returns(_commandMock.Object);
 
-            //var rowsReturned = _dbDataRepository.GetMoviesList(_connectionMock.Object);
+            _mockTelemetery.Setup(x => x.GetMoviesList(It.IsAny<SqlCommand>())).Returns(Task.FromResult((DbDataReader)dataSet.CreateDataReader()));
+            
+            var rowsReturned = _dbDataRepository.GetMoviesList(_connectionMock.Object);
             //Assert.Equal(3, rowsReturned.FieldCount);
         }
 
@@ -90,4 +91,5 @@ namespace DataReaderPoc.Lib.Tests
             return MoviesList;
         }
     }
+
 }
