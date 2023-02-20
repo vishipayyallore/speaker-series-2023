@@ -5,15 +5,16 @@ using static System.Console;
 
 IDbConnection connection;
 IDataRepository dataRepository = new DataRepository();
+IDbDataRepository dbDataRepository = new DbDataRepository();
 
 // First use a SqlClient connection
 ForegroundColor = ConsoleColor.Green;
 connection = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=MoviesAPI;Trusted_Connection=True;MultipleActiveResultSets=True");
 WriteLine("SqlClient\r\n{0}", dataRepository.GetServerVersion(connection));
 
-ForegroundColor= ConsoleColor.Cyan;
+ForegroundColor = ConsoleColor.Cyan;
 var moviesList = dataRepository.GetAllMovies(connection);
-foreach(var movie in moviesList)
+foreach (var movie in moviesList)
 {
     WriteLine($"{movie.Id} - {movie.Title} - {movie.InTheaters}");
 }

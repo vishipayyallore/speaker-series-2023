@@ -1,33 +1,8 @@
 ﻿using DataReaderPoc.Data;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
 
 namespace DataReaderPoc.Lib
 {
-
-    public class DbDataRepository : IDbDataRepository
-    {
-        public DbDataReader GetMoviesList(SqlConnection connection)
-        {
-            ConnectionState originalState = connection.State;
-            if (originalState != ConnectionState.Open)
-                connection.Open();
-            try
-            {
-                SqlCommand command = connection.CreateCommand();
-                command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
-
-                return command.ExecuteReader();
-            }
-            finally
-            {
-                // Close the connection if that's how we got it
-                // if (originalState == ConnectionState.Closed)
-                //    connection.Close();
-            }
-        }
-    }
 
     public class DataRepository : IDataRepository
     {
@@ -86,10 +61,10 @@ namespace DataReaderPoc.Lib
                 IDbCommand command = connection.CreateCommand();
                 command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
 
-                IDataReader reader =  command.ExecuteReader();
+                IDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    movies.Add(new Movie { Id= reader.GetInt32(0), Title = reader.GetString(1), InTheaters = reader.GetBoolean(2) });
+                    movies.Add(new Movie { Id = reader.GetInt32(0), Title = reader.GetString(1), InTheaters = reader.GetBoolean(2) });
                 }
             }
             finally

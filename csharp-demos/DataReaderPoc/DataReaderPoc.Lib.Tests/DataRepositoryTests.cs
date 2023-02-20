@@ -56,7 +56,7 @@ namespace DataReaderPoc.Lib.Tests
         private static DataTable GetDummyMoviesList()
         {
             DataTable MoviesList = new("MoviesDetails");
-            
+
             //to create the column and schema
             MoviesList.Columns.Add(new DataColumn("Id", typeof(Int32)));
             MoviesList.Columns.Add(new DataColumn("Title", typeof(string)));
