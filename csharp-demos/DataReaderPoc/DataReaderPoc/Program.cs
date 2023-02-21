@@ -5,15 +5,23 @@ using static System.Console;
 
 IDbConnection connection;
 IDataRepository dataRepository = new DataRepository();
+IDbDataRepository dbDataRepository = new DbDataRepository(new Telemetery());
 
 // First use a SqlClient connection
 ForegroundColor = ConsoleColor.Green;
 connection = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Database=MoviesAPI;Trusted_Connection=True;MultipleActiveResultSets=True");
 WriteLine("SqlClient\r\n{0}", dataRepository.GetServerVersion(connection));
 
-ForegroundColor= ConsoleColor.Cyan;
+ForegroundColor = ConsoleColor.Blue;
+var movies = await dbDataRepository.GetMoviesList((SqlConnection)connection);
+while (movies.Read())
+{
+    WriteLine($"{movies.GetInt32(0)} | {movies.GetString(1)} | {movies.GetBoolean(2)}");
+}
+
+ForegroundColor = ConsoleColor.Cyan;
 var moviesList = dataRepository.GetAllMovies(connection);
-foreach(var movie in moviesList)
+foreach (var movie in moviesList)
 {
     WriteLine($"{movie.Id} - {movie.Title} - {movie.InTheaters}");
 }

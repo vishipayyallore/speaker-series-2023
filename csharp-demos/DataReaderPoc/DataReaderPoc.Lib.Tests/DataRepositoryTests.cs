@@ -1,11 +1,15 @@
 using Moq;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 
 namespace DataReaderPoc.Lib.Tests
 {
     public class DataRepositoryTests
     {
         private readonly DataRepository _dataRepository = new();
+        private Mock<ITelemetery> _mockTelemetery = new();
+        private IDbDataRepository _dbDataRepository;
         private readonly Mock<IDbConnection> _connectionMock = new();
         private readonly Mock<IDbCommand> _commandMock = new();
 
@@ -19,6 +23,24 @@ namespace DataReaderPoc.Lib.Tests
 
             var sqlVersionReturned = _dataRepository.GetServerVersion(_connectionMock.Object);
             Assert.Equal(sqlVersion, sqlVersionReturned);
+        }
+
+        [Fact]
+        public void When_Db_GetMoviesList_Returns_Rows()
+        {
+            DataTable MoviesList = GetDummyMoviesList();
+
+            DataSet dataSet = new();
+            dataSet.Tables.Add(MoviesList);
+
+            _dbDataRepository = new DbDataRepository(_mockTelemetery.Object);
+
+            _connectionMock.Setup(x => x.CreateCommand()).Returns(_commandMock.Object);
+
+            _mockTelemetery.Setup(x => x.GetMoviesList(It.IsAny<SqlCommand>())).Returns(Task.FromResult((DbDataReader)dataSet.CreateDataReader()));
+            
+            var rowsReturned = _dbDataRepository.GetMoviesList(_connectionMock.Object);
+            //Assert.Equal(3, rowsReturned.FieldCount);
         }
 
         [Fact]
@@ -56,7 +78,7 @@ namespace DataReaderPoc.Lib.Tests
         private static DataTable GetDummyMoviesList()
         {
             DataTable MoviesList = new("MoviesDetails");
-            
+
             //to create the column and schema
             MoviesList.Columns.Add(new DataColumn("Id", typeof(Int32)));
             MoviesList.Columns.Add(new DataColumn("Title", typeof(string)));
@@ -69,4 +91,5 @@ namespace DataReaderPoc.Lib.Tests
             return MoviesList;
         }
     }
+
 }

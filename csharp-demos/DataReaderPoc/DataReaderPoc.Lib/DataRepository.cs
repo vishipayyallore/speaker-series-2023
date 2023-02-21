@@ -1,9 +1,9 @@
 ﻿using DataReaderPoc.Data;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace DataReaderPoc.Lib
 {
+
     public class DataRepository : IDataRepository
     {
         public string GetServerVersion(IDbConnection connection)
@@ -61,10 +61,10 @@ namespace DataReaderPoc.Lib
                 IDbCommand command = connection.CreateCommand();
                 command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
 
-                IDataReader reader =  command.ExecuteReader();
+                IDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    movies.Add(new Movie { Id= reader.GetInt32(0), Title = reader.GetString(1), InTheaters = reader.GetBoolean(2) });
+                    movies.Add(new Movie { Id = reader.GetInt32(0), Title = reader.GetString(1), InTheaters = reader.GetBoolean(2) });
                 }
             }
             finally
