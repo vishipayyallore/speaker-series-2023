@@ -26,7 +26,8 @@ namespace DataReaderPoc.Lib
                 IDbCommand command = connection.CreateCommand();
                 command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
 
-                return await _telemetery.GetMoviesList(command);
+                var output = await _telemetery.GetMoviesList(command);
+                return output;
             }
             catch (Exception error)
             {
