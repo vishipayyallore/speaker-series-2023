@@ -13,19 +13,23 @@ namespace DataReaderPoc.Lib
             _telemetery = telemetery ?? throw new ArgumentNullException(nameof(telemetery));
         }
 
-        public async Task<DbDataReader> GetMoviesList(IDbConnection connection)
+        public async Task<IDataReader> GetMoviesList(IDbConnection connection)
         {
             ConnectionState originalState = connection.State;
             if (originalState != ConnectionState.Open)
+            {
                 connection.Open();
+            }
+
             try
             {
                 IDbCommand command = connection.CreateCommand();
                 command.CommandText = "SELECT Id, Title, InTheaters FROM Movies;";
 
-                return await _telemetery.GetMoviesList((SqlCommand)command);
+                var output = await _telemetery.GetMoviesList(command);
+                return output;
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 var message = error.Message;
                 throw;

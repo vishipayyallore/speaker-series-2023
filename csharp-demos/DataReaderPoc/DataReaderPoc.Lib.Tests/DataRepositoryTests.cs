@@ -1,3 +1,4 @@
+using DataReaderPoc.Data;
 using Moq;
 using System.Data;
 using System.Data.Common;
@@ -26,7 +27,7 @@ namespace DataReaderPoc.Lib.Tests
         }
 
         [Fact]
-        public void When_Db_GetMoviesList_Returns_Rows()
+        public async void When_Db_GetMoviesList_Returns_Rows()
         {
             DataTable MoviesList = GetDummyMoviesList();
 
@@ -37,10 +38,15 @@ namespace DataReaderPoc.Lib.Tests
 
             _connectionMock.Setup(x => x.CreateCommand()).Returns(_commandMock.Object);
 
-            _mockTelemetery.Setup(x => x.GetMoviesList(It.IsAny<SqlCommand>())).Returns(Task.FromResult((DbDataReader)dataSet.CreateDataReader()));
-            
-            var rowsReturned = _dbDataRepository.GetMoviesList(_connectionMock.Object);
-            //Assert.Equal(3, rowsReturned.FieldCount);
+            _mockTelemetery.Setup(x => x.GetMoviesList(It.IsAny<IDbCommand>())).Returns(Task.FromResult(dataSet.CreateDataReader() as IDataReader));
+
+            var movies = await _dbDataRepository.GetMoviesList(_connectionMock.Object);
+            Assert.Equal(3, movies.FieldCount);
+
+            while (movies.Read())
+            {
+                Console.WriteLine($"{movies.GetInt32(0)} | {movies.GetString(1)} | {movies.GetBoolean(2)}");
+            }
         }
 
         [Fact]
