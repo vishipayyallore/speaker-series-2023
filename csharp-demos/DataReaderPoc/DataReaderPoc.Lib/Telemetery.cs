@@ -1,13 +1,13 @@
-﻿using System.Data.Common;
-using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.Common;
 
 namespace DataReaderPoc.Lib
 {
     public class Telemetery : ITelemetery
     {
-        public async Task<DbDataReader> GetMoviesList(SqlCommand sqlCommand)
+        public async Task<IDataReader> GetMoviesList(IDbCommand sqlCommand)
         {
-            return await sqlCommand.ExecuteReaderAsync();
+            return await ((DbCommand)sqlCommand).ExecuteReaderAsync();
         }
     }
 }

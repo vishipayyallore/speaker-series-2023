@@ -36,9 +36,11 @@ namespace DataReaderPoc.Lib.Tests
             _dbDataRepository = new DbDataRepository(_mockTelemetery.Object);
 
             _connectionMock.Setup(x => x.CreateCommand()).Returns(_commandMock.Object);
+            Mock<IDbCommand> _commandMockV1 = new(); 
+            _commandMockV1.Setup(x => x.ExecuteReader()).Returns(dataSet.CreateDataReader());
 
-            _mockTelemetery.Setup(x => x.GetMoviesList(It.IsAny<SqlCommand>())).Returns(Task.FromResult((DbDataReader)dataSet.CreateDataReader()));
-            
+            // _mockTelemetery.Setup(x => x.GetMoviesList(It.IsAny<DbCommand>())).Returns(Task.FromResult(dataSet.CreateDataReader()));
+
             var rowsReturned = _dbDataRepository.GetMoviesList(_connectionMock.Object);
             //Assert.Equal(3, rowsReturned.FieldCount);
         }
