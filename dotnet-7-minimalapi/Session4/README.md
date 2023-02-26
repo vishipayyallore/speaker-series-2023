@@ -84,15 +84,13 @@
 
 > 1. Discussion and Demo
 
+![Postman Collections | 100x100](./Documentation/Images/PostmanCollections.PNG)
+
 ## 9.GitHub Actions to build API
 
 > 1. Discussion and Demo
 
-## 10. Update Postman Collections to test the API (Environment Variables, and Collections)
-
-> 1. Discussion and Demo
-
-![Postman Collections | 100x100](./Documentation/Images/PostmanCollections.PNG)
+![GitHub Actions | 100x100](./Documentation/Images/SessionFirstLook.PNG)
 
 ---
 
