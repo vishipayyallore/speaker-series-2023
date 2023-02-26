@@ -60,8 +60,11 @@
 
 > 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/openapi?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/openapi?view=aspnetcore-7.0)
 
+![Swagger UI | 100x100](./Documentation/Images/SwaggerUI.PNG)
+
 ```xml
 <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 </ItemGroup>
 ```
@@ -103,21 +106,38 @@ _ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoo
 
 > 1. Discussion and Demo
 
+![Repository Layer | 100x100](./Documentation/Images/Repository.PNG)
+
 ## 4.Creating Business Layer
 
 > 1. Discussion and Demo
+
+![Business Layer | 100x100](./Documentation/Images/BusinessLayer.PNG)
 
 ## 5.Dependency Injection of Swagger, Repository Layer, Business Layer
 
 > 1. Discussion and Demo
 
+```csharp
+_ = services.AddScoped<ICoursesBusiness, CoursesBusiness>();
+_ = services.AddScoped<ICoursesRepository, CoursesRepository>();
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+_ = services.AddEndpointsApiExplorer();
+_ = services.AddSwaggerGen();
+```
+
 ## 6.Move Service Dependencies into a Extension Class
 
 > 1. Discussion and Demo
 
+![Services Collection | 100x100](./Documentation/Images/ServicesCollection.PNG)
+
 ## 7.Move Http Request Pipeline Dependencies into a Extension Class
 
 > 1. Discussion and Demo
+
+![Http Pipeline | 100x100](./Documentation/Images/HttpPipeline.PNG)
 
 ## 8.Update Postman Collections to test the API (Environment Variables, and Collections)
 
