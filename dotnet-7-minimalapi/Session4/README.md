@@ -52,13 +52,52 @@
 
 ---
 
-## 1.Adding Swagger Dependencies
+## 1. Adding Swagger Dependencies
 
 > 1. Discussion and Demo
 
-## 2.WithTags().WithName().Produces(200).ProducesProblem(500)
+**Reference(s):**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/openapi?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/openapi?view=aspnetcore-7.0)
+
+```xml
+<ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+</ItemGroup>
+```
+
+```csharp
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+_ = builder.Services.AddEndpointsApiExplorer();
+_ = builder.Services.AddSwaggerGen();
+```
+
+```csharp
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+```
+
+## 2. WithTags().WithName().Produces(200).ProducesProblem(500)
 
 > 1. Discussion and Demo
+
+```csharp
+_ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbContext, IMapper mapper) =>
+{
+    var coursesResponse = ApiResponseDto<IReadOnlyCollection<CourseDto>>.Create(
+            mapper.Map<IReadOnlyCollection<CourseDto>>(await schoolDbContext.Courses.ToListAsync())
+        );
+    return Results.Ok(coursesResponse);
+})
+  .AllowAnonymous()
+  .WithName("GetAllCourses")
+  .Produces<ApiResponseDto<IReadOnlyCollection<CourseDto>>>(StatusCodes.Status200OK)
+  .ProducesProblem(StatusCodes.Status500InternalServerError)
+  .WithOpenApi();
+```
 
 ## 3.Creating Repository Layer
 
