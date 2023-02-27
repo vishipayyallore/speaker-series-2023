@@ -1,4 +1,4 @@
-# A Microservices Series - Architect, Design, Develop, Deploy, and Maintain
+# Architect, Design, Develop, Deploy, and Maintain Microservices
 
 This is a series of video course on the `Architect, Design, Develop, Deploy, and Maintain Microservices`. The series is divided into **`Multiple seasons`**.
 
@@ -11,7 +11,8 @@ In this series we will learn 1. Minimal API, 2. API with Controller, 3. API Gate
 > 1. Client & Admin Applications
 > 1. API Gateway
 > 1. Azure Services
-> 1. Docker / Docker-Compose
+> 1. Docker
+> 1. Docker-Compose
 > 1. ARM/Biceps
 > 1. IaC
 > 1. Terraform

@@ -209,3 +209,4 @@ _ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoo
 > 1. Move Http Request Pipeline Dependencies into a Extension Class
 > 1. Update Postman Collections to test the API (Environment Variables, and Collections)
 > 1. GitHub Actions to build API
+> 1. SUMMARY / RECAP / Q&A
