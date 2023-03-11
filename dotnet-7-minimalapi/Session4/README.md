@@ -1,10 +1,10 @@
 # Minimal API .NET 7 - Swagger, Repository, Business Layer, and GitHub Actions
 
-## Date Time: 05-Mar-2023 at 09:00 AM IST
+## Date Time: 12-Mar-2023 at 09:00 AM IST
 
 ## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/291609769](https://www.meetup.com/dot-net-learners-house-hyderabad/events/291609769)
 
-## YouTube URL: [https://www.youtube.com/watch?v=7iWWTCZCJBg](https://www.youtube.com/watch?v=7iWWTCZCJBg)
+## YouTube URL: [https://www.youtube.com/watch?v=DWzz4rEsV0M](https://www.youtube.com/watch?v=DWzz4rEsV0M)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -160,7 +160,7 @@ _ = services.AddSwaggerGen();
 
 ---
 
-## What is Next? session `5` of `9` Sessions on 19 Mar, 2023
+## What is Next? session `5` of `5` Sessions on 02 Apr, 2023
 
 > 1. Logging using Serilog
 > 1. Dependency Injection of CORS
