@@ -1,10 +1,10 @@
 # .NET 7 on AWS - Creating Docker Images, Deploying to ECS using Fargate
 
-## Date Time: 12-Feb-2023 at 09:00 AM IST
+## Date Time: 29-Mar-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/291262858](https://www.meetup.com/dot-net-learners-house-hyderabad/events/291262858)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/291609779/](https://www.meetup.com/dot-net-learners-house-hyderabad/events/291609779/)
 
-## YouTube URL: [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
+## YouTube URL: [https://www.youtube.com/watch?v=a8GdSOASGps](https://www.youtube.com/watch?v=a8GdSOASGps)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -34,7 +34,9 @@
 
 ## What are we doing today?
 
-> 1. Quick Recap of the [previous session](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
+> 1. Quick Recap of the `previous sessions`
+>    - [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
+>    - [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
 > 1. Hands-on with Dockerize Static Web Site
 >    - Build and Push the Docker Image to Docker Hub
 >    - Execute Docker Image from Docker Hub on Local Machine
@@ -54,9 +56,29 @@
 
 ---
 
-## 1. Quick Recap of the [previous session](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
+## 1. Quick Recap of the `previous sessions`
+
+> 1. [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
+> 1. [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
+
+## 2. Dockerfile
 
 > 1. Discussion and Demo
+> 1. Dockerfile for Static Web Site
+> 1. Dockerfile for Web API with Multiple Stages
+> 1. Dockerfile for Web App with Multiple Stages
+> 1. Dockerfile for SQL Server
+
+Reference(s):
+
+> 1. [https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose)
+
+```dockercli
+docker run -d \
+-p 8080:80 \
+--name brezyweather-app \
+codewithpraveen/labs-docker-sql:1.0.0
+```
 
 ## 2. Hands-on with Dockerize Static Web Site
 
