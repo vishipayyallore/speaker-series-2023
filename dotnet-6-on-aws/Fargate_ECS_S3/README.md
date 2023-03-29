@@ -38,8 +38,10 @@
 >    - [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
 >    - [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
 > 1. Deploying MS SQL Server on Local Docker
->    - To Be Done
->    - To Be Done
+>    - Creating MS SQL Server 2022 Container on Local Docker
+>    - Connecting to MS SQL Server 2022 hosted on Local Docker using VS Code
+>    - Connecting to MS SQL Server 2022 hosted on Local Docker using Azure Data Studio
+>    - Creating Database, Table, and Data on MS SQL Server 2022 using VS Code / Azure Data Studio / sqlcmd
 > 1. Deploying MS SQL Server on AWS ECS using Fargate
 >    - Create Container, Task Definition, and Service on AWS ECS using AWS Console
 >    - Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
@@ -62,9 +64,71 @@
 > 1. [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
 
 ## 2. Deploying MS SQL Server on Local Docker
->
-> - To Be Done
-> - To Be Done
+
+> 1. Demo and Hands-on
+
+### Creating MS SQL Server 2022 Container on Local Docker
+
+> 1. Demo and Hands-on
+
+```bash
+docker image pull mcr.microsoft.com/mssql/server:2022-latest
+
+docker image ls
+
+docker run -d -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=YourStrongPassword" -p 1433:1433 --name=school-db mcr.microsoft.com/mssql/server:2022-latest
+
+docker exec -it school-db /bin/bash
+
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P YourStrongPassword
+
+QUIT
+exit
+```
+
+![MS SQL Server 2022 Local Docker | 100x100](./Documentation/Images/MSSQLServer2022_LocalDocker.PNG)
+
+![Working with SQLCMD | 100x100](./Documentation/Images/WorkingWith_SQLCMD.PNG)
+
+### Connecting to MS SQL Server 2022 hosted on Local Docker using VS Code
+
+> 1. Demo and Hands-on
+
+![MS Sql Server VS Code | 100x100](./Documentation/Images/MSSqlServer_VSCode.PNG)
+
+### Connecting to MS SQL Server 2022 hosted on Local Docker using Azure Data Studio
+
+> 1. Demo and Hands-on
+
+![MS Sql Server VS Code | 100x100](./Documentation/Images/LocalMSSqlServer_AzureDataStudio.PNG)
+
+### Creating Database, Table, and Data on MS SQL Server 2022 using VS Code / Azure Data Studio / sqlcmd
+
+> 1. Demo and Hands-on
+
+```sql
+CREATE DATABASE School
+GO
+
+SELECT Name FROM sys.databases
+GO
+
+USE School
+GO
+
+CREATE TABLE Students (ID INT, DOJ DATETIME2, Name VARCHAR(100));
+GO
+
+SELECT * FROM Students
+GO
+
+INSERT INTO Students VALUES (1, DATEADD(hh, -1, GETDATE()), 'Sri Varu');
+INSERT INTO Students VALUES (2, DATEADD(hh, -2, GETDATE()), 'AAA');
+GO
+
+SELECT * FROM Students
+GO
+```
 
 ## 3. Deploying MS SQL Server on AWS ECS using Fargate
 
@@ -79,6 +143,10 @@
 ### Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
 
 > 1. Demo and Hands-on
+
+```bash
+Server=YourIPAddress;Database=master;User Id=sa;Password=YourStrongPassword;Encrypt=True;TrustServerCertificate=True;
+```
 
 ![Connecting To MS SQL Server On AWS ECS | 100x100](./Documentation/Images/ConnectingToMSSQLServerOn_AWS_ECS.PNG)
 
