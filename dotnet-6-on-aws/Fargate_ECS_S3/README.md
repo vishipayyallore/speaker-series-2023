@@ -76,11 +76,11 @@ docker image pull mcr.microsoft.com/mssql/server:2022-latest
 
 docker image ls
 
-docker run -d -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Password@123" -p 1433:1433 --name=school-db mcr.microsoft.com/mssql/server:2022-latest
+docker run -d -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=YourStrongPassword" -p 1433:1433 --name=school-db mcr.microsoft.com/mssql/server:2022-latest
 
 docker exec -it school-db /bin/bash
 
-/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P Password@123
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P YourStrongPassword
 
 QUIT
 exit
@@ -143,6 +143,10 @@ GO
 ### Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
 
 > 1. Demo and Hands-on
+
+```bash
+Server=YourIPAddress;Database=master;User Id=sa;Password=YourStrongPassword;Encrypt=True;TrustServerCertificate=True;
+```
 
 ![Connecting To MS SQL Server On AWS ECS | 100x100](./Documentation/Images/ConnectingToMSSQLServerOn_AWS_ECS.PNG)
 
