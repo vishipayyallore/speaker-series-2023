@@ -74,10 +74,6 @@ Reference(s):
 > 1. [https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose)
 
 ```dockercli
-docker run -d \
--p 8080:80 \
---name brezyweather-app \
-codewithpraveen/labs-docker-sql:1.0.0
 ```
 
 ## 2. Hands-on with Dockerize Static Web Site
