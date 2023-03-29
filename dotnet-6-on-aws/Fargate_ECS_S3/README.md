@@ -1,4 +1,4 @@
-# .NET 7 on AWS - Creating Docker Images, Deploying to ECS using Fargate
+# .NET 7 on AWS - MS SQL Server 2022 on AWS ECS using Fargate
 
 ## Date Time: 29-Mar-2023 at 09:00 AM IST
 
@@ -37,14 +37,12 @@
 > 1. Quick Recap of the `previous sessions`
 >    - [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
 >    - [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
-> 1. Hands-on with Dockerize Static Web Site
->    - Build and Push the Docker Image to Docker Hub
->    - Execute Docker Image from Docker Hub on Local Machine
-> 1. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
-> 1. Hands-on with Dockerize .NET 7 Minimal API
->    - Build and Push the Docker Image to Docker Hub
->    - Execute Docker Image from Docker Hub on Local Machine
-> 1. Hands-on with Fargate/ECS using .NET 7 Minimal API Docker Image on AWS Console
+> 1. Deploying MS SQL Server on Local Docker
+>    - To Be Done
+>    - To Be Done
+> 1. Deploying MS SQL Server on AWS ECS using Fargate
+>    - To Be Done
+>    - To Be Done
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -61,111 +59,16 @@
 > 1. [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
 > 1. [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
 
-## 2. Dockerfile
+## 2. Deploying MS SQL Server on Local Docker
+>
+> - To Be Done
+> - To Be Done
 
-> 1. Discussion and Demo
-> 1. Dockerfile for Static Web Site
-> 1. Dockerfile for Web API with Multiple Stages
-> 1. Dockerfile for Web App with Multiple Stages
-> 1. Dockerfile for SQL Server
+## 3. Deploying MS SQL Server on AWS ECS using Fargate
+>
+> - To Be Done
+> - To Be Done
 
-Reference(s):
-
-> 1. [https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose)
-
-```dockercli
-```
-
-## 2. Hands-on with Dockerize Static Web Site
-
-> 1. Discussion and Demo
-
-**Reference(s):**
-
-> 1. [https://www.nginx.com/resources/wiki/start/topics/examples/full/](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
-
-### 2.1. Build and Push the Docker Image to Docker Hub
-
-```dockercmd
-TAG=latest
-VERSION_TAG=$(git log -1 --pretty=format:%h)
-echo "version tag: $VERSION_TAG"
-
-REPOSITORY=vishipayyallore/static-website
-
-docker login
-
-docker build -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG .
-
-docker push $REPOSITORY:$TAG
-docker push $REPOSITORY:$VERSION_TAG
-```
-
-![Build And Push Static Web Site | 100x100](./Documentation/Images/BuildAndPushStaticWebSite.PNG)
-
-### 2.2. Execute Docker Image from Docker Hub on Local Machine
-
-```dockercmd
-docker run -d --rm --name static-website-12feb -p 8009:80 vishipayyallore/static-website:latest
-```
-
-[http://localhost:8009](http://localhost:8009)
-
-![Static Web Site in local docker | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_1.PNG)
-
-## 3. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
-
-> 1. Discussion and Demo
-> 1. View the `CloudFormation` stack for the same
-
-[http://Yourhost.us-east-1.elb.amazonaws.com](http://Yourhost.us-east-1.elb.amazonaws.com)
-
-![Static Web Site in AWS ECS | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_2.PNG)
-
-## 4. Hands-on with Dockerize .NET 7 Minimal API
-
-> 1. Discussion and Demo
-
-**Path:** [C:\LordKrishna\GitHub\services-school](C:\LordKrishna\GitHub\services-school)
-
-### 4.1. Build and Push the Docker Image to Docker Hub
-
-```dockercmd
-TAG=latest
-VERSION_TAG=$(git log -1 --pretty=format:%h)
-echo "version tag: $VERSION_TAG"
-
-# The name of the repository on Docker Hub should be in lowercase
-REPOSITORY=vishipayyallore/school-api
-
-docker login
-
-docker build -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG -f Source/School.Api/Dockerfile .
-
-docker push $REPOSITORY:$TAG
-docker push $REPOSITORY:$VERSION_TAG
-```
-
-![Build And Push .NET 7 Minimal API | 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI.PNG)
-
-### 4.2. Execute Docker Image from Docker Hub on Local Machine
-
-```dockercmd
-docker run -d --rm --name School-Api-12feb -p 8010:80 vishipayyallore/school-api:latest
-```
-
-[http://localhost:8010/api/courses](http://localhost:8010/api/users/U101?name=SriVaru)
-
-![Execute .NET 7 Minimal API Docker Image| 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI_1.PNG)
-
-## 5. Hands-on with Fargate/ECS using .NET 7 Minimal API Docker Image on AWS Console
-
-> 1. Discussion and Demo
-> 1. View the `CloudFormation` stack for the same
-
-[http://Yourhost.us-east-1.elb.amazonaws.com/api/courses](http://Yourhost.us-east-1.elb.amazonaws.com/api/courses)
-
-![.NET 7 Minimal API Docker Image on AWS ECS | 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI_2.PNG)
 
 ---
 
