@@ -94,13 +94,41 @@ exit
 
 > 1. Demo and Hands-on
 
+![MS Sql Server VS Code | 100x100](./Documentation/Images/MSSqlServer_VSCode.PNG)
+
 ### Connecting to MS SQL Server 2022 hosted on Local Docker using Azure Data Studio
 
 > 1. Demo and Hands-on
 
+![MS Sql Server VS Code | 100x100](./Documentation/Images/LocalMSSqlServer_AzureDataStudio.PNG)
+
 ### Creating Database, Table, and Data on MS SQL Server 2022 using VS Code / Azure Data Studio / sqlcmd
 
 > 1. Demo and Hands-on
+
+```sql
+CREATE DATABASE School
+GO
+
+SELECT Name FROM sys.databases
+GO
+
+USE School
+GO
+
+CREATE TABLE Students (ID INT, DOJ DATETIME2, Name VARCHAR(100));
+GO
+
+SELECT * FROM Students
+GO
+
+INSERT INTO Students VALUES (1, DATEADD(hh, -1, GETDATE()), 'Sri Varu');
+INSERT INTO Students VALUES (2, DATEADD(hh, -2, GETDATE()), 'AAA');
+GO
+
+SELECT * FROM Students
+GO
+```
 
 ## 3. Deploying MS SQL Server on AWS ECS using Fargate
 
