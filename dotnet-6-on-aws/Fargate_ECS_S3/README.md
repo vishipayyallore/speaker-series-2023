@@ -1,4 +1,4 @@
-# .NET 7 on AWS - Creating Docker Images, Deploying to ECS using Fargate
+# .NET 7 on AWS - MS SQL Server 2022 on AWS ECS using Fargate
 
 ## Date Time: 29-Mar-2023 at 09:00 AM IST
 
@@ -37,14 +37,14 @@
 > 1. Quick Recap of the `previous sessions`
 >    - [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
 >    - [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
-> 1. Hands-on with Dockerize Static Web Site
->    - Build and Push the Docker Image to Docker Hub
->    - Execute Docker Image from Docker Hub on Local Machine
-> 1. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
-> 1. Hands-on with Dockerize .NET 7 Minimal API
->    - Build and Push the Docker Image to Docker Hub
->    - Execute Docker Image from Docker Hub on Local Machine
-> 1. Hands-on with Fargate/ECS using .NET 7 Minimal API Docker Image on AWS Console
+> 1. Deploying MS SQL Server on Local Docker
+>    - To Be Done
+>    - To Be Done
+> 1. Deploying MS SQL Server on AWS ECS using Fargate
+>    - Create Container, Task Definition, and Service on AWS ECS using AWS Console
+>    - Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
+>    - Creating Database, Table, and Data on MS SQL Server 2022 using Azure Data Studio
+>    - Create Container, Task Definition, and Service on AWS ECS using AWS Console
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -61,115 +61,60 @@
 > 1. [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
 > 1. [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
 
-## 2. Dockerfile
+## 2. Deploying MS SQL Server on Local Docker
+>
+> - To Be Done
+> - To Be Done
 
-> 1. Discussion and Demo
-> 1. Dockerfile for Static Web Site
-> 1. Dockerfile for Web API with Multiple Stages
-> 1. Dockerfile for Web App with Multiple Stages
-> 1. Dockerfile for SQL Server
+## 3. Deploying MS SQL Server on AWS ECS using Fargate
 
-Reference(s):
+> 1. Demo and Hands-on
 
-> 1. [https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose)
+### Create Container, Task Definition, and Service on AWS ECS using AWS Console
 
-```dockercli
-docker run -d \
--p 8080:80 \
---name brezyweather-app \
-codewithpraveen/labs-docker-sql:1.0.0
+> 1. Demo and Hands-on
+
+![Container, Task Definition, and Service on AWS ECS | 100x100](./Documentation/Images/AWS_ECS_Cluster.PNG)
+
+### Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
+
+> 1. Demo and Hands-on
+
+![Connecting To MS SQL Server On AWS ECS | 100x100](./Documentation/Images/ConnectingToMSSQLServerOn_AWS_ECS.PNG)
+
+### Creating Database, Table, and Data on MS SQL Server 2022 using Azure Data Studio
+
+> 1. Demo and Hands-on
+
+```sql
+CREATE DATABASE School
+GO
+
+SELECT Name FROM sys.databases
+GO
+
+USE School
+GO
+
+CREATE TABLE Students (ID INT, DOJ DATETIME2, Name VARCHAR(100));
+GO
+
+SELECT * FROM Students
+GO
+
+INSERT INTO Students VALUES (1, DATEADD(hh, -1, GETDATE()), 'Sri Varu');
+INSERT INTO Students VALUES (2, DATEADD(hh, -2, GETDATE()), 'AAA');
+GO
+
+SELECT * FROM Students
+GO
 ```
 
-## 2. Hands-on with Dockerize Static Web Site
+![Creating Database, Table, and Data on MS SQL Server 2022 | 100x100](./Documentation/Images/CreateDatabaseTableData_DataStudio.PNG)
 
-> 1. Discussion and Demo
+### Accessing MS SQL Server 2022 from AWS ECS
 
-**Reference(s):**
-
-> 1. [https://www.nginx.com/resources/wiki/start/topics/examples/full/](https://www.nginx.com/resources/wiki/start/topics/examples/full/)
-
-### 2.1. Build and Push the Docker Image to Docker Hub
-
-```dockercmd
-TAG=latest
-VERSION_TAG=$(git log -1 --pretty=format:%h)
-echo "version tag: $VERSION_TAG"
-
-REPOSITORY=vishipayyallore/static-website
-
-docker login
-
-docker build -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG .
-
-docker push $REPOSITORY:$TAG
-docker push $REPOSITORY:$VERSION_TAG
-```
-
-![Build And Push Static Web Site | 100x100](./Documentation/Images/BuildAndPushStaticWebSite.PNG)
-
-### 2.2. Execute Docker Image from Docker Hub on Local Machine
-
-```dockercmd
-docker run -d --rm --name static-website-12feb -p 8009:80 vishipayyallore/static-website:latest
-```
-
-[http://localhost:8009](http://localhost:8009)
-
-![Static Web Site in local docker | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_1.PNG)
-
-## 3. Hands-on with Fargate/ECS using Static Web Site Docker Image on AWS Console
-
-> 1. Discussion and Demo
-> 1. View the `CloudFormation` stack for the same
-
-[http://Yourhost.us-east-1.elb.amazonaws.com](http://Yourhost.us-east-1.elb.amazonaws.com)
-
-![Static Web Site in AWS ECS | 100x100](./Documentation/Images/BuildAndPushStaticWebSite_2.PNG)
-
-## 4. Hands-on with Dockerize .NET 7 Minimal API
-
-> 1. Discussion and Demo
-
-**Path:** [C:\LordKrishna\GitHub\services-school](C:\LordKrishna\GitHub\services-school)
-
-### 4.1. Build and Push the Docker Image to Docker Hub
-
-```dockercmd
-TAG=latest
-VERSION_TAG=$(git log -1 --pretty=format:%h)
-echo "version tag: $VERSION_TAG"
-
-# The name of the repository on Docker Hub should be in lowercase
-REPOSITORY=vishipayyallore/school-api
-
-docker login
-
-docker build -t $REPOSITORY:$TAG -t $REPOSITORY:$VERSION_TAG -f Source/School.Api/Dockerfile .
-
-docker push $REPOSITORY:$TAG
-docker push $REPOSITORY:$VERSION_TAG
-```
-
-![Build And Push .NET 7 Minimal API | 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI.PNG)
-
-### 4.2. Execute Docker Image from Docker Hub on Local Machine
-
-```dockercmd
-docker run -d --rm --name School-Api-12feb -p 8010:80 vishipayyallore/school-api:latest
-```
-
-[http://localhost:8010/api/courses](http://localhost:8010/api/users/U101?name=SriVaru)
-
-![Execute .NET 7 Minimal API Docker Image| 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI_1.PNG)
-
-## 5. Hands-on with Fargate/ECS using .NET 7 Minimal API Docker Image on AWS Console
-
-> 1. Discussion and Demo
-> 1. View the `CloudFormation` stack for the same
-
-[http://Yourhost.us-east-1.elb.amazonaws.com/api/courses](http://Yourhost.us-east-1.elb.amazonaws.com/api/courses)
-
-![.NET 7 Minimal API Docker Image on AWS ECS | 100x100](./Documentation/Images/BuildAndPush_NET7MinimalAPI_2.PNG)
+![Accessing MS SQL Server 2022 from AWS ECS | 100x100](./Documentation/Images/MSSQLServer_2022_On_AWS_ECS.PNG)
 
 ---
 
@@ -182,6 +127,7 @@ docker run -d --rm --name School-Api-12feb -p 8010:80 vishipayyallore/school-api
 
 ## What is Next? session?
 
+> 1. Deep dive into Dockerfile
 > 1. Hands-on with Dockerize Angular 15 Single Page Application
 > 1. Pushing it to Docker Hub
 > 1. Hands-on with Fargate/ECS using Angular 15 SPA Docker Image on AWS Console
