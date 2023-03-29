@@ -41,8 +41,10 @@
 >    - To Be Done
 >    - To Be Done
 > 1. Deploying MS SQL Server on AWS ECS using Fargate
->    - To Be Done
->    - To Be Done
+>    - Create Container, Task Definition, and Service on AWS ECS using AWS Console
+>    - Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
+>    - Creating Database, Table, and Data on MS SQL Server 2022 using Azure Data Studio
+>    - Create Container, Task Definition, and Service on AWS ECS using AWS Console
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -65,10 +67,54 @@
 > - To Be Done
 
 ## 3. Deploying MS SQL Server on AWS ECS using Fargate
->
-> - To Be Done
-> - To Be Done
 
+> 1. Demo and Hands-on
+
+### Create Container, Task Definition, and Service on AWS ECS using AWS Console
+
+> 1. Demo and Hands-on
+
+![Container, Task Definition, and Service on AWS ECS | 100x100](./Documentation/Images/AWS_ECS_Cluster.PNG)
+
+### Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
+
+> 1. Demo and Hands-on
+
+![Connecting To MS SQL Server On AWS ECS | 100x100](./Documentation/Images/ConnectingToMSSQLServerOn_AWS_ECS.PNG)
+
+### Creating Database, Table, and Data on MS SQL Server 2022 using Azure Data Studio
+
+> 1. Demo and Hands-on
+
+```sql
+CREATE DATABASE School
+GO
+
+SELECT Name FROM sys.databases
+GO
+
+USE School
+GO
+
+CREATE TABLE Students (ID INT, DOJ DATETIME2, Name VARCHAR(100));
+GO
+
+SELECT * FROM Students
+GO
+
+INSERT INTO Students VALUES (1, DATEADD(hh, -1, GETDATE()), 'Sri Varu');
+INSERT INTO Students VALUES (2, DATEADD(hh, -2, GETDATE()), 'AAA');
+GO
+
+SELECT * FROM Students
+GO
+```
+
+![Creating Database, Table, and Data on MS SQL Server 2022 | 100x100](./Documentation/Images/CreateDatabaseTableData_DataStudio.PNG)
+
+### Accessing MS SQL Server 2022 from AWS ECS
+
+![Accessing MS SQL Server 2022 from AWS ECS | 100x100](./Documentation/Images/MSSQLServer_2022_On_AWS_ECS.PNG)
 
 ---
 
@@ -81,6 +127,7 @@
 
 ## What is Next? session?
 
+> 1. Deep dive into Dockerfile
 > 1. Hands-on with Dockerize Angular 15 Single Page Application
 > 1. Pushing it to Docker Hub
 > 1. Hands-on with Fargate/ECS using Angular 15 SPA Docker Image on AWS Console
