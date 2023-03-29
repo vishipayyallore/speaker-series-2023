@@ -79,7 +79,16 @@ docker image ls
 docker run -d -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Password@123" -p 1433:1433 --name=school-db mcr.microsoft.com/mssql/server:2022-latest
 
 docker exec -it school-db /bin/bash
+
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P Password@123
+
+QUIT
+exit
 ```
+
+![MS SQL Server 2022 Local Docker | 100x100](./Documentation/Images/MSSQLServer2022_LocalDocker.PNG)
+
+![Working with SQLCMD | 100x100](./Documentation/Images/WorkingWith_SQLCMD.PNG)
 
 ### Connecting to MS SQL Server 2022 hosted on Local Docker using VS Code
 
