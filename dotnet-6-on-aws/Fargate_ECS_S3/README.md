@@ -84,6 +84,10 @@ docker exec -it school-db /bin/bash
 
 QUIT
 exit
+
+ls /var/opt/mssql
+
+\\wsl$\docker-desktop-data\data\docker\volumes
 ```
 
 ![MS SQL Server 2022 Local Docker | 100x100](./Documentation/Images/MSSQLServer2022_LocalDocker.PNG)
