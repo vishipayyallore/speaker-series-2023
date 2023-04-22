@@ -143,6 +143,8 @@ docker build --pull --rm -f "./Dockerfile" -t products-web:$(Get-Date -Format yy
 docker run --name products-web --rm -d -p 8888:80 products-web:latest
 ```
 
+![Docker Image Push Ng15 Locally | 100x100](./Documentation/Images/Docker_Image_Build_Ng15_Locally.PNG)
+
 ```powershell
 cd C:\LordKrishna\GitHub\ng-products-web-2023
 
@@ -155,6 +157,8 @@ docker build --pull --rm -f "./Dockerfile" -t vishipayyallore/products-web:$VERS
 docker push vishipayyallore/products-web:latest
 docker push vishipayyallore/products-web:$VERSION_TAG
 ```
+
+![Docker Image Push Ng15 Docker Hub | 100x100](./Documentation/Images/Docker_Image_Push_Ng15_DHub.PNG)
 
 ## 6. Deploying Angular 15 SPA to AWS ECS using Fargate
 
