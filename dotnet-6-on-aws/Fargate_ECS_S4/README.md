@@ -51,7 +51,7 @@
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
-### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/dotnet-6-on-aws/Fargate_ECS_S1) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/dotnet-6-on-aws/Fargate_ECS_S4) of today's session for more details
 
 ---
 
@@ -63,77 +63,63 @@
 
 > 1. [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
 > 1. [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
+> 1. [https://www.youtube.com/watch?v=a8GdSOASGps](https://www.youtube.com/watch?v=a8GdSOASGps)
 
-## 2. Deploying MS SQL Server on Local Docker
+**Hint:**
+
+> 1. Volume Mount Path [\\wsl$\docker-desktop-data\data\docker\volumes](\\wsl$\docker-desktop-data\data\docker\volumes)
+
+## 2. Dockerfile Deep Dive
 
 > 1. Demo and Hands-on
 
-### Creating MS SQL Server 2022 Container on Local Docker
+### Simple Dockerfile
 
-> 1. Demo and Hands-on
+```dockerfile
+# Use an official NGINX image as the base image
+FROM nginx
 
-```bash
-docker image pull mcr.microsoft.com/mssql/server:2022-latest
+# Copy the static files into the NGINX image
+COPY ./www /usr/share/nginx/html
 
-docker image ls
+# Copy the NGINX configuration file into the NGINX image
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
-docker run -d -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=YourStrongPassword" -p 1433:1433 --name=school-db mcr.microsoft.com/mssql/server:2022-latest
+# Expose port 80 for incoming traffic
+EXPOSE 80
 
-docker exec -it school-db /bin/bash
-
-/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P YourStrongPassword
-
-QUIT
-exit
-
-ls /var/opt/mssql
-
-\\wsl$\docker-desktop-data\data\docker\volumes
+# Start NGINX when the container is run
+CMD ["nginx", "-g", "daemon off;"]
 ```
 
-![MS SQL Server 2022 Local Docker | 100x100](./Documentation/Images/MSSQLServer2022_LocalDocker.PNG)
+### Multi Stage Dockerfile
 
-![Working with SQLCMD | 100x100](./Documentation/Images/WorkingWith_SQLCMD.PNG)
+```dockerfile
+### STAGE 1: Build ###
+FROM node:lts-alpine AS build
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
+RUN npm cache clean --force
+RUN npm install
+COPY . .
+RUN npm run build
 
-### Connecting to MS SQL Server 2022 hosted on Local Docker using VS Code
-
-> 1. Demo and Hands-on
-
-![MS Sql Server VS Code | 100x100](./Documentation/Images/MSSqlServer_VSCode.PNG)
-
-### Connecting to MS SQL Server 2022 hosted on Local Docker using Azure Data Studio
-
-> 1. Demo and Hands-on
-
-![MS Sql Server VS Code | 100x100](./Documentation/Images/LocalMSSqlServer_AzureDataStudio.PNG)
-
-### Creating Database, Table, and Data on MS SQL Server 2022 using VS Code / Azure Data Studio / sqlcmd
-
-> 1. Demo and Hands-on
-
-```sql
-CREATE DATABASE School
-GO
-
-SELECT Name FROM sys.databases
-GO
-
-USE School
-GO
-
-CREATE TABLE Students (ID INT, DOJ DATETIME2, Name VARCHAR(100));
-GO
-
-SELECT * FROM Students
-GO
-
-INSERT INTO Students VALUES (1, DATEADD(hh, -1, GETDATE()), 'Sri Varu');
-INSERT INTO Students VALUES (2, DATEADD(hh, -2, GETDATE()), 'AAA');
-GO
-
-SELECT * FROM Students
-GO
+### STAGE 2: Run ###
+FROM nginx:alpine
+# Copy the NGINX configuration file into the NGINX image
+COPY ./nginx.conf /etc/nginx/nginx.conf
+# Expose port 80 for incoming traffic
+EXPOSE 80
+COPY --from=build /usr/src/app/dist/products-web /usr/share/nginx/html
 ```
+
+> 1. Tools to create Dockerfile
+>    - Manual
+>    - VS Code Extension
+>    - VS 2022
+> 1. Dockerizing .NET Web API
+> 1. Dockerizing Angular 15 SPA
+> 1. Deploying Angular 15 SPA to AWS ECS using Fargate
 
 ## 3. Deploying MS SQL Server on AWS ECS using Fargate
 
