@@ -113,67 +113,55 @@ EXPOSE 80
 COPY --from=build /usr/src/app/dist/products-web /usr/share/nginx/html
 ```
 
-> 1. Tools to create Dockerfile
->    - Manual
->    - VS Code Extension
->    - VS 2022
-> 1. Dockerizing .NET Web API
-> 1. Dockerizing Angular 15 SPA
-> 1. Deploying Angular 15 SPA to AWS ECS using Fargate
-
-## 3. Deploying MS SQL Server on AWS ECS using Fargate
+## 3. Tools to create Dockerfile
 
 > 1. Demo and Hands-on
 
-### Create Container, Task Definition, and Service on AWS ECS using AWS Console
+### Manual
 
 > 1. Demo and Hands-on
 
-![Container, Task Definition, and Service on AWS ECS | 100x100](./Documentation/Images/AWS_ECS_Cluster.PNG)
-
-### Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
+### VS Code Extension
 
 > 1. Demo and Hands-on
 
-```bash
-Server=YourIPAddress;Database=master;User Id=sa;Password=YourStrongPassword;Encrypt=True;TrustServerCertificate=True;
+### VS 2022
+
+> 1. Demo and Hands-on
+
+## 4. Dockerizing .NET Web API
+
+> 1. Demo and Hands-on
+
+## 5. Dockerizing Angular 15 SPA
+
+> 1. Demo and Hands-on
+
+```powershell
+docker build --pull --rm -f "./Dockerfile" -t products-web:$(Get-Date -Format yyyyMMddHHmmssfff) -t products-web:latest .
+
+docker run --name products-web --rm -d -p 8888:80 products-web:latest
 ```
 
-![Connecting To MS SQL Server On AWS ECS | 100x100](./Documentation/Images/ConnectingToMSSQLServerOn_AWS_ECS.PNG)
+```powershell
+cd C:\LordKrishna\GitHub\ng-products-web-2023
 
-### Creating Database, Table, and Data on MS SQL Server 2022 using Azure Data Studio
+$VERSION_TAG=$(Get-Date -Format yyyyMMddHHmmssfff)
 
-> 1. Demo and Hands-on
+docker login
 
-```sql
-CREATE DATABASE School
-GO
+docker build --pull --rm -f "./Dockerfile" -t vishipayyallore/products-web:$VERSION_TAG -t vishipayyallore/products-web:latest .
 
-SELECT Name FROM sys.databases
-GO
-
-USE School
-GO
-
-CREATE TABLE Students (ID INT, DOJ DATETIME2, Name VARCHAR(100));
-GO
-
-SELECT * FROM Students
-GO
-
-INSERT INTO Students VALUES (1, DATEADD(hh, -1, GETDATE()), 'Sri Varu');
-INSERT INTO Students VALUES (2, DATEADD(hh, -2, GETDATE()), 'AAA');
-GO
-
-SELECT * FROM Students
-GO
+docker push vishipayyallore/products-web:latest
+docker push vishipayyallore/products-web:$VERSION_TAG
 ```
 
-![Creating Database, Table, and Data on MS SQL Server 2022 | 100x100](./Documentation/Images/CreateDatabaseTableData_DataStudio.PNG)
+## 6. Deploying Angular 15 SPA to AWS ECS using Fargate
 
-### Accessing MS SQL Server 2022 from AWS ECS
+> 1. Demo and Hands-on
+> 1. [http://ec2co-ecsel-14r6g3i5hvddu-630769210.us-east-2.elb.amazonaws.com](http://ec2co-ecsel-14r6g3i5hvddu-630769210.us-east-2.elb.amazonaws.com)
 
-![Accessing MS SQL Server 2022 from AWS ECS | 100x100](./Documentation/Images/MSSQLServer_2022_On_AWS_ECS.PNG)
+![Products Web AWS ECS | 100x100](./Documentation/Images/ProductsWeb_AWSECS.PNG)
 
 ---
 
