@@ -1,10 +1,10 @@
-# .NET 7 on AWS - MS SQL Server 2022 on AWS ECS using Fargate
+# .NET 7 on AWS - Dockerfile Deep Dive, and Containerize .NET 7 and Angular 15 App
 
-## Date Time: 29-Mar-2023 at 09:00 AM IST
+## Date Time: 23-Aar-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/291609779/](https://www.meetup.com/dot-net-learners-house-hyderabad/events/291609779/)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/292399294](https://www.meetup.com/dot-net-learners-house-hyderabad/events/292399294)
 
-## YouTube URL: [https://www.youtube.com/watch?v=a8GdSOASGps](https://www.youtube.com/watch?v=a8GdSOASGps)
+## YouTube URL: [https://www.youtube.com/watch?v=85my3e6IxRU](https://www.youtube.com/watch?v=85my3e6IxRU)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -37,16 +37,17 @@
 > 1. Quick Recap of the `previous sessions`
 >    - [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
 >    - [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
-> 1. Deploying MS SQL Server on Local Docker
->    - Creating MS SQL Server 2022 Container on Local Docker
->    - Connecting to MS SQL Server 2022 hosted on Local Docker using VS Code
->    - Connecting to MS SQL Server 2022 hosted on Local Docker using Azure Data Studio
->    - Creating Database, Table, and Data on MS SQL Server 2022 using VS Code / Azure Data Studio / sqlcmd
-> 1. Deploying MS SQL Server on AWS ECS using Fargate
->    - Create Container, Task Definition, and Service on AWS ECS using AWS Console
->    - Connecting to MS SQL Server 2022 hosted on AWS ECS using Azure Data Studio
->    - Creating Database, Table, and Data on MS SQL Server 2022 using Azure Data Studio
->    - Create Container, Task Definition, and Service on AWS ECS using AWS Console
+>    - [https://www.youtube.com/watch?v=a8GdSOASGps](https://www.youtube.com/watch?v=a8GdSOASGps)
+> 1. Dockerfile Deep Dive
+>    - Simple Dockerfile
+>    - Multi Stage Dockerfile
+> 1. Tools to create Dockerfile
+>    - Manual
+>    - VS Code Extension
+>    - VS 2022
+> 1. Dockerizing .NET Web API
+> 1. Dockerizing Angular 15 SPA
+> 1. Deploying Angular 15 SPA to AWS ECS using Fargate
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
