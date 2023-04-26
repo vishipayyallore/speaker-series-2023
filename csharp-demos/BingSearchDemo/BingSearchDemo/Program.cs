@@ -13,8 +13,8 @@ using System.Xml;
 // This sample uses the Bing Web Search API v7 to retrieve different kinds of media from the web.
 
 // Add your Bing Search V7 subscription key and endpoint to your environment variables
-const string subscriptionKey = "Your_Bing_Key_1";
-const string endpoint = "Your_Bing_Endpoint/v7.0/search";
+string subscriptionKey = Environment.GetEnvironmentVariable("BING_SEARCH_V7_SUBSCRIPTION_KEY")!;
+string endpoint = $"{Environment.GetEnvironmentVariable("BING_SEARCH_V7_ENDPOINT")}/v7.0/search";
 
 const string query = "hummingbirds";
 
@@ -26,7 +26,7 @@ OutputEncoding = Encoding.UTF8;
 WriteLine("Searching the Web for: " + query);
 
 // Construct the URI of the search request
-var uriQuery = endpoint + "?q=" + Uri.EscapeDataString(query);
+var uriQuery = $"{endpoint}?q={Uri.EscapeDataString(query)}";
 
 // Perform the Web request and get the response
 WebRequest request = HttpWebRequest.Create(uriQuery);
