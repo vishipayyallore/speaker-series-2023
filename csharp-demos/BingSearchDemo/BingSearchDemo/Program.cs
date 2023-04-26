@@ -2,13 +2,8 @@
 // Licensed under the MIT License.
 
 using Newtonsoft.Json;
-using System;
-using System.Text;
 using System.Net;
-using System.IO;
-using System.Collections.Generic;
-using static System.Net.WebRequestMethods;
-using System.Xml;
+using System.Text;
 
 // This sample uses the Bing Web Search API v7 to retrieve different kinds of media from the web.
 
@@ -23,7 +18,7 @@ Dictionary<String, String> relevantHeaders = new();
 
 OutputEncoding = Encoding.UTF8;
 
-WriteLine("Searching the Web for: " + query);
+WriteLine($"Searching the Web for: {query}");
 
 // Construct the URI of the search request
 var uriQuery = $"{endpoint}?q={Uri.EscapeDataString(query)}";
@@ -50,4 +45,4 @@ foreach (var header in relevantHeaders)
 
 WriteLine("JSON Response:");
 dynamic parsedJson = JsonConvert.DeserializeObject(json);
-WriteLine(JsonConvert.SerializeObject(parsedJson));
+WriteLine(JsonConvert.SerializeObject(parsedJson, Formatting.Indented));
