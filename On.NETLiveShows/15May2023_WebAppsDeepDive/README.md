@@ -56,104 +56,55 @@
 
 ---
 
-## 1. Adding Swagger Dependencies
+## 1. Create a static HTML web app by using Azure Cloud Shell / Terminal
 
 > 1. Discussion and Demo
+> 1. Walk through of the Html App
+> 1. Login using `az login`
+> 1. Verify the account `az account show -o table`
+> 1. Execute the `az webapp up`
 
-**Reference(s):**
+URL: [https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az_webapp_up](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az_webapp_up)
 
-> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/openapi?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/openapi?view=aspnetcore-7.0)
+```bash
+az login
 
-![Swagger UI | 100x100](./Documentation/Images/SwaggerUI.PNG)
+az account show -o table
 
-```xml
-<ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-</ItemGroup>
+az webapp list-runtimes
+
+az appservice plan create --name plan-simplesite15may2023 --resource-group rg-on-dotnet-dev-001 --location eastus --sku F1
+az webapp up --location eastus --name app-simplesite15may2023 --resource-group rg-on-dotnet-dev-001 --plan plan-simplesite15may2023 --html
+
+az webapp up --location EastUs --resource-group rg-on-dotnet-dev-001 --html
+az webapp up --location EastUs --name app-hellohtml03102022 --resource-group rg-on-dotnet-dev-001 --runtime "dotnet:6"
 ```
 
-```csharp
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-_ = builder.Services.AddEndpointsApiExplorer();
-_ = builder.Services.AddSwaggerGen();
-```
+## 2. Deploy .NET 6 Web API with SQL Server, Redis Cache and Azure Key Vault
 
-```csharp
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-```
+> 1. Discussion and Demo
+> 1. Cache Aside Pattern
+> 1. Azure Key Vault
+> 1. Azure SQL Server
+> 1. Azure Redis Cache
+> 1. Application Insights
+> 1. Debugging Logs / Event Viewer
 
-## 2. WithTags().WithName().Produces(200).ProducesProblem(500)
+## 3. Deploy .NET 7 Minimal API
 
 > 1. Discussion and Demo
 
-```csharp
-_ = group.MapGet(CoursesRoutes.Root, async ([FromServices] SchoolDbContext schoolDbContext, IMapper mapper) =>
-{
-    var coursesResponse = ApiResponseDto<IReadOnlyCollection<CourseDto>>.Create(
-            mapper.Map<IReadOnlyCollection<CourseDto>>(await schoolDbContext.Courses.ToListAsync())
-        );
-    return Results.Ok(coursesResponse);
-})
-  .AllowAnonymous()
-  .WithName("GetAllCourses")
-  .Produces<ApiResponseDto<IReadOnlyCollection<CourseDto>>>(StatusCodes.Status200OK)
-  .ProducesProblem(StatusCodes.Status500InternalServerError)
-  .WithOpenApi();
-```
-
-## 3.Creating Repository Layer
+## 4. Deploy Angular 15 Application
 
 > 1. Discussion and Demo
 
-![Repository Layer | 100x100](./Documentation/Images/Repository.PNG)
-
-## 4.Creating Business Layer
+## 5. Deploying Multi Containers in App Service using Docker Compose
 
 > 1. Discussion and Demo
-
-![Business Layer | 100x100](./Documentation/Images/BusinessLayer.PNG)
-
-## 5.Dependency Injection of Swagger, Repository Layer, Business Layer
-
-> 1. Discussion and Demo
-
-```csharp
-_ = services.AddScoped<ICoursesBusiness, CoursesBusiness>();
-_ = services.AddScoped<ICoursesRepository, CoursesRepository>();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-_ = services.AddEndpointsApiExplorer();
-_ = services.AddSwaggerGen();
-```
-
-## 6.Move Service Dependencies into a Extension Class
-
-> 1. Discussion and Demo
-
-![Services Collection | 100x100](./Documentation/Images/ServicesCollection.PNG)
-
-## 7.Move Http Request Pipeline Dependencies into a Extension Class
-
-> 1. Discussion and Demo
-
-![Http Pipeline | 100x100](./Documentation/Images/HttpPipeline.PNG)
-
-## 8.Update Postman Collections to test the API (Environment Variables, and Collections)
-
-> 1. Discussion and Demo
-
-![Postman Collections | 100x100](./Documentation/Images/PostmanCollections.PNG)
-
-## 9.GitHub Actions to build API
-
-> 1. Discussion and Demo
-
-![GitHub Actions | 100x100](./Documentation/Images/SessionFirstLook.PNG)
+> 1. .NET 6 Web API
+> 1. MongoDB
+> 1. Containerize the .NET 6 Web API
+> 1. Deploy using Docker Compose
 
 ---
 
@@ -163,12 +114,3 @@ _ = services.AddSwaggerGen();
 > 2. Any open queries, I will get back through meetup chat/twitter.
 
 ---
-
-## What is Next? session `5` of `5` Sessions on 02 Apr, 2023
-
-> 1. Logging using Serilog
-> 1. Dependency Injection of CORS
-> 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Local API Endpoint
-> 1. Deploy Minimal API to Azure App Service using VS 2022
-> 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Azure Hosted API Endpoint
-> 1. SUMMARY / RECAP / Q&A
