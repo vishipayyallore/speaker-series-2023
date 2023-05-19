@@ -40,6 +40,8 @@
 >    - What is Azure AI Studio?
 >    - Trying couple of Built-in Completion Examples in Azure AI Studio
 > 1. Tokens Tokens Tokens and more Tokens
+> 1. Trying our own Completion Examples in Azure AI Studio
+> 1. Trying our own Completion Examples using Postman
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -102,6 +104,32 @@
 > 1. [https://platform.openai.com/tokenizer](https://platform.openai.com/tokenizer)
 
 ![Tokenizer | 100x100](./Documentation/Images/Tokenizer.PNG)
+
+## 4. Trying our own Completion Examples in Azure AI Studio
+
+> 1. Discussion and Demo
+
+```text
+Input: Happy Birthday
+
+Input: Give the top 5 food items from South India
+
+Input: Give the top 5 Populated states in India
+
+Inputs: 
+1. Which is the tallest building in the world 
+2. Which is the tallest building in Hyderabad
+
+Input: Tell me two jokes on simple people
+```
+
+![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
+
+## 5. Trying our own Completion Examples using Postman
+
+> 1. Discussion and Demo
+
+![Own Completion Requests Postman| 100x100](./Documentation/Images/OwnCompletionRequest_Postman.PNG)
 
 ---
 
