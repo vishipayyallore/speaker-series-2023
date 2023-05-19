@@ -38,8 +38,8 @@
 >    - Azure OpenAI Service models
 > 1. 30,000 foot view of Azure AI Studio
 >    - What is Azure AI Studio?
->    - Trying couple of Examples in Azure AI Studio
-> 1. Hands-on with FarGate/ECD using `Razor Web App` on AWS Console
+>    - Trying couple of Built-in Completion Examples in Azure AI Studio
+> 1. Tokens Tokens Tokens and more Tokens
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -61,19 +61,19 @@
 > 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits)
 > 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
 
-### What is Azure OpenAI Service?
+### 1.1. What is Azure OpenAI Service?
 
 > 1. Discussion and Demo
 
-### Azure OpenAI Service quotas and limits
+### 1.2. Azure OpenAI Service quotas and limits
 
 > 1. Discussion and Demo
 
-### Azure OpenAI Service models
+### 1.3. Azure OpenAI Service models
 
 > 1. Discussion and Demo
 
-## 2. 30,000 foot view of Azure AI Studio
+## 2. 30,000 foot view of Azure OpenAI
 
 > 1. Discussion and Demo
 
@@ -81,17 +81,27 @@
 
 > 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line)
 
-### What is Azure AI Studio?
+### 2.1. What is Azure AI Studio?
 
 > 1. Discussion and Demo
 
 ![Azure AI Studio | 100x100](./Documentation/Images/AzureAIStudio.PNG)
 
-### Trying couple of Examples in Azure AI Studio
+### 2.2. Trying couple of Built-in Completion Examples in Azure AI Studio
 
 > 1. Discussion and Demo
 
 ![Azure AI Studio Translation | 100x100](./Documentation/Images/AzureAIStudio_Translation.PNG)
+
+## 3. Tokens Tokens Tokens and more Tokens
+
+> 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://platform.openai.com/tokenizer](https://platform.openai.com/tokenizer)
+
+![Tokenizer | 100x100](./Documentation/Images/Tokenizer.PNG)
 
 ---
 
