@@ -38,8 +38,10 @@
 >    - Azure OpenAI Service models
 > 1. 30,000 foot view of Azure AI Studio
 >    - What is Azure AI Studio?
->    - Trying couple of Examples in Azure AI Studio
-> 1. Hands-on with FarGate/ECD using `Razor Web App` on AWS Console
+>    - Trying couple of Built-in Completion Examples in Azure AI Studio
+> 1. Tokens Tokens Tokens and more Tokens
+> 1. Trying our own Completion Examples in Azure AI Studio
+> 1. Trying our own Completion Examples using Postman
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -51,88 +53,83 @@
 
 ---
 
-## 1. 30,000 foot view of Docker
+## 1. 30,000 foot view of Azure OpenAI
 
 > 1. Discussion and Demo
 
 **References:**
 
-> 1. [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
+> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview)
+> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits)
+> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
 
-### Docker architecture
-
-> 1. Discussion and Demo
-
-### The Docker daemon
+### 1.1. What is Azure OpenAI Service?
 
 > 1. Discussion and Demo
 
-### The Docker client
+### 1.2. Azure OpenAI Service quotas and limits
 
 > 1. Discussion and Demo
 
-### The Docker Images
+### 1.3. Azure OpenAI Service models
 
 > 1. Discussion and Demo
 
-### The Docker Containers
-
-> 1. Discussion and Demo
-
-### The Docker Images Registry
-
-> 1. Discussion and Demo
-
-## 2. Hands-on with Docker using `nginx` on Local Machine
+## 2. 30,000 foot view of Azure OpenAI
 
 > 1. Discussion and Demo
 
 **References:**
 
-> 1. [https://hub.docker.com/_/nginx](https://hub.docker.com/_/nginx)
+> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line)
 
-![Local Nginx 1 | 100x100](./Documentation/Images/Local_Nginx_1.PNG)
+### 2.1. What is Azure AI Studio?
 
-![Local Nginx 2 | 100x100](./Documentation/Images/Local_Nginx_2.PNG)
+> 1. Discussion and Demo
 
-## 3. Hands-on with Docker using `Razor Web App` on Local Machine
+![Azure AI Studio | 100x100](./Documentation/Images/AzureAIStudio.PNG)
+
+### 2.2. Trying couple of Built-in Completion Examples in Azure AI Studio
+
+> 1. Discussion and Demo
+
+![Azure AI Studio Translation | 100x100](./Documentation/Images/AzureAIStudio_Translation.PNG)
+
+## 3. Tokens Tokens Tokens and more Tokens
 
 > 1. Discussion and Demo
 
 **References:**
 
-> 1. [https://hub.docker.com/repository/docker/vishipayyallore/booksstoreweb/general](https://hub.docker.com/repository/docker/vishipayyallore/booksstoreweb/general)
+> 1. [https://platform.openai.com/tokenizer](https://platform.openai.com/tokenizer)
 
-![Docker Hub | 100x100](./Documentation/Images/Docker_Hub.PNG)
+![Tokenizer | 100x100](./Documentation/Images/Tokenizer.PNG)
 
-```dockercmd
-docker pull vishipayyallore/booksstoreweb:latest
+## 4. Trying our own Completion Examples in Azure AI Studio
+
+> 1. Discussion and Demo
+
+```text
+Input: Happy Birthday
+
+Input: Give the top 5 food items from South India
+
+Input: Give the top 5 Populated states in India
+
+Inputs: 
+1. Which is the tallest building in the world 
+2. Which is the tallest building in Hyderabad
+
+Input: Tell me two jokes on simple people
 ```
 
-![Docker Pull | 100x100](./Documentation/Images/Docker_Pull.PNG)
+![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
 
-![Local BooksStore 1 | 100x100](./Documentation/Images/Local_BooksStore_1.PNG)
-
-![Local BooksStore 2 | 100x100](./Documentation/Images/Local_BooksStore_2.PNG)
-
-## 4. 30,000 foot view of ECS / Just Enough ECS
+## 5. Trying our own Completion Examples using Postman
 
 > 1. Discussion and Demo
 
-**References:**
-
-> 1. [https://docs.aws.amazon.com/ecs/index.html](https://docs.aws.amazon.com/ecs/index.html)
-> 1. [https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
-
-## Hands-on with FarGate/ECS using `nginx` on AWS Console
-
-> 1. Discussion and Demo
-
-## Hands-on with FarGate/ECS using `Razor Web App` on AWS Console
-
-> 1. Discussion and Demo
-
-![DotNetRazor_AWS_ALB | 100x100](./Documentation/Images/DotNetRazor_AWS_ALB.PNG)
+![Own Completion Requests Postman| 100x100](./Documentation/Images/OwnCompletionRequest_Postman.PNG)
 
 ---
 
