@@ -75,7 +75,7 @@
 
 > 1. Discussion and Demo
 
-## 2. 30,000 foot view of Azure OpenAI
+## 2. 30,000 foot view of Azure AI Studio
 
 > 1. Discussion and Demo
 
