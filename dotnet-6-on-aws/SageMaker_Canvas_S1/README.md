@@ -32,9 +32,17 @@
 
 ## What are we doing today?
 
-> 1. Dockerfile Deep Dive
->    - Simple Dockerfile
->    - Multi Stage Dockerfile
+> 1. 30,000 foot view of Data Science, Machine Learning, Artificial Intelligence, and AutoML
+> 1. 30,000 foot view of Amazon SageMaker
+> 1. 30,000 foot view of Amazon SageMaker Canvas
+> 1. Creating Domains in Amazon SageMaker
+> 1. Launch Amazon SageMaker Canvas
+> 1. Create a S3 Bucket and Upload the Dataset
+> 1. Create a Dataset in Amazon SageMaker Canvas
+> 1. Create new model
+> 1. Build the Model
+> 1. Analyze the Model
+> 1. Predict the Model
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -53,7 +61,7 @@
 > 1. Single Liner on Artificial Intelligence
 > 1. Single Liner on AutoML
 
-Reference(s):
+**Reference(s):**
 
 > 1. [https://aws.amazon.com/machine-learning/what-is-ai/](https://aws.amazon.com/machine-learning/what-is-ai/)
 > 1. [https://aws.amazon.com/what-is/machine-learning/](https://aws.amazon.com/what-is/machine-learning/)
@@ -66,7 +74,7 @@ Reference(s):
 
 > 1. Single Liner on Amazon SageMaker
 
-Reference(s):
+**Reference(s):**
 
 > 1. [https://aws.amazon.com/sagemaker/](https://aws.amazon.com/sagemaker/)
 
@@ -74,9 +82,58 @@ Reference(s):
 
 > 1. Single Liner on Amazon SageMaker Canvas
 
-Reference(s):
+**Reference(s):**
 
 > 1. [https://aws.amazon.com/sagemaker/canvas](https://aws.amazon.com/sagemaker/canvas)
+
+## 4. Creating Domains in Amazon SageMaker
+
+> 1. Discussion and Demo
+
+![SageMaker Domains | 100x100](./Documentation/Images/SageMaker_Domains.PNG)
+
+## 5. Launch Amazon SageMaker Canvas
+
+> 1. Discussion and Demo
+
+![SageMaker Canvas Landing | 100x100](./Documentation/Images/SageMaker_Canvas_Landing.PNG)
+
+## 6. Create a S3 Bucket and Upload the Dataset
+
+> 1. Discussion and Demo
+
+![S3 Bucket DataSet | 100x100](./Documentation/Images/S3Bucket_DataSet.PNG)
+
+## 7. Create a Dataset in Amazon SageMaker Canvas
+
+> 1. Discussion and Demo
+> 1. Browse, import, and join data
+
+![SageMaker DataSet | 100x100](./Documentation/Images/SageMaker_DataSets.PNG)
+
+## 8. Create new model
+
+> 1. Discussion and Demo
+
+![Create New Model | 100x100](./Documentation/Images/CreateNewModel.PNG)
+
+## 9. Build the Model
+
+> 1. Discussion and Demo
+
+![Build Model | 100x100](./Documentation/Images/SageMaker_BuildPhase.PNG)
+
+## 10. Analyze the Model
+
+> 1. Discussion and Demo
+
+![Analyze Model | 100x100](./Documentation/Images/SageMaker_AnalyzePhase.PNG)
+
+## 11. Predict the Model
+
+> 1. Discussion and Demo
+
+![Predict Model | 100x100](./Documentation/Images/SageMaker_PredictPhase.PNG)
 
 ---
 
