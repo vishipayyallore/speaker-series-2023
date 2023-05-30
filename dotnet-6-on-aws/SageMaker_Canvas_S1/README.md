@@ -32,20 +32,9 @@
 
 ## What are we doing today?
 
-> 1. Quick Recap of the `previous sessions`
->    - [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
->    - [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
->    - [https://www.youtube.com/watch?v=a8GdSOASGps](https://www.youtube.com/watch?v=a8GdSOASGps)
 > 1. Dockerfile Deep Dive
 >    - Simple Dockerfile
 >    - Multi Stage Dockerfile
-> 1. Tools to create Dockerfile
->    - Manual
->    - VS Code Extension
->    - VS 2022
-> 1. Dockerizing .NET Web API
-> 1. Dockerizing Angular 15 SPA
-> 1. Deploying Angular 15 SPA to AWS ECS using Fargate
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -57,113 +46,29 @@
 
 ---
 
-## 1. Quick Recap of the `previous sessions`
+## 1. 30,000 foot view of Data Science, Machine Learning, Artificial Intelligence, and AutoML
 
-> 1. [https://www.youtube.com/watch?v=Ydd8FQvHr3Q](https://www.youtube.com/watch?v=Ydd8FQvHr3Q)
-> 1. [https://www.youtube.com/watch?v=2QUHjKsFhYA](https://www.youtube.com/watch?v=2QUHjKsFhYA)
-> 1. [https://www.youtube.com/watch?v=a8GdSOASGps](https://www.youtube.com/watch?v=a8GdSOASGps)
+> 1. Single Liner on Data Science
+> 1. Single Liner on Machine Learning
+> 1. Single Liner on Artificial Intelligence
+> 1. Single Liner on AutoML
 
-**Hint:**
+Reference(s):
 
-> 1. Volume Mount Path [\\wsl$\docker-desktop-data\data\docker\volumes](\\wsl$\docker-desktop-data\data\docker\volumes)
+> 1. [https://aws.amazon.com/machine-learning/what-is-ai/](https://aws.amazon.com/machine-learning/what-is-ai/)
+> 1. [https://aws.amazon.com/what-is/machine-learning/](https://aws.amazon.com/what-is/machine-learning/)
+> 1. [https://aws.amazon.com/what-is/data-science/](https://aws.amazon.com/what-is/data-science/)
+> 1. [https://bigcloud.global/a-beginners-guide-to-data-science-ai-and-ml/](https://bigcloud.global/a-beginners-guide-to-data-science-ai-and-ml/)
+> 1. [https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning#:~:text=Differences%20between%20AI%20and%20ML,-Now%20that%20you&text=While%20artificial%20intelligence%20encompasses%20the,accurate%20results%20by%20identifying%20patterns.](https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning#:~:text=Differences%20between%20AI%20and%20ML,-Now%20that%20you&text=While%20artificial%20intelligence%20encompasses%20the,accurate%20results%20by%20identifying%20patterns.)
+> 1. [https://www.geeksforgeeks.org/what-is-automl-in-machine-learning/](https://www.geeksforgeeks.org/what-is-automl-in-machine-learning/)
 
-## 2. Dockerfile Deep Dive
+## 2. 30,000 foot view of Amazon SageMaker
 
-> 1. Demo and Hands-on
+> 1. Single Liner on Amazon SageMaker
 
-### Simple Dockerfile
+Reference(s):
 
-```dockerfile
-# Use an official NGINX image as the base image
-FROM nginx
-
-# Copy the static files into the NGINX image
-COPY ./www /usr/share/nginx/html
-
-# Copy the NGINX configuration file into the NGINX image
-COPY ./nginx.conf /etc/nginx/nginx.conf
-
-# Expose port 80 for incoming traffic
-EXPOSE 80
-
-# Start NGINX when the container is run
-CMD ["nginx", "-g", "daemon off;"]
-```
-
-### Multi Stage Dockerfile
-
-```dockerfile
-### STAGE 1: Build ###
-FROM node:lts-alpine AS build
-WORKDIR /usr/src/app
-COPY package.json package-lock.json ./
-RUN npm cache clean --force
-RUN npm install
-COPY . .
-RUN npm run build
-
-### STAGE 2: Run ###
-FROM nginx:alpine
-# Copy the NGINX configuration file into the NGINX image
-COPY ./nginx.conf /etc/nginx/nginx.conf
-# Expose port 80 for incoming traffic
-EXPOSE 80
-COPY --from=build /usr/src/app/dist/products-web /usr/share/nginx/html
-```
-
-## 3. Tools to create Dockerfile
-
-> 1. Demo and Hands-on
-
-### Manual
-
-> 1. Demo and Hands-on
-
-### VS Code Extension
-
-> 1. Demo and Hands-on
-
-### VS 2022
-
-> 1. Demo and Hands-on
-
-## 4. Dockerizing .NET Web API
-
-> 1. Demo and Hands-on
-
-## 5. Dockerizing Angular 15 SPA
-
-> 1. Demo and Hands-on
-
-```powershell
-docker build --pull --rm -f "./Dockerfile" -t products-web:$(Get-Date -Format yyyyMMddHHmmssfff) -t products-web:latest .
-
-docker run --name products-web --rm -d -p 8888:80 products-web:latest
-```
-
-![Docker Image Push Ng15 Locally | 100x100](./Documentation/Images/Docker_Image_Build_Ng15_Locally.PNG)
-
-```powershell
-cd C:\LordKrishna\GitHub\ng-products-web-2023
-
-$VERSION_TAG=$(Get-Date -Format yyyyMMddHHmmssfff)
-
-docker login
-
-docker build --pull --rm -f "./Dockerfile" -t vishipayyallore/products-web:$VERSION_TAG -t vishipayyallore/products-web:latest .
-
-docker push vishipayyallore/products-web:latest
-docker push vishipayyallore/products-web:$VERSION_TAG
-```
-
-![Docker Image Push Ng15 Docker Hub | 100x100](./Documentation/Images/Docker_Image_Push_Ng15_DHub.PNG)
-
-## 6. Deploying Angular 15 SPA to AWS ECS using Fargate
-
-> 1. Demo and Hands-on
-> 1. [http://ec2co-ecsel-14r6g3i5hvddu-630769210.us-east-2.elb.amazonaws.com](http://ec2co-ecsel-14r6g3i5hvddu-630769210.us-east-2.elb.amazonaws.com)
-
-![Products Web AWS ECS | 100x100](./Documentation/Images/ProductsWeb_AWSECS.PNG)
+> 1. [https://aws.amazon.com/sagemaker/](https://aws.amazon.com/sagemaker/)
 
 ---
 
