@@ -70,6 +70,14 @@ Reference(s):
 
 > 1. [https://aws.amazon.com/sagemaker/](https://aws.amazon.com/sagemaker/)
 
+## 3. 30,000 foot view of Amazon SageMaker Canvas
+
+> 1. Single Liner on Amazon SageMaker Canvas
+
+Reference(s):
+
+> 1. [https://aws.amazon.com/sagemaker/canvas](https://aws.amazon.com/sagemaker/canvas)
+
 ---
 
 ## SUMMARY / RECAP / Q&A
