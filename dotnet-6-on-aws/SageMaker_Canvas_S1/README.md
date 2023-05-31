@@ -146,8 +146,4 @@
 
 ## What is Next? session?
 
-> 1. Deep dive into Dockerfile
-> 1. Hands-on with Dockerize Angular 15 Single Page Application
-> 1. Pushing it to Docker Hub
-> 1. Hands-on with Fargate/ECS using Angular 15 SPA Docker Image on AWS Console
-> 1. Working with Multi Container in ECS using Fargate (`Microservices`)
+> 1. To be decided
