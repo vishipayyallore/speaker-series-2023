@@ -42,7 +42,7 @@
 > 1. Create new model
 > 1. Build the Model
 > 1. Analyze the Model
-> 1. Predict the Model
+> 1. Perform Prediction using the Model
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -129,7 +129,7 @@
 
 ![Analyze Model | 100x100](./Documentation/Images/SageMaker_AnalyzePhase.PNG)
 
-## 11. Predict the Model
+## 11. Perform Prediction using the Model
 
 > 1. Discussion and Demo
 
