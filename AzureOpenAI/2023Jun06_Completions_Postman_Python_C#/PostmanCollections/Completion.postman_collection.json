@@ -1,0 +1,49 @@
+{
+  "info": {
+    "_postman_id": "d945ca54-4a16-41a2-986a-800581f013ae",
+    "name": "Completion",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24752915"
+  },
+  "item": [
+    {
+      "name": "POST {{OPENAI_API_BASE}}/openai/deployments/{{COMPLETIONS_MODEL}}/completions?api-version={{OPENAI_API_VERSION}}",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "{{OPENAI_API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"prompt\": \"Inputs: \\n1. Which is the tallest building in the world \\n2. Which is the tallest building in Hyderabad\",\r\n  \"temperature\": 1,\r\n  \"top_p\": 0.5,\r\n  \"frequency_penalty\": 0,\r\n  \"presence_penalty\": 0,\r\n  \"max_tokens\": 90,\r\n  \"best_of\": 1,\r\n  \"stop\": null\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{OPENAI_API_BASE}}/openai/deployments/{{COMPLETIONS_MODEL}}/completions?api-version={{OPENAI_API_VERSION}}",
+          "host": ["{{OPENAI_API_BASE}}"],
+          "path": [
+            "openai",
+            "deployments",
+            "{{COMPLETIONS_MODEL}}",
+            "completions"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "{{OPENAI_API_VERSION}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

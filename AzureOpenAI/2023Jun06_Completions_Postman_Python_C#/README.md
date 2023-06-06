@@ -1,10 +1,10 @@
-# Hands-On - Getting Started with Azure OpenAI
+# Azure OpenAI - Completion Requests using Postman, Python, and C# .NET 7
 
-## Date Time: 20-May-2023 at 09:00 AM IST
+## Date Time: 06-Jun-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293318064](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293318064)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293666812/](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293666812/)
 
-## YouTube URL: [https://www.youtube.com/watch?v=Kgz_Qgsgp_Q](https://www.youtube.com/watch?v=Kgz_Qgsgp_Q)
+## YouTube URL: [https://www.youtube.com/watch?v=ppcS_V3rFkg](https://www.youtube.com/watch?v=ppcS_V3rFkg)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -32,16 +32,10 @@
 
 ## What are we doing today?
 
-> 1. 30,000 foot view of Azure OpenAI
->    - What is Azure OpenAI Service?
->    - Azure OpenAI Service quotas and limits
->    - Azure OpenAI Service models
-> 1. 30,000 foot view of Azure AI Studio
->    - What is Azure AI Studio?
->    - Trying couple of Built-in Completion Examples in Azure AI Studio
-> 1. Tokens Tokens Tokens and more Tokens
-> 1. Trying our own Completion Examples in Azure AI Studio
 > 1. Trying our own Completion Examples using Postman
+> 1. Trying our own Completion Examples using Python Notebook
+> 1. Trying our own Completion Examples using Python
+> 1. Trying our own Completion Examples using C# .NET 7
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -53,83 +47,24 @@
 
 ---
 
-## 1. 30,000 foot view of Azure OpenAI
+## 1. Trying our own Completion Examples using Postman
 
 > 1. Discussion and Demo
+> 1. Import the Postman's Evniornment and Collection
+> 1. Update the Environment Variables
+> 1. Completion Request using Postman
 
-**References:**
+### Postman's Collection and Environment
 
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview)
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits)
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
+![Postman's Evniornment| 100x100](./Documentation/Images/Postman_Collection_Environment.PNG)
 
-### 1.1. What is Azure OpenAI Service?
+### Postman's Evniornment
 
-> 1. Discussion and Demo
+![Postman's Evniornment| 100x100](./Documentation/Images/Environments_In_Postman.PNG)
 
-### 1.2. Azure OpenAI Service quotas and limits
+### Completion Request using Postman
 
-> 1. Discussion and Demo
-
-### 1.3. Azure OpenAI Service models
-
-> 1. Discussion and Demo
-
-## 2. 30,000 foot view of Azure AI Studio
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line)
-
-### 2.1. What is Azure AI Studio?
-
-> 1. Discussion and Demo
-
-![Azure AI Studio | 100x100](./Documentation/Images/AzureAIStudio.PNG)
-
-### 2.2. Trying couple of Built-in Completion Examples in Azure AI Studio
-
-> 1. Discussion and Demo
-
-![Azure AI Studio Translation | 100x100](./Documentation/Images/AzureAIStudio_Translation.PNG)
-
-## 3. Tokens Tokens Tokens and more Tokens
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://platform.openai.com/tokenizer](https://platform.openai.com/tokenizer)
-
-![Tokenizer | 100x100](./Documentation/Images/Tokenizer.PNG)
-
-## 4. Trying our own Completion Examples in Azure AI Studio
-
-> 1. Discussion and Demo
-
-```text
-Input: Happy Birthday
-
-Input: Give the top 5 food items from South India
-
-Input: Give the top 5 Populated states in India
-
-Inputs: 
-1. Which is the tallest building in the world 
-2. Which is the tallest building in Hyderabad
-
-Input: Tell me two jokes on simple people
-```
-
-![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
-
-## 5. Trying our own Completion Examples using Postman
-
-> 1. Discussion and Demo
-
-![Own Completion Requests Postman| 100x100](./Documentation/Images/OwnCompletionRequest_Postman.PNG)
+![Completion Request using Postman| 100x100](./Documentation/Images/Completion_Request_using_Postman.PNG)
 
 ---
 
