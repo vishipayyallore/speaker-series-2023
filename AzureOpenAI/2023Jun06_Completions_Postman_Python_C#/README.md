@@ -54,17 +54,97 @@
 > 1. Update the Environment Variables
 > 1. Completion Request using Postman
 
-### Postman's Collection and Environment
+### 1.1. Postman's Collection and Environment
 
 ![Postman's Evniornment| 100x100](./Documentation/Images/Postman_Collection_Environment.PNG)
 
-### Postman's Evniornment
+### 1.2. Postman's Evniornment
 
 ![Postman's Evniornment| 100x100](./Documentation/Images/Environments_In_Postman.PNG)
 
-### Completion Request using Postman
+### 1.3. Completion Request using Postman
 
 ![Completion Request using Postman| 100x100](./Documentation/Images/Completion_Request_using_Postman.PNG)
+
+## 2. Trying our own Completion Examples using Python Notebook
+
+> 1. Discussion and Demo
+> 1. Install `openai`, `requests`, and `python-dotenv` packages
+> 1. Create a .env file and update the Environment Variables
+> 1. Completion Request using Python Notebook
+> 1. Execute the Python Notebook
+
+**Reference(s):**
+
+> 1. [https://github.com/openai/openai-python](https://github.com/openai/openai-python)
+> 1. [https://pypi.org/project/openai/](https://pypi.org/project/openai/)
+> 1. [https://pypi.org/project/requests/](https://pypi.org/project/requests/)
+> 1. [https://pypi.org/project/python-dotenv/](https://pypi.org/project/python-dotenv/)
+
+### 2.1. Install `openai`, `requests` packages
+
+```powershell
+pip install openai
+pip install requests
+pip install python-dotenv
+```
+
+### 2.2. Create a .env file and update the Environment Variables
+
+```text
+COMPLETIONS_MODEL="text-davinci-003-dev-001"
+OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
+OPENAI_API_VERSION="2022-12-01"
+OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
+```
+
+### 2.3. Execute the Python Notebook
+
+![Completion Request using Python Notebook| 100x100](./Documentation/Images/Completion_Request_using_Ipynb.PNG)
+
+## 3. Trying our own Completion Examples using Python
+
+> 1. Discussion and Demo
+> 1. Create `Virtual Environment`
+> 1. Install `openai`, `requests`, and `python-dotenv` packages
+> 1. Create a .env file and update the Environment Variables
+> 1. Completion Request using Python
+> 1. Execute the Python Script
+
+**Reference(s):**
+
+> 1. [https://pypi.org/project/virtualenv/](https://pypi.org/project/virtualenv/)
+
+### 3.1. Virtual Environment
+
+```bash
+pip install virtualenv
+python -m venv completiondemovenv
+completiondemovenv/Scripts/activate
+pip freeze
+deactivate
+```
+
+![Virtual Environment| 100x100](./Documentation/Images/VirtualEnvironment_Creation.PNG)
+
+### 3.2. Install `openai`, `requests` packages
+
+```powershell
+pip install openai
+pip install requests
+pip install python-dotenv
+```
+
+![Packages inside VEnv| 100x100](./Documentation/Images/Packages_Inside_VEnv.PNG)
+
+### 3.3. Create a .env file and update the Environment Variables
+
+```text
+COMPLETIONS_MODEL="text-davinci-003-dev-001"
+OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
+OPENAI_API_VERSION="2022-12-01"
+OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
+```
 
 ---
 
