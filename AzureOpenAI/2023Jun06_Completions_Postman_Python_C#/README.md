@@ -1,10 +1,10 @@
-# Hands-On - Getting Started with Azure OpenAI
+# Azure OpenAI - Completion Requests using Postman, Python, and C# .NET 7
 
-## Date Time: 20-May-2023 at 09:00 AM IST
+## Date Time: 06-Jun-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293318064](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293318064)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293666812/](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293666812/)
 
-## YouTube URL: [https://www.youtube.com/watch?v=Kgz_Qgsgp_Q](https://www.youtube.com/watch?v=Kgz_Qgsgp_Q)
+## YouTube URL: [https://www.youtube.com/watch?v=ppcS_V3rFkg](https://www.youtube.com/watch?v=ppcS_V3rFkg)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -32,16 +32,10 @@
 
 ## What are we doing today?
 
-> 1. 30,000 foot view of Azure OpenAI
->    - What is Azure OpenAI Service?
->    - Azure OpenAI Service quotas and limits
->    - Azure OpenAI Service models
-> 1. 30,000 foot view of Azure AI Studio
->    - What is Azure AI Studio?
->    - Trying couple of Built-in Completion Examples in Azure AI Studio
-> 1. Tokens Tokens Tokens and more Tokens
-> 1. Trying our own Completion Examples in Azure AI Studio
 > 1. Trying our own Completion Examples using Postman
+> 1. Trying our own Completion Examples using Python Notebook
+> 1. Trying our own Completion Examples using Python
+> 1. Trying our own Completion Examples using C# .NET 7
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -53,83 +47,110 @@
 
 ---
 
-## 1. 30,000 foot view of Azure OpenAI
+## 1. Trying our own Completion Examples using Postman
 
 > 1. Discussion and Demo
+> 1. Import the Postman's Evniornment and Collection
+> 1. Update the Environment Variables
+> 1. Completion Request using Postman
 
-**References:**
+### 1.1. Postman's Collection and Environment
 
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview)
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits)
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
+![Postman's Evniornment| 100x100](./Documentation/Images/Postman_Collection_Environment.PNG)
 
-### 1.1. What is Azure OpenAI Service?
+### 1.2. Postman's Evniornment
 
-> 1. Discussion and Demo
+![Postman's Evniornment| 100x100](./Documentation/Images/Environments_In_Postman.PNG)
 
-### 1.2. Azure OpenAI Service quotas and limits
+### 1.3. Completion Request using Postman
 
-> 1. Discussion and Demo
+![Completion Request using Postman| 100x100](./Documentation/Images/Completion_Request_using_Postman.PNG)
 
-### 1.3. Azure OpenAI Service models
-
-> 1. Discussion and Demo
-
-## 2. 30,000 foot view of Azure AI Studio
+## 2. Trying our own Completion Examples using Python Notebook
 
 > 1. Discussion and Demo
+> 1. Install `openai`, `requests`, and `python-dotenv` packages
+> 1. Create a .env file and update the Environment Variables
+> 1. Completion Request using Python Notebook
+> 1. Execute the Python Notebook
 
-**References:**
+**Reference(s):**
 
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line)
+> 1. [https://github.com/openai/openai-python](https://github.com/openai/openai-python)
+> 1. [https://pypi.org/project/openai/](https://pypi.org/project/openai/)
+> 1. [https://pypi.org/project/requests/](https://pypi.org/project/requests/)
+> 1. [https://pypi.org/project/python-dotenv/](https://pypi.org/project/python-dotenv/)
 
-### 2.1. What is Azure AI Studio?
+### 2.1. Install `openai`, `requests` packages
 
-> 1. Discussion and Demo
-
-![Azure AI Studio | 100x100](./Documentation/Images/AzureAIStudio.PNG)
-
-### 2.2. Trying couple of Built-in Completion Examples in Azure AI Studio
-
-> 1. Discussion and Demo
-
-![Azure AI Studio Translation | 100x100](./Documentation/Images/AzureAIStudio_Translation.PNG)
-
-## 3. Tokens Tokens Tokens and more Tokens
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://platform.openai.com/tokenizer](https://platform.openai.com/tokenizer)
-
-![Tokenizer | 100x100](./Documentation/Images/Tokenizer.PNG)
-
-## 4. Trying our own Completion Examples in Azure AI Studio
-
-> 1. Discussion and Demo
-
-```text
-Input: Happy Birthday
-
-Input: Give the top 5 food items from South India
-
-Input: Give the top 5 Populated states in India
-
-Inputs: 
-1. Which is the tallest building in the world 
-2. Which is the tallest building in Hyderabad
-
-Input: Tell me two jokes on simple people
+```powershell
+pip install openai
+pip install requests
+pip install python-dotenv
 ```
 
-![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
+### 2.2. Create a .env file and update the Environment Variables
 
-## 5. Trying our own Completion Examples using Postman
+```text
+COMPLETIONS_MODEL="text-davinci-003-dev-001"
+OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
+OPENAI_API_VERSION="2022-12-01"
+OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
+```
+
+### 2.3. Execute the Python Notebook
+
+![Completion Request using Python Notebook| 100x100](./Documentation/Images/Completion_Request_using_Ipynb.PNG)
+
+## 3. Trying our own Completion Examples using Python
+
+> 1. Discussion and Demo
+> 1. Create `Virtual Environment`
+> 1. Install `openai`, `requests`, and `python-dotenv` packages
+> 1. Create a .env file and update the Environment Variables
+> 1. Completion Request using Python
+> 1. Execute the Python Script
+
+**Reference(s):**
+
+> 1. [https://pypi.org/project/virtualenv/](https://pypi.org/project/virtualenv/)
+
+### 3.1. Virtual Environment
+
+```bash
+pip install virtualenv
+python -m venv completiondemovenv
+completiondemovenv/Scripts/activate
+pip freeze
+deactivate
+```
+
+![Virtual Environment| 100x100](./Documentation/Images/VirtualEnvironment_Creation.PNG)
+
+### 3.2. Install `openai`, `requests` packages
+
+```powershell
+pip install openai
+pip install requests
+pip install python-dotenv
+```
+
+![Packages inside VEnv| 100x100](./Documentation/Images/Packages_Inside_VEnv.PNG)
+
+### 3.3. Create a .env file and update the Environment Variables
+
+```text
+COMPLETIONS_MODEL="text-davinci-003-dev-001"
+OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
+OPENAI_API_VERSION="2022-12-01"
+OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
+```
+
+### 3.4. Execute the Python Script
 
 > 1. Discussion and Demo
 
-![Own Completion Requests Postman| 100x100](./Documentation/Images/OwnCompletionRequest_Postman.PNG)
+![Completion Request using Python | 100x100](./Documentation/Images/Completion_Request_using_Py.PNG)
 
 ---
 

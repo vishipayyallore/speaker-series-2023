@@ -1,0 +1,22 @@
+import requests
+import time
+import os
+api_base = 'https://azure-openai-dev-001.openai.azure.com/'
+api_key = os.getenv("OPENAI_API_KEY")
+api_version = '2023-06-01-preview'
+url = "{}openai/images/generations:submit?api-version={}".format(api_base, api_version)
+headers= { "api-key": api_key, "Content-Type": "application/json" }
+body = {
+    "prompt": "USER_PROMPT_GOES_HERE",
+    "n": 2,
+    "resolution": "1024x1024"
+}
+submission = requests.post(url, headers=headers, json=body)
+operation_location = submission.headers['Operation-Location']
+retry_after = submission.headers['Retry-after']
+status = ""
+while (status != "Succeeded"):
+    time.sleep(int(retry_after))
+    response = requests.get(operation_location, headers=headers)
+    status = response.json()['status']
+image_url = response.json()['result']['contentUrl']
