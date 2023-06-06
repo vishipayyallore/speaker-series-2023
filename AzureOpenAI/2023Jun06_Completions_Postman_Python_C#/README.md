@@ -146,6 +146,12 @@ OPENAI_API_VERSION="2022-12-01"
 OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
 ```
 
+### 3.4. Execute the Python Script
+
+> 1. Discussion and Demo
+
+![Completion Request using Python | 100x100](./Documentation/Images/Completion_Request_using_Py.PNG)
+
 ---
 
 ## SUMMARY / RECAP / Q&A
