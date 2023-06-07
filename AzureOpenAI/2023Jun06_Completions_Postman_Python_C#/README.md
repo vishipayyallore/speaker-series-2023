@@ -152,6 +152,34 @@ OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
 
 ![Completion Request using Python | 100x100](./Documentation/Images/Completion_Request_using_Py.PNG)
 
+## 4. Trying our own Completion Examples using C# .NET 7
+
+> 1. Discussion and Demo
+> 1. Create a .NET 7 Console Application
+> 1. Add below mentioned NuGet Packages
+> 1. Add appsettings.json/secrets.json and update the Environment Variables
+> 1. Completion Request using C# .NET 7
+> 1. Execute the C# .NET 7 Console Application
+
+```xml
+  <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+  </ItemGroup>
+```
+
+```json
+{
+  "CompletionConfiguration": {
+    "ModelDeploymentName": "text-davinci-003-dev-001",
+    "OPEN_API_EndPoint": "https://azure-openai-dev-001.openai.azure.com/",
+    "OPEN_API_Key": "9a9b9c9a9b9c9a9b9c9a9b9c9a9b9c"
+  }
+}
+```
+
 ---
 
 ## SUMMARY / RECAP / Q&A
