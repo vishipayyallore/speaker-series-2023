@@ -45,11 +45,15 @@ Response<Completions> completionsResponse = await client.GetCompletionsAsync(
     });
 Completions completions = completionsResponse.Value;
 
+ForegroundColor = ConsoleColor.Yellow;
+
 int index = 0;
 foreach (string? text in completions?.Choices?.Select(c => c.Text)?.ToArray()!)
 {
     WriteLine($"{++index}. {text}");
 }
+
+ResetColor();   
 
 WriteLine("\n\nPress any key ...");
 ReadKey();
