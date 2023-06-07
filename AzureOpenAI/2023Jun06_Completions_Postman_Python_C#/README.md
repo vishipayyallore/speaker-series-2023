@@ -180,6 +180,10 @@ OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
 }
 ```
 
+### Completion Request using C# .NET 7
+
+![Completion Request using C# | 100x100](./Documentation/Images/Completion_Request_using_C%23.PNG)
+
 ---
 
 ## SUMMARY / RECAP / Q&A
