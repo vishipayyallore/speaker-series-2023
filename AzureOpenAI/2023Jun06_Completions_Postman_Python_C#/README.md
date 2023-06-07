@@ -1,6 +1,6 @@
 # Azure OpenAI - Completion Requests using Postman, Python, and C# .NET 7
 
-## Date Time: 06-Jun-2023 at 09:00 AM IST
+## Date Time: 07-Jun-2023 at 09:00 AM IST
 
 ## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293666812/](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293666812/)
 
@@ -152,6 +152,38 @@ OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
 
 ![Completion Request using Python | 100x100](./Documentation/Images/Completion_Request_using_Py.PNG)
 
+## 4. Trying our own Completion Examples using C# .NET 7
+
+> 1. Discussion and Demo
+> 1. Create a .NET 7 Console Application
+> 1. Add below mentioned NuGet Packages
+> 1. Add appsettings.json/secrets.json and update the Environment Variables
+> 1. Completion Request using C# .NET 7
+> 1. Execute the C# .NET 7 Console Application
+
+```xml
+  <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+  </ItemGroup>
+```
+
+```json
+{
+  "CompletionConfiguration": {
+    "ModelDeploymentName": "text-davinci-003-dev-001",
+    "OPEN_API_EndPoint": "https://azure-openai-dev-001.openai.azure.com/",
+    "OPEN_API_Key": "9a9b9c9a9b9c9a9b9c9a9b9c9a9b9c"
+  }
+}
+```
+
+### Completion Request using C# .NET 7
+
+![Completion Request using C# | 100x100](./Documentation/Images/Completion_Request_using_C%23.PNG)
+
 ---
 
 ## SUMMARY / RECAP / Q&A
@@ -163,6 +195,5 @@ OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
 
 ## What is Next? session?
 
-> 1. Creating our own Docker Image
-> 1. Pushing it to Docker Hub
-> 1. Working with FarGate and ECS
+> 1. Getting Started with Azure OpenAI - Prompt Engineering
+> 1. Mini Project - Azure OpenAI - Prompt Engineering
