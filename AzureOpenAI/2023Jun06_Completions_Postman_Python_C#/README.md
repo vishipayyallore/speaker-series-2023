@@ -1,6 +1,6 @@
 # Azure OpenAI - Completion Requests using Postman, Python, and C# .NET 7
 
-## Date Time: 06-Jun-2023 at 09:00 AM IST
+## Date Time: 07-Jun-2023 at 09:00 AM IST
 
 ## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293666812/](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293666812/)
 
@@ -163,6 +163,5 @@ OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
 
 ## What is Next? session?
 
-> 1. Creating our own Docker Image
-> 1. Pushing it to Docker Hub
-> 1. Working with FarGate and ECS
+> 1. Getting Started with Azure OpenAI - Prompt Engineering
+> 1. Mini Project - Azure OpenAI - Prompt Engineering
