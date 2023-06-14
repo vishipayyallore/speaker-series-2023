@@ -3,13 +3,13 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 
 //Update the blobServiceEndpoint value that you recorded previously in this lab.   
-const string blobServiceEndpoint = "https://mediastorelab03.blob.core.windows.net/";
+const string blobServiceEndpoint = "https://Storage_Account_Name.blob.core.windows.net/";
 
 //Update the storageAccountName value that you recorded previously in this lab.
-const string storageAccountName = "mediastorelab03";
+const string storageAccountName = "Storage_Account_Name";
 
 //Update the storageAccountKey value that you recorded previously in this lab.
-const string storageAccountKey = "DI7I58/Q5ugHtYzvDgPBbxSoQGZwBCaYjiyjuUp+KPy8BvHnZh1A4cKMF0Zc+FDI+K94Fqo8x6E1+AStUmYfJg==";
+const string storageAccountKey = "Storage_Account_Key";
 
 //The following line of code to create a new instance of the StorageSharedKeyCredential class by using the storageAccountName and storageAccountKey constants as constructor parameters
 StorageSharedKeyCredential accountCredentials = new(storageAccountName, storageAccountKey);
