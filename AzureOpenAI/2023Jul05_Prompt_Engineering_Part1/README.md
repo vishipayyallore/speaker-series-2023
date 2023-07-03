@@ -32,10 +32,8 @@
 
 ## What are we doing today?
 
-> 1. Trying our own Completion Examples using Postman
-> 1. Trying our own Completion Examples using Python Notebook
-> 1. Trying our own Completion Examples using Python
-> 1. Trying our own Completion Examples using C# .NET 7
+> 1. What is Prompt Engineering ?
+> 1. We will focus on Text based Prompt Engineering
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
