@@ -33,7 +33,20 @@
 ## What are we doing today?
 
 > 1. What is Prompt Engineering ?
-> 1. We will focus on Text based Prompt Engineering
+>    - We will focus on Text based Prompt Engineering
+> 1. Understanding Prompts: Inputs, Outputs, and Parameters
+>    - Elements of a Good Prompt
+>    - Evaluating and Refining Prompts: An Iterative Process
+> 1. Crafting Simple Prompts: Techniques and Best Practices
+>    - Controlling the Output
+> 1. Basic Principles for Interacting with AI
+> 1. Role Prompting and Nested Prompts
+> 1. Prompting for Classification
+>    - Text Translation Prompts
+>    - Summarization Prompts
+>    - Question Answering Prompts
+>    - Sentiment Analysis Prompts
+>    - Data Extraction Prompts
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
