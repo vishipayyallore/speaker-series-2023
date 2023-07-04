@@ -62,13 +62,11 @@
 
 ## 1. What is Prompt Engineering ?
 
-> 1. Discussion and Demo
 > 1. Prompt engineering is a technique used to shape the behavior of language models by carefully crafting prompts or instructions provided to the models. It involves designing prompts that align with specific tasks, providing relevant context, and utilizing techniques like priming, fine-tuning, or conditioning to achieve desired responses from the models. By engineering prompts effectively, the output quality and relevance of language models can be enhanced.
 > 1. Prompt engineering is the process of carefully crafting and refining the prompts given to language models in order to achieve desired outputs. It involves designing prompts that provide clear instructions, specifying the desired format or context, and employing techniques like example-based prompting to influence the model's responses. Effective prompt engineering can help guide the language model's generation and improve the quality and relevance of the generated outputs.
 > 1. Prompt engineering involves formulating and designing precise instructions or queries to guide language models' outputs. It focuses on optimizing prompts to elicit desired responses and improve the quality and relevance of the model-generated content.
 > 1. Prompt engineering is the practice of refining and optimizing the input prompts given to language models to influence their generated outputs. By carefully designing and tailoring the prompts, developers can guide the model's behavior and improve the relevance, accuracy, and desired characteristics of the generated text.
 >    - We will focus on Text based Prompt Engineering
->    - Elements of a Good Prompt
 
 **Reference(s):**
 
@@ -168,7 +166,7 @@ Answer:
 
 ![Iterative Process 2 | 100x100](./Documentation/Images/Iterative_2.PNG)
 
-## X. Promts with Parameters customization
+## X. Prompts with Parameters customization
 
 > 1. Please refer to the Prompt text and parameters below
 > 1. Demo with different parameters
