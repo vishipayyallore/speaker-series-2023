@@ -33,22 +33,12 @@
 ## What are we doing today?
 
 > 1. What is Prompt Engineering ?
->    - We will focus on Text based Prompt Engineering
->    - Elements of a Good Prompt
-> 1. Evaluating and Refining Prompts: An Iterative Process
-> 1. Understanding Prompts: Instructions, Inputs, Outputs, and Parameters
->    - Instructions
->    - Inputs
->    - Outputs
->    - Parameters (Temparature, Max Tokens, Top P, Frequency Penalty, Presence Penalty, Stop)
 > 1. Techniques and Best Practices for Prompt Engineering
->    - Controlling the Output
-> 1. Basic Principles for Interacting with AI Models
-> 1. Prompting for Classification
->    - Text Translation Prompts
->    - Summarization Prompts
->    - Sentiment Analysis Prompts
->    - Data Extraction Prompts
+> 1. Understanding Prompts: Instructions, Inputs, Outputs, and Parameters
+> 1. Instructions, and Inputs for Interacting with AI Models
+> 1. Prompts with Parameters customization
+> 1. Controlling the output with `Desired Format`
+> 1. Additional Prompts if time permits
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -271,6 +261,10 @@ Output:
 
 > 1. Prompt Engineering Part 2
 > 1. Question Answering Prompts
+> 1. Text Translation Prompts
+> 1. Summarization Prompts
+> 1. Sentiment Analysis Prompts
+> 1. Data Extraction Prompts
 > 1. Role Prompting and Nested Prompts
 > 1. Zero-Shot and Few-Shot Prompting
 > 1. Mini Project - Azure OpenAI - Prompt Engineering
