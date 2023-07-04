@@ -34,17 +34,18 @@
 
 > 1. What is Prompt Engineering ?
 >    - We will focus on Text based Prompt Engineering
-> 1. Understanding Prompts: Inputs, Outputs, and Parameters
 >    - Elements of a Good Prompt
 >    - Evaluating and Refining Prompts: An Iterative Process
+> 1. Understanding Prompts: Inputs, Outputs, and Parameters
+>    - Inputs
+>    - Outputs
+>    - Parameters (Temparature, Max Tokens, Top P, Frequency Penalty, Presence Penalty, Stop)
 > 1. Crafting Simple Prompts: Techniques and Best Practices
 >    - Controlling the Output
-> 1. Basic Principles for Interacting with AI
-> 1. Role Prompting and Nested Prompts
+> 1. Basic Principles for Interacting with AI Models
 > 1. Prompting for Classification
 >    - Text Translation Prompts
 >    - Summarization Prompts
->    - Question Answering Prompts
 >    - Sentiment Analysis Prompts
 >    - Data Extraction Prompts
 > 1. SUMMARY / RECAP / Q&A
@@ -58,6 +59,14 @@
 
 ---
 
+**Reference(s):**
+
+> 1. [https://github.com/openai/openai-python](https://github.com/openai/openai-python)
+> 1. [https://pypi.org/project/openai/](https://pypi.org/project/openai/)
+> 1. [https://pypi.org/project/requests/](https://pypi.org/project/requests/)
+> 1. [https://pypi.org/project/python-dotenv/](https://pypi.org/project/python-dotenv/)
+> 1. [https://pypi.org/project/virtualenv/](https://pypi.org/project/virtualenv/)
+
 ## 1. Trying our own Completion Examples using Postman
 
 > 1. Discussion and Demo
@@ -65,135 +74,9 @@
 > 1. Update the Environment Variables
 > 1. Completion Request using Postman
 
-### 1.1. Postman's Collection and Environment
-
-![Postman's Evniornment| 100x100](./Documentation/Images/Postman_Collection_Environment.PNG)
-
-### 1.2. Postman's Evniornment
-
-![Postman's Evniornment| 100x100](./Documentation/Images/Environments_In_Postman.PNG)
-
-### 1.3. Completion Request using Postman
-
-![Completion Request using Postman| 100x100](./Documentation/Images/Completion_Request_using_Postman.PNG)
-
 ## 2. Trying our own Completion Examples using Python Notebook
 
 > 1. Discussion and Demo
-> 1. Install `openai`, `requests`, and `python-dotenv` packages
-> 1. Create a .env file and update the Environment Variables
-> 1. Completion Request using Python Notebook
-> 1. Execute the Python Notebook
-
-**Reference(s):**
-
-> 1. [https://github.com/openai/openai-python](https://github.com/openai/openai-python)
-> 1. [https://pypi.org/project/openai/](https://pypi.org/project/openai/)
-> 1. [https://pypi.org/project/requests/](https://pypi.org/project/requests/)
-> 1. [https://pypi.org/project/python-dotenv/](https://pypi.org/project/python-dotenv/)
-
-### 2.1. Install `openai`, `requests` packages
-
-```powershell
-pip install openai
-pip install requests
-pip install python-dotenv
-```
-
-### 2.2. Create a .env file and update the Environment Variables
-
-```text
-COMPLETIONS_MODEL="text-davinci-003-dev-001"
-OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
-OPENAI_API_VERSION="2022-12-01"
-OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
-```
-
-### 2.3. Execute the Python Notebook
-
-![Completion Request using Python Notebook| 100x100](./Documentation/Images/Completion_Request_using_Ipynb.PNG)
-
-## 3. Trying our own Completion Examples using Python
-
-> 1. Discussion and Demo
-> 1. Create `Virtual Environment`
-> 1. Install `openai`, `requests`, and `python-dotenv` packages
-> 1. Create a .env file and update the Environment Variables
-> 1. Completion Request using Python
-> 1. Execute the Python Script
-
-**Reference(s):**
-
-> 1. [https://pypi.org/project/virtualenv/](https://pypi.org/project/virtualenv/)
-
-### 3.1. Virtual Environment
-
-```bash
-pip install virtualenv
-python -m venv completiondemovenv
-completiondemovenv/Scripts/activate
-pip freeze
-deactivate
-```
-
-![Virtual Environment| 100x100](./Documentation/Images/VirtualEnvironment_Creation.PNG)
-
-### 3.2. Install `openai`, `requests` packages
-
-```powershell
-pip install openai
-pip install requests
-pip install python-dotenv
-```
-
-![Packages inside VEnv| 100x100](./Documentation/Images/Packages_Inside_VEnv.PNG)
-
-### 3.3. Create a .env file and update the Environment Variables
-
-```text
-COMPLETIONS_MODEL="text-davinci-003-dev-001"
-OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
-OPENAI_API_VERSION="2022-12-01"
-OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
-```
-
-### 3.4. Execute the Python Script
-
-> 1. Discussion and Demo
-
-![Completion Request using Python | 100x100](./Documentation/Images/Completion_Request_using_Py.PNG)
-
-## 4. Trying our own Completion Examples using C# .NET 7
-
-> 1. Discussion and Demo
-> 1. Create a .NET 7 Console Application
-> 1. Add below mentioned NuGet Packages
-> 1. Add appsettings.json/secrets.json and update the Environment Variables
-> 1. Completion Request using C# .NET 7
-> 1. Execute the C# .NET 7 Console Application
-
-```xml
-  <ItemGroup>
-    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.5" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
-  </ItemGroup>
-```
-
-```json
-{
-  "CompletionConfiguration": {
-    "ModelDeploymentName": "text-davinci-003-dev-001",
-    "OPEN_API_EndPoint": "https://azure-openai-dev-001.openai.azure.com/",
-    "OPEN_API_Key": "9a9b9c9a9b9c9a9b9c9a9b9c9a9b9c"
-  }
-}
-```
-
-### Completion Request using C# .NET 7
-
-![Completion Request using C# | 100x100](./Documentation/Images/Completion_Request_using_C%23.PNG)
 
 ---
 
@@ -206,5 +89,8 @@ OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
 
 ## What is Next? session?
 
-> 1. Getting Started with Azure OpenAI - Prompt Engineering
+> 1. Prompt Engineering Part 2
+> 1. Question Answering Prompts
+> 1. Role Prompting and Nested Prompts
+> 1. Zero-Shot and Few-Shot Prompting
 > 1. Mini Project - Azure OpenAI - Prompt Engineering
