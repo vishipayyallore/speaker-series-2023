@@ -216,6 +216,33 @@ Tell me a joke on Software Engineers
 
 > 1. Max Tokens parameter controls the length of the output
 > 1. Max Tokens parameter value ranges from 1 to 2048. `Refer documentation for more details`
+> 1. **Samples To be done**
+
+## 6. Additional Prompts if time permits
+
+```text
+Input:
+Write a social media post about my Dosa Center
+
+
+Check out my new Dosa Center! We serve delicious, authentic South Indian cuisine. Come and try our signature dosas, made with fresh ingredients and traditional recipes. Enjoy a taste of India in the comfort of your own home! #dosa #southindianfood #indiancuisine #tasteofindia
+```
+
+```text
+Input:
+Craft a playful and mouthwatering Twitter caption to promote our Dosa Center which makes 100 types of Dosas.
+
+Output:
+Crave something delicious? Try our 100+ varieties of Dosas at the Dosa Center! #DosaLover #Yum #Delicious
+```
+
+```text
+Input:
+Craft a playful and mouthwatering Twitter caption to promote our Dosa Center which makes 100 types of Dosas with homemade spices, and butter
+
+Output:
+100 types of delicious Dosas made with homemade spices and butter - what more could you ask for? Come visit our Dosa Center and get your taste buds tingling! #DosaDelight #YumYum #TasteBudsOnFire
+```
 
 **Reference(s):**
 
