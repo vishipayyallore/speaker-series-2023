@@ -68,12 +68,15 @@
 > 1. [https://pypi.org/project/python-dotenv/](https://pypi.org/project/python-dotenv/)
 > 1. [https://pypi.org/project/virtualenv/](https://pypi.org/project/virtualenv/)
 
-## 1. Trying our own Completion Examples using Postman
+## 1. What is Prompt Engineering ?
 
 > 1. Discussion and Demo
-> 1. Import the Postman's Evniornment and Collection
-> 1. Update the Environment Variables
-> 1. Completion Request using Postman
+> 1. Prompt engineering is a technique used to shape the behavior of language models by carefully crafting prompts or instructions provided to the models. It involves designing prompts that align with specific tasks, providing relevant context, and utilizing techniques like priming, fine-tuning, or conditioning to achieve desired responses from the models. By engineering prompts effectively, the output quality and relevance of language models can be enhanced.
+> 1. Prompt engineering is the process of carefully crafting and refining the prompts given to language models in order to achieve desired outputs. It involves designing prompts that provide clear instructions, specifying the desired format or context, and employing techniques like example-based prompting to influence the model's responses. Effective prompt engineering can help guide the language model's generation and improve the quality and relevance of the generated outputs.
+> 1. Prompt engineering involves formulating and designing precise instructions or queries to guide language models' outputs. It focuses on optimizing prompts to elicit desired responses and improve the quality and relevance of the model-generated content.
+> 1. Prompt engineering is the practice of refining and optimizing the input prompts given to language models to influence their generated outputs. By carefully designing and tailoring the prompts, developers can guide the model's behavior and improve the relevance, accuracy, and desired characteristics of the generated text.
+>    - We will focus on Text based Prompt Engineering
+>    - Elements of a Good Prompt
 
 **Reference(s):**
 
@@ -104,6 +107,32 @@
 ## Parameters (Temparature, Max Tokens, Top P, Frequency Penalty, Presence Penalty, Stop)
 
 > 1. Setting to customize the output of the AI model
+
+## X. Promts with Parameters customization
+
+> 1. Please refer to the Prompt text and parameters below
+
+```text
+Tell me a joke on Software Engineers
+```
+
+```json
+{
+  "prompt": "Input: Please tell me a joke on Software engineer",
+  "temperature": 1,
+  "top_p": 0.5,
+  "frequency_penalty": 0,
+  "presence_penalty": 0,
+  "max_tokens": 180,
+  "stop": null,
+  "best_of": 2,
+  "n": 2
+}
+```
+
+![Parameter Temparature | 100x100](./Documentation/Images/Parameter_Temparature.PNG)
+
+![Parameter Best Of and N | 100x100](./Documentation/Images/Parameter_BestOf_N.PNG)
 
 ---
 
