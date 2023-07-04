@@ -14,34 +14,23 @@ var _configuration = new ConfigurationBuilder()
 OpenAIClient client = new(new Uri(_configuration["CompletionConfiguration:OPEN_API_EndPoint"]!),
                             new AzureKeyCredential(_configuration["CompletionConfiguration:OPEN_API_Key"]!));
 
-// If streaming is selected
-Response<StreamingCompletions> response = await client.GetCompletionsStreamingAsync(
-    _configuration["CompletionConfiguration:ModelDeploymentName"]!,
-    new CompletionsOptions()
-    {
-        Prompts = { "What are the top 10 countries with highest populations are along with their population count and capital city : \n\n1. China - 1.4 billion - Beijing\n2. India - 1.3 billion - New Delhi\n3. United States - 328 million - Washington, D.C.\n4. Indonesia - 269 million - Jakarta\n5. Brazil - 211 million - Brasília\n6. Pakistan - 207 million - Islamabad\n7. Nigeria - 206 million - Abuja\n8. Bangladesh - 166 million - Dhaka\n9. Russia - 144 million - Moscow\n10. Mexico - 126 million - Mexico City" },
-        Temperature = (float)1,
-        MaxTokens = 100,
-        NucleusSamplingFactor = (float)0.5,
-        FrequencyPenalty = (float)0,
-        PresencePenalty = (float)0,
-        GenerationSampleCount = 1,
-    });
-using StreamingCompletions streamingCompletions = response.Value;
+var promptWithoutDesiredOutput = "What are the top 10 countries with highest populations are along with their population count and capital city : \n";
+var promptWithDesiredOutput = "Instructions: Please complete the below\n\nInput: \"\"\"What are the top 2 countries with highest populations are along with their population count and capital city :\"\"\"\n\nDesired Output: JSON Array \n\nOutput: \n";
+var promptWithDesiredOutput1 = "Instructions: Please complete the below\n\nInput: \"\"\"What are the top 2 countries with highest populations are along with their population count and capital city :\"\"\"\n\nDesired Output: XML \n\nOutput: \n";
 
 // If streaming is not selected
 Response<Completions> completionsResponse = await client.GetCompletionsAsync(
     deploymentOrModelName: _configuration["CompletionConfiguration:ModelDeploymentName"]!,
     new CompletionsOptions()
     {
-        Prompts = { "What are the top 10 countries with highest populations are along with their population count and capital city : \n" },
+        Prompts = { promptWithoutDesiredOutput, promptWithDesiredOutput, promptWithDesiredOutput1 },
         Temperature = (float)1,
         MaxTokens = 120,
         NucleusSamplingFactor = (float)0.5,
         FrequencyPenalty = (float)0,
         PresencePenalty = (float)0,
         GenerationSampleCount = 1,
-        Echo= true
+        Echo= false
     });
 Completions completions = completionsResponse.Value;
 
@@ -50,7 +39,7 @@ ForegroundColor = ConsoleColor.Yellow;
 int index = 0;
 foreach (string? text in completions?.Choices?.Select(c => c.Text)?.ToArray()!)
 {
-    WriteLine($"{++index}. {text}");
+    WriteLine($"{++index}. {text}\n");
 }
 
 ResetColor();   

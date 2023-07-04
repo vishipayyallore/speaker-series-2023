@@ -177,7 +177,7 @@ Answer:
 >    - Best Of and N
 >    - Max Tokens
 
-## 5.1. Adjusting the Temparature Parameter for randomness
+### 5.1. Adjusting the Temparature Parameter for randomness
 
 > 1. Temparature parameter controls the randomness of the output
 > 1. Temparature parameter value ranges from 0 to 1
@@ -188,9 +188,9 @@ Tell me a joke on Software Engineers
 
 ![Parameter Temparature | 100x100](./Documentation/Images/Parameter_Temparature.PNG)
 
-## 5.2. Adjusting the Best_Of and N Parameters for multiple outputs
+### 5.2. Adjusting the Best_Of and N Parameters for multiple outputs
 
-### Adjusting the Best_Of and N Parameters
+#### Adjusting the Best_Of and N Parameters
 
 ```json
 {
@@ -208,17 +208,23 @@ Tell me a joke on Software Engineers
 
 ![Parameter Best Of and N | 100x100](./Documentation/Images/Parameter_BestOf_N.PNG)
 
-### The same can be done by changing the prompt text `Input: Please tell me two jokes on Software engineer`
+#### The same can be done by changing the prompt text `Input: Please tell me two jokes on Software engineer`
 
 ![Two Jokes Prompt | 100x100](./Documentation/Images/TwoJokesPrompt.PNG)
 
-## 5.3. Adjusting the Max Tokens Parameter for longer outputs OR Prompt Text
+### 5.3. Adjusting the Max Tokens Parameter for longer outputs OR Prompt Text
 
 > 1. Max Tokens parameter controls the length of the output
 > 1. Max Tokens parameter value ranges from 1 to 2048. `Refer documentation for more details`
 > 1. **Samples To be done**
 
-## 6. Additional Prompts if time permits
+## 6. Controlling the Output with `Desired Format`
+
+![Desired Output | 100x100](./Documentation/Images/DesiredOutput.PNG)
+
+![Desired Output | 100x100](./Documentation/Images/DesiredOutput_1.PNG)
+
+## 7. Additional Prompts if time permits
 
 ```text
 Input:
