@@ -35,12 +35,13 @@
 > 1. What is Prompt Engineering ?
 >    - We will focus on Text based Prompt Engineering
 >    - Elements of a Good Prompt
->    - Evaluating and Refining Prompts: An Iterative Process
-> 1. Understanding Prompts: Inputs, Outputs, and Parameters
+> 1. Evaluating and Refining Prompts: An Iterative Process
+> 1. Understanding Prompts: Instructions, Inputs, Outputs, and Parameters
+>    - Instructions
 >    - Inputs
 >    - Outputs
 >    - Parameters (Temparature, Max Tokens, Top P, Frequency Penalty, Presence Penalty, Stop)
-> 1. Crafting Simple Prompts: Techniques and Best Practices
+> 1. Techniques and Best Practices for Prompt Engineering
 >    - Controlling the Output
 > 1. Basic Principles for Interacting with AI Models
 > 1. Prompting for Classification
@@ -74,10 +75,18 @@
 > 1. Update the Environment Variables
 > 1. Completion Request using Postman
 
-## 2. Trying our own Completion Examples using Python Notebook
+**Reference(s):**
+
+> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/completions#completion](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/completions#completion)
+
+## 2. Techniques and Best Practices for Prompt Engineering
 
 > 1. Discussion and Demo
 
+**Reference(s):**
+
+> 1. [https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
+>
 ---
 
 ## SUMMARY / RECAP / Q&A
