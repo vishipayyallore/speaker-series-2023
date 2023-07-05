@@ -92,10 +92,33 @@
 ## 4. Instructions, and Inputs for Interacting with AI Models
 
 > 1. Instructions to be processed by the AI model
-> 1. Fine tune Inputs
 > 1. Iterative Process
+> 1. Fine tune Inputs
 
-### 4.1. Fine tune Inputs
+### 4.1. Iterative Process
+
+```text
+Instructions:
+Please complete the following
+
+Dosa is
+```
+
+![Iterative Process 1 | 100x100](./Documentation/Images/Iterative_1.PNG)
+
+```text
+Instructions:
+Please complete the following
+
+Input:
+1. Dosa is
+
+Answer:
+```
+
+![Iterative Process 2 | 100x100](./Documentation/Images/Iterative_2.PNG)
+
+### 4.2. Fine tune Inputs
 
 ```text
 Instructions:
@@ -135,29 +158,6 @@ Answers:
 ```
 
 ![Fine Tune Inputs 3 | 100x100](./Documentation/Images/FineTuneInputs_3.PNG)
-
-### 4.2. Iterative Process
-
-```text
-Instructions:
-Please complete the following
-
-Dosa is
-```
-
-![Iterative Process 1 | 100x100](./Documentation/Images/Iterative_1.PNG)
-
-```text
-Instructions:
-Please complete the following
-
-Input:
-1. Dosa is
-
-Answer:
-```
-
-![Iterative Process 2 | 100x100](./Documentation/Images/Iterative_2.PNG)
 
 ## 5. Prompts with Parameters customization
 
