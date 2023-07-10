@@ -32,6 +32,10 @@
 
 ## What are we doing today?
 
+> 1. Introduction to .NET Minimal API
+> 1. How to create .NET Minimal API?
+>    - Create a new .NET Minimal API project using `dotnet cli` command
+>    - Create a new .NET Minimal API project using `VS 2022` command
 > 1. Comparision of Service Collections
 >    - Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
 > 1. Comparison of HTTP Request Pipeline
@@ -51,6 +55,7 @@
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Local API Endpoint
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Azure Hosted API Endpoint
 > 1. SUMMARY / RECAP / Q&A
+> 1. 30,000 foot view of HTTP, and REST
 
 ### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
 
@@ -60,55 +65,108 @@
 
 ---
 
-## 1. Create a static HTML web app by using Azure Cloud Shell / Terminal
+## 1. Introduction to .NET Minimal API
 
-> 1. Discussion and Demo
-> 1. Walk through of the Html App
-> 1. Login using `az login`
-> 1. Verify the account `az account show -o table`
-> 1. Execute the `az webapp up`
+**References:**
 
-URL: [https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az_webapp_up](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az_webapp_up)
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
 
-```bash
-az login
+## 2. How to create .NET Minimal API?
 
-az account show -o table
+### 2.1. Create a new .NET Minimal API project using `dotnet cli` command
 
-az webapp list-runtimes
+```powershell
+dotnet new list
 
-az appservice plan create --name plan-simplesite15may2023 --resource-group rg-on-dotnet-dev-001 --location eastus --sku F1
-az webapp up --location eastus --name app-simplesite15may2023 --resource-group rg-on-dotnet-dev-001 --plan plan-simplesite15may2023 --html
+dotnet new web -o firstsample --dry-run
 
-az webapp up --location EastUs --resource-group rg-on-dotnet-dev-001 --html
-az webapp up --location EastUs --name app-hellohtml03102022 --resource-group rg-on-dotnet-dev-001 --runtime "dotnet:6"
+dotnet new webapi -minimal -o secondsample --dry-run
 ```
 
-## 2. Deploy .NET 6 Web API with SQL Server, Redis Cache and Azure Key Vault
+![Dotnet New List | 100x100](./Documentation/Images/DotnetNewList.PNG)
 
-> 1. Discussion and Demo
-> 1. Cache Aside Pattern
-> 1. Azure Key Vault
-> 1. Azure SQL Server
-> 1. Azure Redis Cache
-> 1. Application Insights
-> 1. Debugging Logs / Event Viewer
+### 2.1. Create a new .NET Minimal API project using `VS 2022` command
 
-## 3. Deploy .NET 7 Minimal API
+#### Create Minimal API using `VS 2022` - Web App Empty Template
 
-> 1. Discussion and Demo
+![Web App Empty Template | 100x100](./Documentation/Images/WebAppEmptyTemplate.PNG)
 
-## 4. Deploy Angular 15 Application
+#### Create Minimal API using `VS 2022` - Web API Template - Uncheck Controllers
 
-> 1. Discussion and Demo
+![Web Api Template | 100x100](./Documentation/Images/WebAPITemplate.PNG)
 
-## 5. Deploying Multi Containers in App Service using Docker Compose
+## 3. Comparision of Service Collections
 
-> 1. Discussion and Demo
-> 1. .NET 6 Web API
-> 1. MongoDB
-> 1. Containerize the .NET 6 Web API
-> 1. Deploy using Docker Compose
+### 3.1. Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
+
+> 1. Comparision bewteen Web
+>    - Web App Empty
+>    - Web API with Uncheck Controllers
+>    - Web API with Controllers
+
+## 4. Comparison of HTTP Request Pipeline
+
+**References:**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0)
+
+## 5. Parameter Binding
+
+**References:**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-7.0)
+
+### 5.1. From Query | From Route | From Body | From Services
+
+![Parameter Binding | 100x100](./Documentation/Images/ParameterBinding.PNG)
+
+## 6. Base Entity - Course Entity inheriting Base Entity
+
+```csharp
+public class BaseEntity
+{
+    [Key]
+    public Guid Id { get; set; }
+
+    [Required]
+    public DateTime CreatedDate { get; set; }
+    
+    [Required]
+    public string? CreatedBy { get; set; }
+    
+    [Required]
+    public DateTime ModifiedDate { get; set; }
+    
+    [Required]
+    public string? ModifiedBy { get; set; }
+}
+```
+
+```csharp
+public class Course : BaseEntity
+{
+    public string? CourseId { get; set; }
+
+    public string? Name { get; set; }
+    
+    public int Duration { get; set; }
+    
+    public string? Description { get; set; }
+}
+```
+
+## 7. EF Core Tips
+
+### 7.1. Libraries
+
+### 7.2. Connection Strings
+
+## 8. Creating Endpoints
+
+### 8.1. Manual
+
+### 8.2. Scaffold
 
 ---
 
@@ -118,3 +176,32 @@ az webapp up --location EastUs --name app-hellohtml03102022 --resource-group rg-
 > 2. Any open queries, I will get back through meetup chat/twitter.
 
 ---
+
+## Appendix A
+
+### 1. 30,000 foot view of HTTP, and REST
+
+**References:**
+
+> 1. [https://rapidapi.com/blog/rest-api-vs-web-api](https://rapidapi.com/blog/rest-api-vs-web-api)
+> 1. [https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.](https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT)
+> 1. [https://en.wikipedia.org/wiki/Representational_state_transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
+
+### HTTP Methods
+
+> 1. Discussion and Demo
+
+### HTTP Responses
+
+> 1. Discussion and Demo
+
+### What should I send as Response
+
+> 1. Discussion and Demo
+
+### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
+
+> 1. Discussion and Demo
