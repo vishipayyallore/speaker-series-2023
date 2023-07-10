@@ -65,11 +65,35 @@
 
 ---
 
-## 2. Introduction to .NET Minimal API
+## 1. Introduction to .NET Minimal API
 
 **References:**
 
 > 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
+
+## 2. How to create .NET Minimal API?
+
+### 2.1. Create a new .NET Minimal API project using `dotnet cli` command
+
+```powershell
+dotnet new list
+
+dotnet new web -o firstsample --dry-run
+
+dotnet new webapi -minimal -o secondsample --dry-run
+```
+
+![Dotnet New List | 100x100](./Documentation/Images/DotnetNewList.PNG)
+
+### 2.1. Create a new .NET Minimal API project using `VS 2022` command
+
+#### Create Minimal API using `VS 2022` - Web App Empty Template
+
+![Web App Empty Template | 100x100](./Documentation/Images/WebAppEmptyTemplate.PNG)
+
+#### Create Minimal API using `VS 2022` - Web API Template - Uncheck Controllers
+
+![Web Api Template | 100x100](./Documentation/Images/WebAPITemplate.PNG)
 
 ## 3. Comparision of Service Collections
 
