@@ -32,6 +32,7 @@
 
 ## What are we doing today?
 
+> 1. Introduction to .NET Minimal API
 > 1. Comparision of Service Collections
 >    - Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
 > 1. Comparison of HTTP Request Pipeline
@@ -52,6 +53,10 @@
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Azure Hosted API Endpoint
 > 1. SUMMARY / RECAP / Q&A
 
+## Appendix A
+
+> 1. 30,000 foot view of HTTP, and REST
+
 ### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
 
 ---
@@ -60,55 +65,19 @@
 
 ---
 
-## 1. Create a static HTML web app by using Azure Cloud Shell / Terminal
+## 2. Introduction to .NET Minimal API
 
-> 1. Discussion and Demo
-> 1. Walk through of the Html App
-> 1. Login using `az login`
-> 1. Verify the account `az account show -o table`
-> 1. Execute the `az webapp up`
+**References:**
 
-URL: [https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az_webapp_up](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az_webapp_up)
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
 
-```bash
-az login
-
-az account show -o table
-
-az webapp list-runtimes
-
-az appservice plan create --name plan-simplesite15may2023 --resource-group rg-on-dotnet-dev-001 --location eastus --sku F1
-az webapp up --location eastus --name app-simplesite15may2023 --resource-group rg-on-dotnet-dev-001 --plan plan-simplesite15may2023 --html
-
-az webapp up --location EastUs --resource-group rg-on-dotnet-dev-001 --html
-az webapp up --location EastUs --name app-hellohtml03102022 --resource-group rg-on-dotnet-dev-001 --runtime "dotnet:6"
-```
-
-## 2. Deploy .NET 6 Web API with SQL Server, Redis Cache and Azure Key Vault
-
-> 1. Discussion and Demo
-> 1. Cache Aside Pattern
-> 1. Azure Key Vault
-> 1. Azure SQL Server
-> 1. Azure Redis Cache
-> 1. Application Insights
-> 1. Debugging Logs / Event Viewer
-
-## 3. Deploy .NET 7 Minimal API
+## 3. Comparision of Service Collections
 
 > 1. Discussion and Demo
 
-## 4. Deploy Angular 15 Application
+### 3.1. Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
 
 > 1. Discussion and Demo
-
-## 5. Deploying Multi Containers in App Service using Docker Compose
-
-> 1. Discussion and Demo
-> 1. .NET 6 Web API
-> 1. MongoDB
-> 1. Containerize the .NET 6 Web API
-> 1. Deploy using Docker Compose
 
 ---
 
@@ -118,3 +87,32 @@ az webapp up --location EastUs --name app-hellohtml03102022 --resource-group rg-
 > 2. Any open queries, I will get back through meetup chat/twitter.
 
 ---
+
+## Appendix A
+
+### 1. 30,000 foot view of HTTP, and REST
+
+**References:**
+
+> 1. [https://rapidapi.com/blog/rest-api-vs-web-api](https://rapidapi.com/blog/rest-api-vs-web-api)
+> 1. [https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.](https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)
+> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT)
+> 1. [https://en.wikipedia.org/wiki/Representational_state_transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
+
+### HTTP Methods
+
+> 1. Discussion and Demo
+
+### HTTP Responses
+
+> 1. Discussion and Demo
+
+### What should I send as Response
+
+> 1. Discussion and Demo
+
+### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
+
+> 1. Discussion and Demo
