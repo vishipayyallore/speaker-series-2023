@@ -156,6 +156,18 @@ public class Course : BaseEntity
 }
 ```
 
+## 7. EF Core Tips
+
+### 7.1. Libraries
+
+### 7.2. Connection Strings
+
+## 8. Creating Endpoints
+
+### 8.1. Manual
+
+### 8.2. Scaffold
+
 ---
 
 ## SUMMARY / RECAP / Q&A
