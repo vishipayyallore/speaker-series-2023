@@ -52,9 +52,6 @@
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Local API Endpoint
 > 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Azure Hosted API Endpoint
 > 1. SUMMARY / RECAP / Q&A
-
-## Appendix A
-
 > 1. 30,000 foot view of HTTP, and REST
 
 ### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
@@ -97,11 +94,19 @@ dotnet new webapi -minimal -o secondsample --dry-run
 
 ## 3. Comparision of Service Collections
 
-> 1. Discussion and Demo
-
 ### 3.1. Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
 
-> 1. Discussion and Demo
+> 1. Comparision bewteen Web
+>    - Web App Empty
+>    - Web API with Uncheck Controllers
+>    - Web API with Controllers
+
+## 4. Comparison of HTTP Request Pipeline
+
+**References:**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0)
 
 ---
 
