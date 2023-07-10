@@ -33,6 +33,9 @@
 ## What are we doing today?
 
 > 1. Introduction to .NET Minimal API
+> 1. How to create .NET Minimal API?
+>    - Create a new .NET Minimal API project using `dotnet cli` command
+>    - Create a new .NET Minimal API project using `VS 2022` command
 > 1. Comparision of Service Collections
 >    - Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
 > 1. Comparison of HTTP Request Pipeline
@@ -107,6 +110,51 @@ dotnet new webapi -minimal -o secondsample --dry-run
 
 > 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
 > 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0)
+
+## 5. Parameter Binding
+
+**References:**
+
+> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-7.0)
+
+### 5.1. From Query | From Route | From Body | From Services
+
+![Parameter Binding | 100x100](./Documentation/Images/ParameterBinding.PNG)
+
+## 6. Base Entity - Course Entity inheriting Base Entity
+
+```csharp
+public class BaseEntity
+{
+    [Key]
+    public Guid Id { get; set; }
+
+    [Required]
+    public DateTime CreatedDate { get; set; }
+    
+    [Required]
+    public string? CreatedBy { get; set; }
+    
+    [Required]
+    public DateTime ModifiedDate { get; set; }
+    
+    [Required]
+    public string? ModifiedBy { get; set; }
+}
+```
+
+```csharp
+public class Course : BaseEntity
+{
+    public string? CourseId { get; set; }
+
+    public string? Name { get; set; }
+    
+    public int Duration { get; set; }
+    
+    public string? Description { get; set; }
+}
+```
 
 ---
 
