@@ -160,7 +160,43 @@ public class Course : BaseEntity
 
 ### 7.1. Libraries
 
+```xml
+<ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+</ItemGroup>
+```
+
+```xml
+<ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+</ItemGroup>
+```
+
 ### 7.2. Connection Strings
+
+```csharp
+var connectionString = builder.Configuration.GetConnectionString("StudentEnrollmentDbConnection");
+builder.Services.AddDbContext<StudentEnrollmentDbContext>(options =>
+{
+    _ = options.UseSqlServer(connectionString);
+});
+```
+
+```csharp
+builder.Services.AddDbContext<StudentEnrollmentDbContext>(options =>
+{
+    _ = options.UseSqlServer("name=StudentEnrollmentDbConnection"); /* This will also read from appsettings.json */
+});
+```
+
+### 7.3. dotnet ef migrations
+
+```powershell
+dotnet ef migrations add InitialVersion --project ./StudentEnrollment.Data/StudentEnrollment.Data.csproj --startup-project ./StudentEnrollment.Api/StudentEnrollment.Api.csproj
+```
+
+![dotnet ef migrations | 100x100](./Documentation/Images/dotnet_ef_migrations.PNG)
 
 ## 8. Creating Endpoints
 
