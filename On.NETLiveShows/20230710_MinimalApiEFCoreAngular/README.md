@@ -204,6 +204,12 @@ dotnet ef migrations add InitialVersion --project ./StudentEnrollment.Data/Stude
 
 ### 8.2. Scaffold
 
+## X. Angular 15 integration with Minimal API Azure Hosted API Endpoint
+
+> 1. SPA with Standalone components
+
+![Angular 15 with Minimal API | 100x100](./Documentation/Images/Angular15_MinimalAPI.PNG)
+
 ---
 
 ## SUMMARY / RECAP / Q&A
