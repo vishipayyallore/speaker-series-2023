@@ -36,6 +36,8 @@
 >    - What is Azure OpenAI Service?
 >    - Azure OpenAI Service quotas and limits
 >    - Azure OpenAI Service models
+> 1. Create Azure OpenAI Service in Azure Portal
+> 1. How to deploy Azure OpenAI Model in Azure AI Studio?
 > 1. 30,000 foot view of Azure AI Studio
 >    - What is Azure AI Studio?
 >    - Trying couple of Built-in Completion Examples in Azure AI Studio
@@ -81,9 +83,13 @@
 
 ![Azure OpenAI Service | 100x100](./Documentation/Images/AzureOpenAIService.PNG)
 
+![Azure OpenAI Service | 100x100](./Documentation/Images/AzureOpenAIService_1.PNG)
+
 ## 3. How to deploy Azure OpenAI Model in Azure AI Studio?
 
 > 1. Discussion and Demo
+
+![Model Deployments | 100x100](./Documentation/Images/ModelDeployments.PNG)
 
 ## 4. 30,000 foot view of Azure AI Studio
 
@@ -99,7 +105,7 @@
 
 ![Azure AI Studio | 100x100](./Documentation/Images/AzureAIStudio.PNG)
 
-### 4.2. Trying couple of Built-in Completion Examples in Azure AI Studio
+### 4.2. Trying a couple of Built-in Completion Examples in Azure AI Studio
 
 > 1. Discussion and Demo
 
@@ -143,7 +149,7 @@ Input: Tell me two jokes on simple people
 
 ---
 
-## SUMMARY / RECAP / Q&A
+## 8. SUMMARY / RECAP / Q&A
 
 > 1. SUMMARY / RECAP / Q&A
 > 2. Any open queries, I will get back through meetup chat/twitter.
