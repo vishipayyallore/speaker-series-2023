@@ -4,7 +4,7 @@
 
 ## Event URL: [https://www.meetup.com/microsoft-reactor-bengaluru/events/294658190](https://www.meetup.com/microsoft-reactor-bengaluru/events/294658190)
 
-## YouTube URL: [To Be Done](https://www.youtube.com/watch?v=Kgz_Qgsgp_Q)
+## YouTube URL: [https://www.youtube.com/watch?v=WXyxnbxbcsQ](https://www.youtube.com/watch?v=WXyxnbxbcsQ)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -75,7 +75,17 @@
 
 > 1. Discussion and Demo
 
-## 2. 30,000 foot view of Azure AI Studio
+## 2. Create Azure OpenAI Service in Azure Portal
+
+> 1. Discussion and Demo
+
+![Azure OpenAI Service | 100x100](./Documentation/Images/AzureOpenAIService.PNG)
+
+## 3. How to deploy Azure OpenAI Model in Azure AI Studio?
+
+> 1. Discussion and Demo
+
+## 4. 30,000 foot view of Azure AI Studio
 
 > 1. Discussion and Demo
 
@@ -83,19 +93,19 @@
 
 > 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line)
 
-### 2.1. What is Azure AI Studio?
+### 4.1. What is Azure AI Studio?
 
 > 1. Discussion and Demo
 
 ![Azure AI Studio | 100x100](./Documentation/Images/AzureAIStudio.PNG)
 
-### 2.2. Trying couple of Built-in Completion Examples in Azure AI Studio
+### 4.2. Trying couple of Built-in Completion Examples in Azure AI Studio
 
 > 1. Discussion and Demo
 
 ![Azure AI Studio Translation | 100x100](./Documentation/Images/AzureAIStudio_Translation.PNG)
 
-## 3. Tokens Tokens Tokens and more Tokens
+## 5. Tokens Tokens Tokens and more Tokens
 
 > 1. Discussion and Demo
 
@@ -105,7 +115,7 @@
 
 ![Tokenizer | 100x100](./Documentation/Images/Tokenizer.PNG)
 
-## 4. Trying our own Completion Examples in Azure AI Studio
+## 6. Trying our own Completion Examples in Azure AI Studio
 
 > 1. Discussion and Demo
 
@@ -125,7 +135,7 @@ Input: Tell me two jokes on simple people
 
 ![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
 
-## 5. Trying our own Completion Examples using Postman
+## 7. Trying our own Completion Examples using Postman
 
 > 1. Discussion and Demo
 
