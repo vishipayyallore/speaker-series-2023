@@ -1,10 +1,10 @@
-# Hands-On - Getting Started with Azure OpenAI
+# Hands-On - Getting Started with Azure OpenAI Studio
 
-## Date Time: 20-May-2023 at 09:00 AM IST
+## Date Time: 19-Jul-2023 at 06:00 PM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293318064](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293318064)
+## Event URL: [https://www.meetup.com/microsoft-reactor-bengaluru/events/294658190](https://www.meetup.com/microsoft-reactor-bengaluru/events/294658190)
 
-## YouTube URL: [https://www.youtube.com/watch?v=Kgz_Qgsgp_Q](https://www.youtube.com/watch?v=Kgz_Qgsgp_Q)
+## YouTube URL: [To Be Done](https://www.youtube.com/watch?v=Kgz_Qgsgp_Q)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -142,6 +142,8 @@ Input: Tell me two jokes on simple people
 
 ## What is Next? session?
 
-> 1. Creating our own Docker Image
-> 1. Pushing it to Docker Hub
-> 1. Working with FarGate and ECS
+> 1. Trying our own Completion Examples using Postman
+> 1. Trying our own Completion Examples using Python Notebook
+> 1. Trying our own Completion Examples using Python
+> 1. Trying our own Completion Examples using C# .NET 7
+> 1. SUMMARY / RECAP / Q&A
