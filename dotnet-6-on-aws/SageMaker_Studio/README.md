@@ -63,6 +63,33 @@
 **Reference(s):**
 
 > 1. [https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html](https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html)
+> 1. [https://catalog.us-east-1.prod.workshops.aws/workshops/80ba0ea5-7cf9-4b8c-9d3f-1cd988b6c071/en-US/1-use-cases/1-marketing](https://catalog.us-east-1.prod.workshops.aws/workshops/80ba0ea5-7cf9-4b8c-9d3f-1cd988b6c071/en-US/1-use-cases/1-marketing)
+
+```json
+{
+	"data": {
+		"features": {
+			"values": {
+				"race": "caucasian",
+				"gender": "female",
+				"age": 21,
+				"time_in_hospital": 1,
+				"num_lab_procedures": 41,
+				"num_procedures": 1,
+				"num_medications": 1,
+				"number_outpatient": 0,
+				"number_emergency": 0,
+				"number_inpatient": 0,
+				"number_diagnoses": 0,
+				"max_glu_serum": "none",
+				"a1c_result": "none",
+				"change": 0,
+				"diabetes_med": 0
+			}
+		}
+	}
+}
+```
 
 ---
 
