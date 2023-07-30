@@ -58,6 +58,14 @@
 
 > 1. Studio | Studio Lab | Canvas | RStudio | TensorBoard
 
+## X. 30,000 foot view of Amazon SageMaker Studio and Autopilot
+
+**Reference(s):**
+
+> 1. [https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html](https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html)
+
+---
+
 
 ## 1. 30,000 foot view of Data Science, Machine Learning, Artificial Intelligence, and AutoML
 
