@@ -54,6 +54,11 @@
 
 ---
 
+## X. 30,000 foot view of options AI/ML on AWS SageMaker
+
+> 1. Studio | Studio Lab | Canvas | RStudio | TensorBoard
+
+
 ## 1. 30,000 foot view of Data Science, Machine Learning, Artificial Intelligence, and AutoML
 
 > 1. Single Liner on Data Science
