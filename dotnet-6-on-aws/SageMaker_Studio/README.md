@@ -32,8 +32,12 @@
 
 ## What are we doing today?
 
-> 1.
+> 1. 30,000 foot view of options AI/ML on AWS SageMaker
+> 1. 30,000 foot view of Amazon SageMaker Studio and Autopilot
 > 1. Create a S3 Bucket and Upload the Dataset
+> 1. Creating New SageMaker Studio Autopilot Experiment
+> 1. SageMaker Studio Autopilot Experiment Runs
+> 1. SageMaker Studio Autopilot Generated Notebooks
 > 1. Create a Dataset in Amazon SageMaker Canvas
 > 1. Create new model
 > 1. Build the Model
@@ -83,7 +87,7 @@
 
 ![Sagemaker Studio Runs | 100x100](./Documentation/Images/SageMaker_Studio_AutoPilot_Train.PNG)
 
-## 6. SageMaker Studio Autopilot Generated Notebook
+## 6. SageMaker Studio Autopilot Generated Notebooks
 
 > 1. Discussion and Demo
 
@@ -132,7 +136,6 @@
 ## What is Next? session?
 
 > 1. To be decided
-
 > 1. [https://catalog.us-east-1.prod.workshops.aws/workshops/80ba0ea5-7cf9-4b8c-9d3f-1cd988b6c071/en-US/1-use-cases/1-marketing](https://catalog.us-east-1.prod.workshops.aws/workshops/80ba0ea5-7cf9-4b8c-9d3f-1cd988b6c071/en-US/1-use-cases/1-marketing)
 
 ```json
