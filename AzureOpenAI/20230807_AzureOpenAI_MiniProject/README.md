@@ -1,8 +1,8 @@
-# Azure OpenAI - Prompt Engineering using Studio/Postman/Python/C# .NET 7
+# Azure OpenAI - Mini Project - Python, Postman, .NET 7, Azure SQL, and Angular
 
-## Date Time: 05-Jul-2023 at 09:00 AM IST
+## Date Time: 07-Aug-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/294011427/](https://www.meetup.com/dot-net-learners-house-hyderabad/events/294011427/)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/294280219](https://www.meetup.com/dot-net-learners-house-hyderabad/events/294280219)
 
 ## YouTube URL: [https://www.youtube.com/watch?v=ppcS_V3rFkg](https://www.youtube.com/watch?v=ppcS_V3rFkg)
 
