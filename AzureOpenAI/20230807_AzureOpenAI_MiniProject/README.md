@@ -1,4 +1,4 @@
-# Azure OpenAI - Mini Project - Python, Postman, .NET 7, Azure SQL, and Angular
+# Azure OpenAI - Mini Project - Python, Postman, .NET 7 Minimal API, Azure SQL, Blazor and Angular
 
 ## Date Time: 07-Aug-2023 at 09:00 AM IST
 
@@ -44,7 +44,16 @@
 
 ---
 
-## 1. To be decided
+## 1. Setting up Azure SQL Database, Tables and Stored Procedures
+
+> 1. Discussion on Azure SQL Database, Tables and Stored Procedures
+
+### 1.1. Table Creation
+
+```sql
+```
+
+## X. To be decided
 
 ### How to execute the Python Flask API?
 
