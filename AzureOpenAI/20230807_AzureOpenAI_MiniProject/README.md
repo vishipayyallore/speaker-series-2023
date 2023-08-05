@@ -153,9 +153,19 @@ python .\app.py
 
 > 1. Discussion and Demo
 
+### 5.1. .NET 7 Minimal API Project Structure
+
+> 1. `Program.cs`: This file contains the entry point of the app.
+
+![.NET 7 Minimal API Project Structure | 100x100](./Documentation/Images/MinimalAPI_ProjectStructure.PNG)
+
+![.NET 7 Minimal API Swagger | 100x100](./Documentation/Images/MinimalAPI_Swagger.PNG)
+
 ## 6. Testing Countries Information .NET 7 Minimal API using Postman
 
 > 1. Discussion and Demo
+
+![.NET 7 Minimal API Postman | 100x100](./Documentation/Images/MinimalAPI_Postman.PNG)
 
 ---
 
