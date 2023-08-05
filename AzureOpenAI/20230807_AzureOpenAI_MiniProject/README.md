@@ -51,7 +51,42 @@
 ### 1.1. Table Creation
 
 ```sql
+CREATE TABLE CountriesInfo (
+    [CountryId] INT IDENTITY (1, 1) NOT NULL PRIMARY KEY,
+    [CountryName] NVARCHAR(100),
+    [CapitalState] NVARCHAR(100),
+    [NationalBird] NVARCHAR(100),
+    [CountryPopulation] BIGINT
+);
 ```
+
+### 1.2. Stored Procedure Creation
+
+```sql
+CREATE PROCEDURE [dbo].[usp_insert_country_info]
+    @CountryName NVARCHAR(100),
+    @CapitalState NVARCHAR(100),
+    @NationalBird NVARCHAR(100),
+    @CountryPopulation BIGINT,
+    @CountryId INT OUTPUT
+AS
+BEGIN
+    
+    SET NOCOUNT ON;
+
+    INSERT INTO CountriesInfo 
+        (CountryName, CapitalState, NationalBird, CountryPopulation)
+    VALUES 
+        (@CountryName, @CapitalState, @NationalBird, @CountryPopulation);
+
+    SET @CountryId = SCOPE_IDENTITY();
+
+    SELECT @CountryId AS CountryId;
+    
+END;
+```
+
+![Azure SQL Assets | 100x100](./Documentation/Images/Azure_Sql_Assets.PNG)
 
 ## X. To be decided
 
