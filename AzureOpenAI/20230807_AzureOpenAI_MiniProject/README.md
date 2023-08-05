@@ -32,7 +32,19 @@
 
 ## What are we doing today?
 
-> 1. To be decided
+> 1. Setting up Azure SQL Database, Tables and Stored Procedures
+>    - Table Creation
+>    - Stored Procedure Creation
+> 1. Create a Python Flask Web API to Invoke SQL Stored Procedure
+>    - Python Flask Web API Project Structure
+>    - How to execute the Python Flask API?
+> 1. Testing Python Flask Web API using Postman
+> 1. Integrating Python Flask Web API using Blazor Server App
+>    - Blazor Server App Project Structure
+>    - Blazor Server App Consuming Python Flask Web API
+> 1. Retrieving Countries Information using .NET 7 Minimal API
+>    - .NET 7 Minimal API Project Structure
+> 1. Testing Countries Information .NET 7 Minimal API using Postman
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
