@@ -1,4 +1,4 @@
-# Azure OpenAI - Mini Project - Python, Postman, .NET 7 Minimal API, Azure SQL, Blazor/Angular
+# Azure OpenAI - Mini Project - Python, Azure SQL, .NET 7 Minimal API, Blazor Server, and Postman
 
 ## Date Time: 07-Aug-2023 at 09:00 AM IST
 
@@ -123,11 +123,39 @@ python .\app.py
 
 ![Execute Python Flask API | 100x100](./Documentation/Images/Executing_Flask_App.PNG)
 
-## 3. Test Python Flask Web API using Postman
+## 3. Testing Python Flask Web API using Postman
 
 > 1. Discussion and Demo
 
 ![Execute Python Flask API | 100x100](./Documentation/Images/SessionFirstLook.PNG)
+
+## 4. Integrating Python Flask Web API using Blazor Server App
+
+> 1. Discussion and Demo
+
+### 4.1. Blazor Server App Project Structure
+
+> 1. `Properties` folder: This folder contains the launchSettings.json file that contains the configuration for launching the app.
+> 1. `wwwroot` folder: This folder contains the static files that are served by the app.
+> 1. `Pages` folder: This folder contains the Razor components that define the UI of the app.
+> 1. `Shared` folder: This folder contains the Razor components that are shared across multiple pages.
+> 1. `Program.cs`: This file contains the entry point of the app.
+
+![Blazor App Project Structure | 100x100](./Documentation/Images/BlazorApp_ProjectStructure.PNG)
+
+### 4.2. Blazor Server App Consuming Python Flask Web API
+
+![Blazor Server App Consuming Python Flask Web API | 100x100](./Documentation/Images/BlazorApp_1.PNG)
+
+![Blazor Server App Consuming Python Flask Web API | 100x100](./Documentation/Images/BlazorApp_2.PNG)
+
+## 5. Retrieving Countries Information using .NET 7 Minimal API
+
+> 1. Discussion and Demo
+
+## 6. Testing Countries Information .NET 7 Minimal API using Postman
+
+> 1. Discussion and Demo
 
 ---
 
