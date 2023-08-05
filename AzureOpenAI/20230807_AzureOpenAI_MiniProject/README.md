@@ -48,6 +48,12 @@
 
 > 1. Discussion on Azure SQL Database, Tables and Stored Procedures
 
+```sql
+SELECT * FROM [dbo].[CountriesInfo]
+
+-- delete [dbo].[CountriesInfo]
+```
+
 ### 1.1. Table Creation
 
 ```sql
@@ -88,9 +94,26 @@ END;
 
 ![Azure SQL Assets | 100x100](./Documentation/Images/Azure_Sql_Assets.PNG)
 
-## X. To be decided
+## 2. Create a Python Flask Web API to Invoke SQL Stored Procedure
 
-### How to execute the Python Flask API?
+> 1. Discussion and Demo
+> 1. **SQLAlchemy** is a Python ORM (Object-Relational Mapping) library that simplifies database interactions by allowing developers to work with Python classes and methods instead of raw SQL, making it easier to perform database operations.
+> 1. SQLAlchemy allows invoking a **stored procedure** using the db.session.execute() method, passing the stored procedure's text as a SQL expression along with parameters if required, and fetching the result if needed.
+
+### 2.1. Python Flask Web API Project Structure
+
+> 1. `api_routes.py`: This file contains API routes and handling for adding country information.
+> 1. `models.py`: This file defines the SQLAlchemy database model for the CountryInfoDto table.
+> 1. `db_config.py`: This file contains the SQLAlchemy database configuration using the db object.
+> 1. `env_config.py`: This file handles loading environment variables from the .env file.
+> 1. `error_handling.py`: This file contains the utility function for handling error responses.
+> 1. `GetCountryInfoFromAzureOpenAI.py`: This file handles integration with Azure OpenAI to fetch country information.
+> 1. `logging_config.py`: This file configures logging settings for the Flask app.
+> 1. `app.py`: This file is the entry point of the Flask application and sets up the app with configurations.
+
+![Python Flask Web API Project Structure | 100x100](./Documentation/Images/PythonFlaskAPI_Structure.PNG)
+
+### 2.2. How to execute the Python Flask API?
 
 ```python
 flask --app app run
@@ -99,6 +122,12 @@ python .\app.py
 ```
 
 ![Execute Python Flask API | 100x100](./Documentation/Images/Executing_Flask_App.PNG)
+
+## 3. Test Python Flask Web API using Postman
+
+> 1. Discussion and Demo
+
+![Execute Python Flask API | 100x100](./Documentation/Images/SessionFirstLook.PNG)
 
 ---
 
