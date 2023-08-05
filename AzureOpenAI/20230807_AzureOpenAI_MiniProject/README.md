@@ -1,4 +1,4 @@
-# Azure OpenAI - Mini Project - Python, Postman, .NET 7 Minimal API, Azure SQL, Blazor and Angular
+# Azure OpenAI - Mini Project - Python, Postman, .NET 7 Minimal API, Azure SQL, Blazor/Angular
 
 ## Date Time: 07-Aug-2023 at 09:00 AM IST
 
