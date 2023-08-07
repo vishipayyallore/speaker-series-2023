@@ -56,6 +56,10 @@
 
 ---
 
+## The Big Picture
+
+![Architecture | 100x100](./Documentation/Images/Architecture_V1.PNG)
+
 ## 1. Setting up Azure SQL Database, Tables and Stored Procedures
 
 > 1. Discussion on Azure SQL Database, Tables and Stored Procedures
