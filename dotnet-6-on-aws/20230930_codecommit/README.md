@@ -46,6 +46,15 @@
 
 ---
 
+## X. Generate Git Credentials for AWS Code Commit
+
+> 1. Discussion and Demo
+> 1. These credentials are required to clone the repositories from AWS Code Commit to local machine
+
+![AWS Code Commit GIT Credentials | 100x100](./Documentation/Images/AWSCC_GitCredentials_1.PNG)
+
+![AWS Code Commit GIT Credentials | 100x100](./Documentation/Images/AWSCC_GitCredentials_2.PNG)
+
 ## X. Create two repositories in AWS Code Commit
 
 > 1. Discussion and Demo
@@ -55,6 +64,19 @@
 ![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_1.PNG)
 
 ![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_2.PNG)
+
+## X. Clone the repositories to local machine
+
+> 1. Clone the repositories to local machine
+> 1. You **need to use the GIT credentials generated in the previous step** to clone the repositories
+
+```bash
+git clone https://git-codecommit.us-west-2.amazonaws.com/v1/repos/shirtsshop-api
+
+git clone https://git-codecommit.us-west-2.amazonaws.com/v1/repos/greetings-api
+```
+
+![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_3.PNG)
 
 ## X. Creating simple Web Api using Java Spring Boot
 
