@@ -46,7 +46,7 @@
 
 ---
 
-## X. Generate Git Credentials for AWS Code Commit
+## 1. Generate Git Credentials for AWS Code Commit
 
 > 1. Discussion and Demo
 > 1. These credentials are required to clone the repositories from AWS Code Commit to local machine
@@ -55,7 +55,7 @@
 
 ![AWS Code Commit GIT Credentials | 100x100](./Documentation/Images/AWSCC_GitCredentials_2.PNG)
 
-## X. Create two repositories in AWS Code Commit
+## 2. Create two repositories in AWS Code Commit
 
 > 1. Discussion and Demo
 > 1. One repository for Java Spring Boot
@@ -65,7 +65,7 @@
 
 ![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_2.PNG)
 
-## X. Clone the repositories to local machine
+## 3. Clone the repositories to local machine
 
 > 1. Clone the repositories to local machine
 > 1. You **need to use the GIT credentials generated in the previous step** to clone the repositories
@@ -78,14 +78,88 @@ git clone https://git-codecommit.us-west-2.amazonaws.com/v1/repos/greetings-api
 
 ![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_3.PNG)
 
-## X. Creating simple Web Api using Java Spring Boot
+## 4. Creating simple Web Api using Java Spring Boot
 
 > 1. Discussion and Demo
 > 1. Navigate to [https://start.spring.io](https://start.spring.io)
+> 1. Select the following options shown in the image below and click on **Generate**
+> 1. This will download a zip file to your local machine
 
 ![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_1.PNG)
 
+> 1. Extract the zip file to a folder where the repository is cloned
+> 1. Open the folder in Visual Studio Code
+> 1. Open the **pom.xml** file and add the following dependency for [lombok](https://projectlombok.org/setup/maven)
+
+```xml
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.30</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+> 1. Update the application.properties file with the following content
+
+```properties
+logging.level.org.springframework.web.*=TRACE
+
+server.port=8083
+```
+
+> 1. Execute the Application class to start the application
+
 ![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_2.PNG)
+
+> 1. Periodically push the changes to the repository
+
+```bash
+git status
+git add .
+git commit -am "Message"
+git push
+```
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_3.PNG)
+
+## 5. Added a greeting controller and DTO
+
+> 1. Discussion and Demo
+> 1. Create a `GreetingsResponseDto` DTO, and `GreetingsController` controller
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_4.PNG)
+
+> 1. Execute the Application class to start the application
+> 1. Verify the application is running by navigating to [http://localhost:8083/api/v1/greetings](http://localhost:8083/api/v1/greetings)
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_5.PNG)
+
+## 6. View Commit History in AWS Code Commit
+
+> 1. Discussion and Demo
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/Commit_History.PNG)
+
+## 7. Create a Branch in AWS Code Commit
+
+> 1. Discussion and Demo
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/NewBranch_1.PNG)
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/NewBranch_2.PNG)
+
+## 8. Create a Pull Request in AWS Code Commit
+
+> 1. Discussion and Demo
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/PullRequest_1.PNG)
+
+## 9. Merge the Pull Request in AWS Code Commit
+
+> 1. Discussion and Demo
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/MergePullRequest_1.PNG)
 
 ---
 
