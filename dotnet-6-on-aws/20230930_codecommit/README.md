@@ -34,21 +34,11 @@
 
 ## What are we doing today?
 
-> 1. 30,000 foot view of options AI/ML on AWS SageMaker
-> 1. 30,000 foot view of Amazon SageMaker Studio and Autopilot
-> 1. Create a S3 Bucket and Upload the Dataset
-> 1. Creating New SageMaker Studio Autopilot Experiment
-> 1. SageMaker Studio Autopilot Experiment Runs
-> 1. SageMaker Studio Autopilot Generated Notebooks
-> 1. Create a Dataset in Amazon SageMaker Canvas
-> 1. Create new model
-> 1. Build the Model
-> 1. Analyze the Model
-> 1. Perform Prediction using the Model
+> 1. To be decided
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
-### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/dotnet-6-on-aws/SageMaker_Studio) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/dotnet-6-on-aws/20230930_codecommit) of today's session for more details
 
 ---
 
@@ -56,75 +46,24 @@
 
 ---
 
-## 1. 30,000 foot view of options AI/ML on AWS SageMaker
+## X. Create two repositories in AWS Code Commit
 
 > 1. Discussion and Demo
-> 1. Studio | Studio Lab | Canvas | RStudio | TensorBoard
+> 1. One repository for Java Spring Boot
+> 1. One repository for .NET 8
 
-## 2. 30,000 foot view of Amazon SageMaker Studio and Autopilot
+![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_1.PNG)
 
-> 1. Discussion and Demo
+![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_2.PNG)
 
-**Reference(s):**
-
-> 1. [https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html](https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html)
-
-![Sagemaker Studio | 100x100](./Documentation/Images/SageMaker_Studio_Landing.PNG)
-
-## 3. Create a S3 Bucket and Upload the Dataset
+## X. Creating simple Web Api using Java Spring Boot
 
 > 1. Discussion and Demo
+> 1. Navigate to [https://start.spring.io](https://start.spring.io)
 
-![S3 Bucket DataSet | 100x100](./Documentation/Images/S3Bucket_DataSet.PNG)
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_1.PNG)
 
-## 4. Creating New SageMaker Studio Autopilot Experiment
-
-> 1. Discussion and Demo
-
-![Sagemaker Studio | 100x100](./Documentation/Images/SageMaker_Studio_Landing.PNG)
-
-## 5. SageMaker Studio Autopilot Experiment Runs
-
-> 1. Discussion and Demo
-
-![Sagemaker Studio Runs | 100x100](./Documentation/Images/SageMaker_Studio_AutoPilot_Train.PNG)
-
-## 6. SageMaker Studio Autopilot Generated Notebooks
-
-> 1. Discussion and Demo
-
-![Sagemaker Studio Notebook | 100x100](./Documentation/Images/SageMaker_Studio_AutoPilot_DataExploration.PNG)
-
-## 7. Create a Dataset in Amazon SageMaker Canvas
-
-> 1. Discussion and Demo
-> 1. Browse, import, and join data
-
-![SageMaker DataSet | 100x100](./Documentation/Images/SageMaker_DataSets.PNG)
-
-## 8. Create new model
-
-> 1. Discussion and Demo
-
-![Create New Model | 100x100](./Documentation/Images/CreateNewModel.PNG)
-
-## 9. Build the Model
-
-> 1. Discussion and Demo
-
-![Build Model | 100x100](./Documentation/Images/SageMaker_BuildPhase.PNG)
-
-## 10. Analyze the Model
-
-> 1. Discussion and Demo
-
-![Analyze Model | 100x100](./Documentation/Images/SageMaker_AnalyzePhase.PNG)
-
-## 11. Perform Prediction using the Model
-
-> 1. Discussion and Demo
-
-![Predict Model | 100x100](./Documentation/Images/SageMaker_PredictPhase.PNG)
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_2.PNG)
 
 ---
 
@@ -138,30 +77,5 @@
 ## What is Next? session?
 
 > 1. To be decided
-> 1. [https://catalog.us-east-1.prod.workshops.aws/workshops/80ba0ea5-7cf9-4b8c-9d3f-1cd988b6c071/en-US/1-use-cases/1-marketing](https://catalog.us-east-1.prod.workshops.aws/workshops/80ba0ea5-7cf9-4b8c-9d3f-1cd988b6c071/en-US/1-use-cases/1-marketing)
-
-```json
-{
-  "data": {
-    "features": {
-      "values": {
-        "race": "caucasian",
-        "gender": "female",
-        "age": 21,
-        "time_in_hospital": 1,
-        "num_lab_procedures": 41,
-        "num_procedures": 1,
-        "num_medications": 1,
-        "number_outpatient": 0,
-        "number_emergency": 0,
-        "number_inpatient": 0,
-        "number_diagnoses": 0,
-        "max_glu_serum": "none",
-        "a1c_result": "none",
-        "change": 0,
-        "diabetes_med": 0
-      }
-    }
-  }
-}
-```
+> 1. SUMMARY / RECAP / Q&A
+> 1. Any open queries, I will get back through meetup chat/twitter.
