@@ -1,10 +1,10 @@
-# Amazon SageMaker Studio (AutoML) and SageMaker Canvas - No Code / Low Code
+# Hands-on with AWS - Code Commit - .NET 8 / Java Spring Boot
 
-## Date Time: 31-Jul-2023 at 09:00 AM IST
+## Date Time: 30-Sep-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293021156](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293021156)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456967](https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456967)
 
-## YouTube URL: [https://www.youtube.com/watch?v=TKkChYB0dM4](https://www.youtube.com/watch?v=TKkChYB0dM4)
+## YouTube URL: [https://www.youtube.com/watch?v=h6l1GoE8qfw](https://www.youtube.com/watch?v=h6l1GoE8qfw)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -13,18 +13,20 @@
 ### Software/Tools
 
 > 1. OS: Windows 10 x64
-> 1. .NET 7
+> 1. .NET 8
 > 1. Visual Studio 2022
 > 1. Visual Studio Code
 
 ### Prior Knowledge
 
-> 1. Basic Programming knowledge
 > 1. AWS
+> 1. Basic Programming knowledge in C#
+> 1. Basic Programming knowledge in Java
+> 1. Basic Programming knowledge in Java Spring Boot
 
 ## Technology Stack
 
-> 1. .NET 7, AWS
+> 1. .NET 8, AWS
 
 ## Information
 
@@ -140,26 +142,26 @@
 
 ```json
 {
- "data": {
-  "features": {
-   "values": {
-    "race": "caucasian",
-    "gender": "female",
-    "age": 21,
-    "time_in_hospital": 1,
-    "num_lab_procedures": 41,
-    "num_procedures": 1,
-    "num_medications": 1,
-    "number_outpatient": 0,
-    "number_emergency": 0,
-    "number_inpatient": 0,
-    "number_diagnoses": 0,
-    "max_glu_serum": "none",
-    "a1c_result": "none",
-    "change": 0,
-    "diabetes_med": 0
-   }
+  "data": {
+    "features": {
+      "values": {
+        "race": "caucasian",
+        "gender": "female",
+        "age": 21,
+        "time_in_hospital": 1,
+        "num_lab_procedures": 41,
+        "num_procedures": 1,
+        "num_medications": 1,
+        "number_outpatient": 0,
+        "number_emergency": 0,
+        "number_inpatient": 0,
+        "number_diagnoses": 0,
+        "max_glu_serum": "none",
+        "a1c_result": "none",
+        "change": 0,
+        "diabetes_med": 0
+      }
+    }
   }
- }
 }
 ```
