@@ -1,10 +1,10 @@
-# Amazon SageMaker Studio (AutoML) and SageMaker Canvas - No Code / Low Code
+# Hands-on with AWS - Code Commit - .NET 8 / Java Spring Boot
 
-## Date Time: 31-Jul-2023 at 09:00 AM IST
+## Date Time: 30-Sep-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/293021156](https://www.meetup.com/dot-net-learners-house-hyderabad/events/293021156)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456967](https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456967)
 
-## YouTube URL: [https://www.youtube.com/watch?v=TKkChYB0dM4](https://www.youtube.com/watch?v=TKkChYB0dM4)
+## YouTube URL: [https://www.youtube.com/watch?v=h6l1GoE8qfw](https://www.youtube.com/watch?v=h6l1GoE8qfw)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -13,18 +13,20 @@
 ### Software/Tools
 
 > 1. OS: Windows 10 x64
-> 1. .NET 7
+> 1. .NET 8
 > 1. Visual Studio 2022
 > 1. Visual Studio Code
 
 ### Prior Knowledge
 
-> 1. Basic Programming knowledge
 > 1. AWS
+> 1. Basic Programming knowledge in C#
+> 1. Basic Programming knowledge in Java
+> 1. Basic Programming knowledge in Java Spring Boot
 
 ## Technology Stack
 
-> 1. .NET 7, AWS
+> 1. .NET 8, AWS
 
 ## Information
 
@@ -32,21 +34,11 @@
 
 ## What are we doing today?
 
-> 1. 30,000 foot view of options AI/ML on AWS SageMaker
-> 1. 30,000 foot view of Amazon SageMaker Studio and Autopilot
-> 1. Create a S3 Bucket and Upload the Dataset
-> 1. Creating New SageMaker Studio Autopilot Experiment
-> 1. SageMaker Studio Autopilot Experiment Runs
-> 1. SageMaker Studio Autopilot Generated Notebooks
-> 1. Create a Dataset in Amazon SageMaker Canvas
-> 1. Create new model
-> 1. Build the Model
-> 1. Analyze the Model
-> 1. Perform Prediction using the Model
+> 1. To be decided
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
-### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/dotnet-6-on-aws/SageMaker_Studio) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/dotnet-6-on-aws/20230930_codecommit) of today's session for more details
 
 ---
 
@@ -54,75 +46,120 @@
 
 ---
 
-## 1. 30,000 foot view of options AI/ML on AWS SageMaker
+## 1. Generate Git Credentials for AWS Code Commit
 
 > 1. Discussion and Demo
-> 1. Studio | Studio Lab | Canvas | RStudio | TensorBoard
+> 1. These credentials are required to clone the repositories from AWS Code Commit to local machine
 
-## 2. 30,000 foot view of Amazon SageMaker Studio and Autopilot
+![AWS Code Commit GIT Credentials | 100x100](./Documentation/Images/AWSCC_GitCredentials_1.PNG)
+
+![AWS Code Commit GIT Credentials | 100x100](./Documentation/Images/AWSCC_GitCredentials_2.PNG)
+
+## 2. Create two repositories in AWS Code Commit
+
+> 1. Discussion and Demo
+> 1. One repository for Java Spring Boot
+> 1. One repository for .NET 8
+
+![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_1.PNG)
+
+![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_2.PNG)
+
+## 3. Clone the repositories to local machine
+
+> 1. Clone the repositories to local machine
+> 1. You **need to use the GIT credentials generated in the previous step** to clone the repositories
+
+```bash
+git clone https://git-codecommit.us-west-2.amazonaws.com/v1/repos/shirtsshop-api
+
+git clone https://git-codecommit.us-west-2.amazonaws.com/v1/repos/greetings-api
+```
+
+![AWS Code Commit Repository | 100x100](./Documentation/Images/AWSCC_Repository_3.PNG)
+
+## 4. Creating simple Web Api using Java Spring Boot
+
+> 1. Discussion and Demo
+> 1. Navigate to [https://start.spring.io](https://start.spring.io)
+> 1. Select the following options shown in the image below and click on **Generate**
+> 1. This will download a zip file to your local machine
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_1.PNG)
+
+> 1. Extract the zip file to a folder where the repository is cloned
+> 1. Open the folder in Visual Studio Code
+> 1. Open the **pom.xml** file and add the following dependency for [lombok](https://projectlombok.org/setup/maven)
+
+```xml
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.30</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+> 1. Update the application.properties file with the following content
+
+```properties
+logging.level.org.springframework.web.*=TRACE
+
+server.port=8083
+```
+
+> 1. Execute the Application class to start the application
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_2.PNG)
+
+> 1. Periodically push the changes to the repository
+
+```bash
+git status
+git add .
+git commit -am "Message"
+git push
+```
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_3.PNG)
+
+## 5. Added a greeting controller and DTO
+
+> 1. Discussion and Demo
+> 1. Create a `GreetingsResponseDto` DTO, and `GreetingsController` controller
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_4.PNG)
+
+> 1. Execute the Application class to start the application
+> 1. Verify the application is running by navigating to [http://localhost:8083/api/v1/greetings](http://localhost:8083/api/v1/greetings)
+
+![Java Spring Boot Web API | 100x100](./Documentation/Images/JavaSpringBoot_WebAPI_5.PNG)
+
+## 6. View Commit History in AWS Code Commit
 
 > 1. Discussion and Demo
 
-**Reference(s):**
+![Java Spring Boot Web API | 100x100](./Documentation/Images/Commit_History.PNG)
 
-> 1. [https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html](https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html)
-
-![Sagemaker Studio | 100x100](./Documentation/Images/SageMaker_Studio_Landing.PNG)
-
-## 3. Create a S3 Bucket and Upload the Dataset
+## 7. Create a Branch in AWS Code Commit
 
 > 1. Discussion and Demo
 
-![S3 Bucket DataSet | 100x100](./Documentation/Images/S3Bucket_DataSet.PNG)
+![Java Spring Boot Web API | 100x100](./Documentation/Images/NewBranch_1.PNG)
 
-## 4. Creating New SageMaker Studio Autopilot Experiment
+![Java Spring Boot Web API | 100x100](./Documentation/Images/NewBranch_2.PNG)
 
-> 1. Discussion and Demo
-
-![Sagemaker Studio | 100x100](./Documentation/Images/SageMaker_Studio_Landing.PNG)
-
-## 5. SageMaker Studio Autopilot Experiment Runs
+## 8. Create a Pull Request in AWS Code Commit
 
 > 1. Discussion and Demo
 
-![Sagemaker Studio Runs | 100x100](./Documentation/Images/SageMaker_Studio_AutoPilot_Train.PNG)
+![Java Spring Boot Web API | 100x100](./Documentation/Images/PullRequest_1.PNG)
 
-## 6. SageMaker Studio Autopilot Generated Notebooks
-
-> 1. Discussion and Demo
-
-![Sagemaker Studio Notebook | 100x100](./Documentation/Images/SageMaker_Studio_AutoPilot_DataExploration.PNG)
-
-## 7. Create a Dataset in Amazon SageMaker Canvas
-
-> 1. Discussion and Demo
-> 1. Browse, import, and join data
-
-![SageMaker DataSet | 100x100](./Documentation/Images/SageMaker_DataSets.PNG)
-
-## 8. Create new model
+## 9. Merge the Pull Request in AWS Code Commit
 
 > 1. Discussion and Demo
 
-![Create New Model | 100x100](./Documentation/Images/CreateNewModel.PNG)
-
-## 9. Build the Model
-
-> 1. Discussion and Demo
-
-![Build Model | 100x100](./Documentation/Images/SageMaker_BuildPhase.PNG)
-
-## 10. Analyze the Model
-
-> 1. Discussion and Demo
-
-![Analyze Model | 100x100](./Documentation/Images/SageMaker_AnalyzePhase.PNG)
-
-## 11. Perform Prediction using the Model
-
-> 1. Discussion and Demo
-
-![Predict Model | 100x100](./Documentation/Images/SageMaker_PredictPhase.PNG)
+![Java Spring Boot Web API | 100x100](./Documentation/Images/MergePullRequest_1.PNG)
 
 ---
 
@@ -136,30 +173,5 @@
 ## What is Next? session?
 
 > 1. To be decided
-> 1. [https://catalog.us-east-1.prod.workshops.aws/workshops/80ba0ea5-7cf9-4b8c-9d3f-1cd988b6c071/en-US/1-use-cases/1-marketing](https://catalog.us-east-1.prod.workshops.aws/workshops/80ba0ea5-7cf9-4b8c-9d3f-1cd988b6c071/en-US/1-use-cases/1-marketing)
-
-```json
-{
- "data": {
-  "features": {
-   "values": {
-    "race": "caucasian",
-    "gender": "female",
-    "age": 21,
-    "time_in_hospital": 1,
-    "num_lab_procedures": 41,
-    "num_procedures": 1,
-    "num_medications": 1,
-    "number_outpatient": 0,
-    "number_emergency": 0,
-    "number_inpatient": 0,
-    "number_diagnoses": 0,
-    "max_glu_serum": "none",
-    "a1c_result": "none",
-    "change": 0,
-    "diabetes_med": 0
-   }
-  }
- }
-}
-```
+> 1. SUMMARY / RECAP / Q&A
+> 1. Any open queries, I will get back through meetup chat/twitter.
