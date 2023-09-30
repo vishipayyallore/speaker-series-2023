@@ -34,7 +34,15 @@
 
 ## What are we doing today?
 
-> 1. To be decided
+> 1. Generate Git Credentials for AWS Code Commit
+> 1. Create two repositories in AWS Code Commit
+> 1. Clone the repositories to local machine
+> 1. Creating simple Web Api using Java Spring Boot
+> 1. Added a greeting controller and DTO
+> 1. View Commit History in AWS Code Commit
+> 1. Create a Branch in AWS Code Commit
+> 1. Create a Pull Request in AWS Code Commit
+> 1. Merge the Pull Request in AWS Code Commit
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
