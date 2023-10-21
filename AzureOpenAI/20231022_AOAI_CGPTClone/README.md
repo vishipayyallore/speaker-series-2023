@@ -120,6 +120,8 @@ app = Flask(__name__)
 def get_api_welcome():
     return {"message": "Welcome to the Azure Open AI API", "status": "success", "processed_at": datetime.now()}
 
+if __name__ == "__main__":
+    app.run()
 ```
 
 ### 1.6. Run the Flask Web API
@@ -131,6 +133,75 @@ flask run
 ```
 
 ![Flask Root Endpoint | 100x100](./Documentation/Images/Flask_Root_Endpoint.PNG)
+
+### 1.7. Serving HTML Pages, and other Static Assets
+
+> 1. Discussion and Demo
+
+```python
+from flask import Flask, render_template
+
+app = Flask(__name__, static_url_path='/static')
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+```
+
+> In summary, the static folder is for storing static assets like stylesheets and JavaScript files, while the templates folder is for storing HTML templates that Flask uses to render dynamic content. Both folders are essential for building web applications in Flask, as they help separate concerns between static presentation and dynamic content.
+
+![Serving HTML Static Assets | 100x100](./Documentation/Images/Serving_HTML_Static_Assets.PNG)
+
+### 1.8. Create an API Endpoint to interact with OpenAI
+
+> 1. Discussion and Demo
+
+```python
+from flask import Flask, render_template, request
+import openai
+import os
+from dotenv import dotenv_values
+
+# Load config values
+config_details = dotenv_values(".env")
+
+openai.api_type = "azure"
+openai.api_base = config_details['OPENAI_API_BASE']
+openai.api_version = config_details['OPENAI_API_VERSION']
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+@app.route("/api/get", methods=['GET'])
+def get_completion_response():
+    user_input = request.args.get('userinput')
+    print("User Text: ", user_input)
+    response = get_response_from_aoai(user_input)
+    print("AOAI Response: ", response)
+    return str(response)
+
+
+def get_response_from_aoai(user_input):
+    user_prompt = f"User Input: {user_input}\n\n"
+
+    try:
+        response = openai.Completion.create(
+            engine=config_details['COMPLETIONS_MODEL'],
+            prompt=user_prompt,
+            temperature=1,
+            max_tokens=150,
+            top_p=0.5,
+            frequency_penalty=0,
+            presence_penalty=0,
+            stop=None
+        )
+
+        answer = response.choices[0].text
+        return answer
+    except Exception as e:
+        print("An exception has occurred:", str(e))
+        return "An error occurred while processing the request."
+```
+
+![Flask Html Azure OpenAI | 100x100](./Documentation/Images/Flask_Html_Azure_OpenAI.PNG)
 
 ---
 
