@@ -57,12 +57,37 @@
 > 1. Discussion and Demo
 > 1. Select the Python Interpreter in Visual Studio Code which is created inside the virtual environment
 
+```bash
+pip install virtualenv
+python -m venv .venvy
+./.venv/Scripts/activate
+pip freeze
+deactivate
+```
+
 ### 1.2. Install the required packages
 
 > 1. Discussion and Demo
 
 ```bash
 pip install flask
+pip install openai
+pip install python-dotenv
+```
+
+### 1.3. Create a .env file and update the Environment Variables
+
+> 1. Discussion and Demo
+
+```bash
+COMPLETIONS_MODEL="text-davinci-003-dev-001"
+OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
+OPENAI_API_VERSION="2022-12-01"
+OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
+```
+
+```powershell
+[System.Environment]::SetEnvironmentVariable('OPENAI_API_KEY', 'YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x', 'User')
 ```
 
 ### 1.3. Create a Flask Web API
