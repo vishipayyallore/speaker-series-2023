@@ -1,8 +1,8 @@
-# Azure OpenAI - Mini Project - Python, Azure SQL, .NET 7 Minimal API, Blazor Server, and Postman
+# Chat GPT Clone - Python Flask, Azure Open AI, HTML, JavaScript, Bootstrap 5.x
 
-## Date Time: 07-Aug-2023 at 09:00 AM IST
+## Date Time: 22-Oct-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/294280219](https://www.meetup.com/dot-net-learners-house-hyderabad/events/294280219)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456891](https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456891)
 
 ## YouTube URL: [https://www.youtube.com/watch?v=ppcS_V3rFkg](https://www.youtube.com/watch?v=ppcS_V3rFkg)
 
@@ -32,23 +32,11 @@
 
 ## What are we doing today?
 
-> 1. Setting up Azure SQL Database, Tables and Stored Procedures
->    - Table Creation
->    - Stored Procedure Creation
-> 1. Create a Python Flask Web API to Invoke SQL Stored Procedure
->    - Python Flask Web API Project Structure
->    - How to execute the Python Flask API?
-> 1. Testing Python Flask Web API using Postman
-> 1. Integrating Python Flask Web API using Blazor Server App
->    - Blazor Server App Project Structure
->    - Blazor Server App Consuming Python Flask Web API
-> 1. Retrieving Countries Information using .NET 7 Minimal API
->    - .NET 7 Minimal API Project Structure
-> 1. Testing Countries Information .NET 7 Minimal API using Postman
+> 1. To be done
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
-### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/AzureOpenAI) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai) of today's session for more details
 
 ---
 
@@ -58,130 +46,162 @@
 
 ## The Big Picture
 
-![Architecture | 100x100](./Documentation/Images/Architecture_V1.PNG)
+![Chat GPT Clone | 100x100](./Documentation/Images/SessionFirstLook.PNG)
 
-## 1. Setting up Azure SQL Database, Tables and Stored Procedures
-
-> 1. Discussion on Azure SQL Database, Tables and Stored Procedures
-
-```sql
-SELECT * FROM [dbo].[CountriesInfo]
-
--- delete [dbo].[CountriesInfo]
-```
-
-### 1.1. Table Creation
-
-```sql
-CREATE TABLE CountriesInfo (
-    [CountryId] INT IDENTITY (1, 1) NOT NULL PRIMARY KEY,
-    [CountryName] NVARCHAR(100),
-    [CapitalState] NVARCHAR(100),
-    [NationalBird] NVARCHAR(100),
-    [CountryPopulation] BIGINT
-);
-```
-
-### 1.2. Stored Procedure Creation
-
-```sql
-CREATE PROCEDURE [dbo].[usp_insert_country_info]
-    @CountryName NVARCHAR(100),
-    @CapitalState NVARCHAR(100),
-    @NationalBird NVARCHAR(100),
-    @CountryPopulation BIGINT,
-    @CountryId INT OUTPUT
-AS
-BEGIN
-    
-    SET NOCOUNT ON;
-
-    INSERT INTO CountriesInfo 
-        (CountryName, CapitalState, NationalBird, CountryPopulation)
-    VALUES 
-        (@CountryName, @CapitalState, @NationalBird, @CountryPopulation);
-
-    SET @CountryId = SCOPE_IDENTITY();
-
-    SELECT @CountryId AS CountryId;
-    
-END;
-```
-
-![Azure SQL Assets | 100x100](./Documentation/Images/Azure_Sql_Assets.PNG)
-
-## 2. Create a Python Flask Web API to Invoke SQL Stored Procedure
+## 1. Creating Flask Web API to interact with OpenAI
 
 > 1. Discussion and Demo
-> 1. **SQLAlchemy** is a Python ORM (Object-Relational Mapping) library that simplifies database interactions by allowing developers to work with Python classes and methods instead of raw SQL, making it easier to perform database operations.
-> 1. SQLAlchemy allows invoking a **stored procedure** using the db.session.execute() method, passing the stored procedure's text as a SQL expression along with parameters if required, and fetching the result if needed.
 
-### 2.1. Python Flask Web API Project Structure
+### 1.1. Create a Virtual Environment
 
-> 1. `api_routes.py`: This file contains API routes and handling for adding country information.
-> 1. `models.py`: This file defines the SQLAlchemy database model for the CountryInfoDto table.
-> 1. `db_config.py`: This file contains the SQLAlchemy database configuration using the db object.
-> 1. `env_config.py`: This file handles loading environment variables from the .env file.
-> 1. `error_handling.py`: This file contains the utility function for handling error responses.
-> 1. `GetCountryInfoFromAzureOpenAI.py`: This file handles integration with Azure OpenAI to fetch country information.
-> 1. `logging_config.py`: This file configures logging settings for the Flask app.
-> 1. `app.py`: This file is the entry point of the Flask application and sets up the app with configurations.
+> 1. Discussion and Demo
+> 1. Select the Python Interpreter in Visual Studio Code which is created inside the virtual environment
 
-![Python Flask Web API Project Structure | 100x100](./Documentation/Images/PythonFlaskAPI_Structure.PNG)
+```bash
+py -0p
+pip install virtualenv
+python -m venv .venv
+./.venv/Scripts/activate
+pip freeze
+deactivate
+```
 
-### 2.2. How to execute the Python Flask API?
+![Creating Virtual Environment | 100x100](./Documentation/Images/Creating_Virtual_Env.PNG)
+
+### 1.2. Install the required packages
+
+> 1. Discussion and Demo
+
+```bash
+pip install flask
+pip install openai
+pip install python-dotenv
+```
+
+![Install the required packages | 100x100](./Documentation/Images/Install_Depended_Packages.PNG)
+
+### 1.3. Create a .env file and update the Environment Variables
+
+> 1. Discussion and Demo
+
+```bash
+COMPLETIONS_MODEL="text-davinci-003-dev-001"
+OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
+OPENAI_API_VERSION="2022-12-01"
+OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
+```
+
+```powershell
+[System.Environment]::SetEnvironmentVariable('OPENAI_API_KEY', 'YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x', 'User')
+```
+
+### 1.4. Create a .gitignore file
+
+> 1. Discussion and Demo
+
+```.gitignore
+.venv/
+.env
+```
+
+### 1.5. Create a Flask Web API with 1st API Endpoint
+
+> 1. Discussion and Demo
+> 1. Create a file called `app.py` and add the below code
 
 ```python
-flask --app app run
+from datetime import datetime
+from flask import Flask
 
-python .\app.py
+app = Flask(__name__)
+
+
+@app.route("/api", methods=['GET'])
+def get_api_welcome():
+    return {"message": "Welcome to the Azure Open AI API", "status": "success", "processed_at": datetime.now()}
+
+if __name__ == "__main__":
+    app.run()
 ```
 
-![Execute Python Flask API | 100x100](./Documentation/Images/Executing_Flask_App.PNG)
-
-## 3. Testing Python Flask Web API using Postman
+### 1.6. Run the Flask Web API
 
 > 1. Discussion and Demo
 
-![Execute Python Flask API | 100x100](./Documentation/Images/SessionFirstLook.PNG)
+```bash
+flask run
+```
 
-## 4. Integrating Python Flask Web API using Blazor Server App
+![Flask Root Endpoint | 100x100](./Documentation/Images/Flask_Root_Endpoint.PNG)
 
-> 1. Discussion and Demo
-
-### 4.1. Blazor Server App Project Structure
-
-> 1. `Properties` folder: This folder contains the launchSettings.json file that contains the configuration for launching the app.
-> 1. `wwwroot` folder: This folder contains the static files that are served by the app.
-> 1. `Pages` folder: This folder contains the Razor components that define the UI of the app.
-> 1. `Shared` folder: This folder contains the Razor components that are shared across multiple pages.
-> 1. `Program.cs`: This file contains the entry point of the app.
-
-![Blazor App Project Structure | 100x100](./Documentation/Images/BlazorApp_ProjectStructure.PNG)
-
-### 4.2. Blazor Server App Consuming Python Flask Web API
-
-![Blazor Server App Consuming Python Flask Web API | 100x100](./Documentation/Images/BlazorApp_1.PNG)
-
-![Blazor Server App Consuming Python Flask Web API | 100x100](./Documentation/Images/BlazorApp_2.PNG)
-
-## 5. Retrieving Countries Information using .NET 7 Minimal API
+### 1.7. Serving HTML Pages, and other Static Assets
 
 > 1. Discussion and Demo
 
-### 5.1. .NET 7 Minimal API Project Structure
+```python
+from flask import Flask, render_template
 
-> 1. `Program.cs`: This file contains the entry point of the app.
+app = Flask(__name__, static_url_path='/static')
 
-![.NET 7 Minimal API Project Structure | 100x100](./Documentation/Images/MinimalAPI_ProjectStructure.PNG)
+@app.route("/")
+def index():
+    return render_template("index.html")
+```
 
-![.NET 7 Minimal API Swagger | 100x100](./Documentation/Images/MinimalAPI_Swagger.PNG)
+> In summary, the static folder is for storing static assets like stylesheets and JavaScript files, while the templates folder is for storing HTML templates that Flask uses to render dynamic content. Both folders are essential for building web applications in Flask, as they help separate concerns between static presentation and dynamic content.
 
-## 6. Testing Countries Information .NET 7 Minimal API using Postman
+![Serving HTML Static Assets | 100x100](./Documentation/Images/Serving_HTML_Static_Assets.PNG)
+
+### 1.8. Create an API Endpoint to interact with OpenAI
 
 > 1. Discussion and Demo
 
-![.NET 7 Minimal API Postman | 100x100](./Documentation/Images/MinimalAPI_Postman.PNG)
+```python
+from flask import Flask, render_template, request
+import openai
+import os
+from dotenv import dotenv_values
+
+# Load config values
+config_details = dotenv_values(".env")
+
+openai.api_type = "azure"
+openai.api_base = config_details['OPENAI_API_BASE']
+openai.api_version = config_details['OPENAI_API_VERSION']
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+@app.route("/api/get", methods=['GET'])
+def get_completion_response():
+    user_input = request.args.get('userinput')
+    print("User Text: ", user_input)
+    response = get_response_from_aoai(user_input)
+    print("AOAI Response: ", response)
+    return str(response)
+
+
+def get_response_from_aoai(user_input):
+    user_prompt = f"User Input: {user_input}\n\n"
+
+    try:
+        response = openai.Completion.create(
+            engine=config_details['COMPLETIONS_MODEL'],
+            prompt=user_prompt,
+            temperature=1,
+            max_tokens=150,
+            top_p=0.5,
+            frequency_penalty=0,
+            presence_penalty=0,
+            stop=None
+        )
+
+        answer = response.choices[0].text
+        return answer
+    except Exception as e:
+        print("An exception has occurred:", str(e))
+        return "An error occurred while processing the request."
+```
+
+![Flask Html Azure OpenAI | 100x100](./Documentation/Images/Flask_Html_Azure_OpenAI.PNG)
 
 ---
 
