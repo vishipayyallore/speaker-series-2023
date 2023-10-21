@@ -1,8 +1,8 @@
-# Azure OpenAI - Mini Project - Python, Azure SQL, .NET 7 Minimal API, Blazor Server, and Postman
+# Chat GPT Clone - Python Flask, Azure Open AI, HTML, JavaScript, Bootstrap 5.x
 
-## Date Time: 07-Aug-2023 at 09:00 AM IST
+## Date Time: 22-Oct-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/294280219](https://www.meetup.com/dot-net-learners-house-hyderabad/events/294280219)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456891](https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456891)
 
 ## YouTube URL: [https://www.youtube.com/watch?v=ppcS_V3rFkg](https://www.youtube.com/watch?v=ppcS_V3rFkg)
 
@@ -32,23 +32,11 @@
 
 ## What are we doing today?
 
-> 1. Setting up Azure SQL Database, Tables and Stored Procedures
->    - Table Creation
->    - Stored Procedure Creation
-> 1. Create a Python Flask Web API to Invoke SQL Stored Procedure
->    - Python Flask Web API Project Structure
->    - How to execute the Python Flask API?
-> 1. Testing Python Flask Web API using Postman
-> 1. Integrating Python Flask Web API using Blazor Server App
->    - Blazor Server App Project Structure
->    - Blazor Server App Consuming Python Flask Web API
-> 1. Retrieving Countries Information using .NET 7 Minimal API
->    - .NET 7 Minimal API Project Structure
-> 1. Testing Countries Information .NET 7 Minimal API using Postman
+> 1. To be done
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
-### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/AzureOpenAI) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai) of today's session for more details
 
 ---
 
@@ -58,7 +46,7 @@
 
 ## The Big Picture
 
-![Architecture | 100x100](./Documentation/Images/Architecture_V1.PNG)
+![Chat GPT Clone | 100x100](./Documentation/Images/SessionFirstLook.PNG)
 
 ## 1. Setting up Azure SQL Database, Tables and Stored Procedures
 
@@ -93,18 +81,18 @@ CREATE PROCEDURE [dbo].[usp_insert_country_info]
     @CountryId INT OUTPUT
 AS
 BEGIN
-    
+
     SET NOCOUNT ON;
 
-    INSERT INTO CountriesInfo 
+    INSERT INTO CountriesInfo
         (CountryName, CapitalState, NationalBird, CountryPopulation)
-    VALUES 
+    VALUES
         (@CountryName, @CapitalState, @NationalBird, @CountryPopulation);
 
     SET @CountryId = SCOPE_IDENTITY();
 
     SELECT @CountryId AS CountryId;
-    
+
 END;
 ```
 
