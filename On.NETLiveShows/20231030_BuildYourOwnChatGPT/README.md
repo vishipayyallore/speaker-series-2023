@@ -1,8 +1,8 @@
-# Minimal APIs with EF Core, App Service, and Angular in On .NET Live
+# Build your own ChatGPT with .NET and Azure Open AI at [On .NET Live](https://dotnet.microsoft.com/en-us/live/on-dotnet-live)
 
-## Date Time: 10-Jul-2023 at 09:30 PM IST
+## Date Time: 30-Oct-2023 at 09:30 PM IST
 
-## YouTube URL: [https://www.youtube.com/watch?v=MUuyd5RVJe4](https://www.youtube.com/watch?v=MUuyd5RVJe4)
+## YouTube URL: [https://www.youtube.com/watch?v=3r7bR5ZEJp4](https://www.youtube.com/watch?v=3r7bR5ZEJp4)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -11,20 +11,19 @@
 ### Software/Tools
 
 > 1. OS: Windows 10 x64
-> 1. .NET 7
+> 1. .NET 8
 > 1. Visual Studio 2022
 > 1. Visual Studio Code
 
 ### Prior Knowledge
 
-> 1. Programming knowledge in C#
-> 1. Azure
-> 1. Angular 15
+> 1. Programming knowledge in C# / Python
+> 1. Azure / Azure Open AI / Open AI
 > 1. .NET REST API
 
 ## Technology Stack
 
-> 1. .NET 7, Azure, and Angular 15
+> 1. .NET 8, Azure, and Azure Open AI
 
 ## Information
 
@@ -32,30 +31,8 @@
 
 ## What are we doing today?
 
-> 1. Introduction to .NET Minimal API
-> 1. How to create .NET Minimal API?
->    - Create a new .NET Minimal API project using `dotnet cli` command
->    - Create a new .NET Minimal API project using `VS 2022` command
-> 1. Comparision of Service Collections
->    - Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
-> 1. Comparison of HTTP Request Pipeline
->    - Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
-> 1. Parameter Binding demo with User Endpoints
->    - From Query | From Route | From Body | From Services
-> 1. Base Entity - Course Entity inheriting Base Entity
-> 1. Dependency Injection and Inversion of Control - Deep Dive
->    - Dependency Injection of DbContext, Auto Mapper, Swagger, Repository Layer, Business Layer
-> 1. Returning Unified Response from different Endpoints
-> 1. Move the Endpoints into an Extension Classes
-> 1. Creating Course Dtos using record, and Auto Mapper Configuration - Enhancing GetAllCourses() API Endpoint to return Course Dtos
-> 1. Adding Swagger Dependencies - WithTags().WithName().Produces(200).ProducesProblem(500);
-> 1. Move Service Dependencies, and Http Request Pipeline Dependencies into a Extension Classes
-> 1. Logging using Serilog
-> 1. Configuration CORS in Development Mode
-> 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Local API Endpoint
-> 1. Angular 15 (SPA with Standalone components) integration with Minimal API Only GetAllCourses() Azure Hosted API Endpoint
+> 1. To be decided
 > 1. SUMMARY / RECAP / Q&A
-> 1. 30,000 foot view of HTTP, and REST
 
 ### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
 
@@ -75,141 +52,6 @@
 
 ### 2.1. Create a new .NET Minimal API project using `dotnet cli` command
 
-```powershell
-dotnet new list
-
-dotnet new web -o firstsample --dry-run
-
-dotnet new webapi -minimal -o secondsample --dry-run
-```
-
-![Dotnet New List | 100x100](./Documentation/Images/DotnetNewList.PNG)
-
-### 2.1. Create a new .NET Minimal API project using `VS 2022` command
-
-#### Create Minimal API using `VS 2022` - Web App Empty Template
-
-![Web App Empty Template | 100x100](./Documentation/Images/WebAppEmptyTemplate.PNG)
-
-#### Create Minimal API using `VS 2022` - Web API Template - Uncheck Controllers
-
-![Web Api Template | 100x100](./Documentation/Images/WebAPITemplate.PNG)
-
-## 3. Comparision of Service Collections
-
-### 3.1. Web App Empty | Web API with Uncheck Controllers | Web API with Controllers
-
-> 1. Comparision bewteen Web
->    - Web App Empty
->    - Web API with Uncheck Controllers
->    - Web API with Controllers
-
-## 4. Comparison of HTTP Request Pipeline
-
-**References:**
-
-> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0)
-> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-7.0)
-
-## 5. Parameter Binding
-
-**References:**
-
-> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding?view=aspnetcore-7.0)
-
-### 5.1. From Query | From Route | From Body | From Services
-
-![Parameter Binding | 100x100](./Documentation/Images/ParameterBinding.PNG)
-
-## 6. Base Entity - Course Entity inheriting Base Entity
-
-```csharp
-public class BaseEntity
-{
-    [Key]
-    public Guid Id { get; set; }
-
-    [Required]
-    public DateTime CreatedDate { get; set; }
-    
-    [Required]
-    public string? CreatedBy { get; set; }
-    
-    [Required]
-    public DateTime ModifiedDate { get; set; }
-    
-    [Required]
-    public string? ModifiedBy { get; set; }
-}
-```
-
-```csharp
-public class Course : BaseEntity
-{
-    public string? CourseId { get; set; }
-
-    public string? Name { get; set; }
-    
-    public int Duration { get; set; }
-    
-    public string? Description { get; set; }
-}
-```
-
-## 7. EF Core Tips
-
-### 7.1. Libraries
-
-```xml
-<ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
-</ItemGroup>
-```
-
-```xml
-<ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
-</ItemGroup>
-```
-
-### 7.2. Connection Strings
-
-```csharp
-var connectionString = builder.Configuration.GetConnectionString("StudentEnrollmentDbConnection");
-builder.Services.AddDbContext<StudentEnrollmentDbContext>(options =>
-{
-    _ = options.UseSqlServer(connectionString);
-});
-```
-
-```csharp
-builder.Services.AddDbContext<StudentEnrollmentDbContext>(options =>
-{
-    _ = options.UseSqlServer("name=StudentEnrollmentDbConnection"); /* This will also read from appsettings.json */
-});
-```
-
-### 7.3. dotnet ef migrations
-
-```powershell
-dotnet ef migrations add InitialVersion --project ./StudentEnrollment.Data/StudentEnrollment.Data.csproj --startup-project ./StudentEnrollment.Api/StudentEnrollment.Api.csproj
-```
-
-![dotnet ef migrations | 100x100](./Documentation/Images/dotnet_ef_migrations.PNG)
-
-## 8. Creating Endpoints
-
-### 8.1. Manual
-
-### 8.2. Scaffold
-
-## X. Angular 15 integration with Minimal API Azure Hosted API Endpoint
-
-> 1. SPA with Standalone components
-
-![Angular 15 with Minimal API | 100x100](./Documentation/Images/Angular15_MinimalAPI.PNG)
-
 ---
 
 ## SUMMARY / RECAP / Q&A
@@ -221,29 +63,8 @@ dotnet ef migrations add InitialVersion --project ./StudentEnrollment.Data/Stude
 
 ## Appendix A
 
-### 1. 30,000 foot view of HTTP, and REST
+### 1. To be decided
 
 **References:**
 
 > 1. [https://rapidapi.com/blog/rest-api-vs-web-api](https://rapidapi.com/blog/rest-api-vs-web-api)
-> 1. [https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.](https://www.guru99.com/api-vs-web-service-difference.html#:~:text=Web%20service%20is%20used%20for,APIs%20are%20not%20web%20services.)
-> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)
-> 1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT)
-> 1. [https://en.wikipedia.org/wiki/Representational_state_transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
-
-### HTTP Methods
-
-> 1. Discussion and Demo
-
-### HTTP Responses
-
-> 1. Discussion and Demo
-
-### What should I send as Response
-
-> 1. Discussion and Demo
-
-### REST (Uniform, Stateless, Cacheable, Layered, Resources, and Self-Descriptive)
-
-> 1. Discussion and Demo
