@@ -48,7 +48,7 @@
 
 > 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
 
-## 2. AI, ML, Auto ML, DL, NLP, GAI
+## 2. Few Terms AI, ML, Auto ML, DL, NLP, GAI
 
 > 2.1. **Artificial Intelligence (AI):**
 >
@@ -106,20 +106,20 @@ Reference(s):
 
 ## 4. Azure Open AI, Transformer and GPT
 
-> 3.1. **Azure Open AI:**
+> 4.1. **Azure Open AI:**
 >
 > - Azure OpenAI is a cloud-based service provided by Microsoft Azure that offers access to the power of OpenAI's language models, such as GPT-3, GPT-4, and others. It enables developers to integrate natural language understanding and text generation capabilities into their applications and services. Azure OpenAI is designed for a wide range of use cases, including chatbots, content generation, language translation, and more, and it offers scalable and efficient access to advanced AI language capabilities via a RESTful API. It provides developers with the tools they need to build intelligent, language-driven applications.
 
 ---
 
-> 3.2. **Transformer:**
+> 4.2. **Transformer:**
 >
 > - A "Transformer" in the context of artificial intelligence and machine learning is not a physical device but a type of deep learning model architecture that has had a significant impact on various natural language processing (NLP) tasks and other machine learning domains.
 > - These topics are interconnected, with AI being the overarching field that encompasses various subfields like ML, DL, NLP, and Generative AI. Each of these subfields has its own set of techniques and applications, contributing to the advancement of artificial intelligence.
 
 ---
 
-> 3.2. **GPT - Generative Pre-trained Transformer:**
+> 4.2. **GPT - Generative Pre-trained Transformer:**
 >
 > - The term "GPT" stands for "Generative Pre-trained Transformer." It refers to a class of deep learning models used for various natural language processing (NLP) tasks. These models are characterized by their ability to generate human-like text and their architecture, which is based on the Transformer neural network.
 >   - **Generative**: GPT models are capable of generating human-readable text. They can be used for tasks like text completion, text summarization, and even creative writing.
@@ -128,6 +128,39 @@ Reference(s):
 > - GPT models, such as GPT-3, GPT-4, and others, have achieved remarkable performance in various NLP tasks and have been widely adopted in the field of artificial intelligence. They have applications in natural language understanding, text generation, language translation, chatbots, and more.
 
 ---
+
+## 5. Tokens Tokens Tokens and more Tokens
+
+> 1. Discussion and Demo
+
+**References:**
+
+> 1. [https://platform.openai.com/tokenizer](https://platform.openai.com/tokenizer)
+
+![Tokenizer | 100x100](./Documentation/Images/Tokenizer.PNG)
+
+## 6. Trying our own Completion Examples in Azure AI Studio
+
+> 1. Discussion and Demo
+
+```text
+Input:
+Happy Birthday
+
+Input:
+Give the top 5 food items from South India
+
+Input:
+Give the top 5 Populated states in India
+
+Inputs:
+1. Which is the tallest building in the world
+2. Which is the tallest building in Hyderabad
+
+Input: Tell me two jokes on simple people
+```
+
+![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
 
 ## SUMMARY / RECAP / Q&A
 
