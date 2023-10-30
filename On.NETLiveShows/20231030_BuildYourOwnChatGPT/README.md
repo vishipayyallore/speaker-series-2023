@@ -162,6 +162,31 @@ Inputs:
 
 ![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
 
+## 7. Create a .env file and update the Environment Variables
+
+```text
+COMPLETIONS_MODEL="text-davinci-003-dev-001"
+OPENAI_API_BASE="https://<your resource name>.openai.azure.com"
+OPENAI_API_VERSION="2022-12-01"
+OPENAI_API_KEY=YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x
+```
+
+```powershell
+[System.Environment]::SetEnvironmentVariable('OPENAI_API_KEY', 'YourAPIKEY-11x1x111111x1xxx1x111x1x11x11x1x', 'User')
+```
+
+## 8. Completion Request using C# .NET 8
+
+> 1. Discussion and Demo
+
+![Completion Requests in CS | 100x100](./Documentation/Images/Completions_Demo_CS_1.PNG)
+
+## 9. Our Own ChatGPT with .NET 8 and Azure Open AI
+
+> 1. Discussion and Demo
+
+![ChatGPT | 100x100](./Documentation/Images/OurOwnChatGPT_Net8.PNG)
+
 ## SUMMARY / RECAP / Q&A
 
 > 1. SUMMARY / RECAP / Q&A
