@@ -34,7 +34,7 @@
 > 1. To be decided
 > 1. SUMMARY / RECAP / Q&A
 
-### Please refer to the [**Source Code**](https://github.com/Microservices-for-Small-School-App/services-school) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/On.NETLiveShows/20231030_BuildYourOwnChatGPT) of today's session for more details
 
 ---
 
@@ -44,9 +44,7 @@
 
 ## 1. What is Intelligence?
 
-**References:**
-
-> 1. [https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-7.0)
+> 1. Discussion
 
 ## 2. Few Terms AI, ML, Auto ML, DL, NLP, GAI
 
@@ -94,7 +92,7 @@
 
 ## 3. ELIZA - The early Natural Language Processing (NLP) Chatbot
 
-> 3.1. **ELIZA:**
+> **ELIZA:**
 >
 > - ELIZA is one of the earliest and most well-known examples of a natural language processing (NLP) chatbot. Developed in the mid-1960s by Joseph Weizenbaum at the Massachusetts Institute of Technology (MIT), ELIZA was designed to simulate a Rogerian psychotherapist. Its primary purpose was to engage users in conversation and provide responses based on simple pattern recognition.
 > - It was one of the first chatbots to use natural language processing techniques to simulate human conversation.
@@ -148,6 +146,9 @@ Input:
 Happy Birthday
 
 Input:
+Tell me two jokes on Innocent people
+
+Input:
 Give the top 5 food items from South India
 
 Input:
@@ -157,7 +158,6 @@ Inputs:
 1. Which is the tallest building in the world
 2. Which is the tallest building in Hyderabad
 
-Input: Tell me two jokes on simple people
 ```
 
 ![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
