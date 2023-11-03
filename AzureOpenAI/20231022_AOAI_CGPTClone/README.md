@@ -32,9 +32,16 @@
 
 ## What are we doing today?
 
-> 1. To be done
+> 1. The Big Picture
+> 1. Create a Virtual Environment
+> 1. Install the required packages
+> 1. Create a .env file and update the Environment Variables
+> 1. Create a .gitignore file
+> 1. Create a Flask Web API with 1st API Endpoint
+> 1. Run the Flask Web API
+> 1. Serving HTML Pages, and other Static Assets
+> 1. Create an API Endpoint to interact with OpenAI
 > 1. SUMMARY / RECAP / Q&A
-> 1. What is next ?
 
 ### Please refer to the [**Source Code**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai) of today's session for more details
 
