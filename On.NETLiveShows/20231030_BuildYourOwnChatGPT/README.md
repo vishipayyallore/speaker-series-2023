@@ -31,7 +31,15 @@
 
 ## What are we doing today?
 
-> 1. To be decided
+> 1. What is Intelligence?
+> 1. Few Terms AI, ML, Auto ML, DL, NLP, GAI
+> 1. ELIZA - The early Natural Language Processing (NLP) Chatbot
+> 1. Azure Open AI, Transformer and GPT
+> 1. Tokens Tokens Tokens and more Tokens
+> 1. Trying our own Completion Examples in Azure AI Studio
+> 1. Create a .env file and update the Environment Variables
+> 1. Completion Request using C# .NET 8
+> 1. Our Own ChatGPT with .NET 8 and Azure Open AI
 > 1. SUMMARY / RECAP / Q&A
 
 ### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/On.NETLiveShows/20231030_BuildYourOwnChatGPT) of today's session for more details
