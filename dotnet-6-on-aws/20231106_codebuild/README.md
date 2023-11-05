@@ -1,8 +1,8 @@
-# Hands-on with AWS - Code Commit - .NET 8 / Java Spring Boot
+# Hands-on with AWS - Code Build - .NET 8 / Java Spring Boot
 
-## Date Time: 30-Sep-2023 at 09:00 AM IST
+## Date Time: 06-Nov-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456967](https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456967)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/296075156](https://www.meetup.com/dot-net-learners-house-hyderabad/events/296075156)
 
 ## YouTube URL: [https://www.youtube.com/watch?v=h6l1GoE8qfw](https://www.youtube.com/watch?v=h6l1GoE8qfw)
 
