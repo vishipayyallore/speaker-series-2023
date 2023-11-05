@@ -34,7 +34,18 @@
 
 ## What are we doing today?
 
-> 1. To be decided
+> 1. Existing AWS Code Commit Repositories
+> 1. What is AWS Code Build?
+> 1. Basic Code Build Workflow
+> 1. Create the S3 Bucket
+> 1. Create the Code Build Project
+> 1. Start the Build in AWS Code Build Project
+> 1. Clean, Build and Test the Spring Boot and .NET 8 Application Locally
+> 1. Few Git Commands
+> 1. Create the BuildSpec.yml
+> 1. Start the Build
+> 1. View the Build Logs
+> 1. View the Build History
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -46,13 +57,13 @@
 
 ---
 
-## Existing AWS Code Commit Repositories
+## 1. Existing AWS Code Commit Repositories
 
 > 1. Discussion and Demo
 
 ![AWS Code Commit Repositories | 100x100](./Documentation/Images/AWS_Code_Commit_Repos.PNG)
 
-## 1. What is AWS Code Build?
+## 2. What is AWS Code Build?
 
 > 1. Discussion
 
@@ -64,32 +75,32 @@
 > 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/trigger-create.html>
 > 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html>
 
-## 2. Basic Code Build Workflow
+## 3. Basic Code Build Workflow
 
 > 1. Developer commits the code to AWS Code Commit
 > 1. AWS Code Build will build the code
 > 1. AWS Code Build will run the tests
 > 1. AWS Code Build will publish the artifacts to S3 Bucket
 
-## 3. Create the S3 Bucket
+## 4. Create the S3 Bucket
 
 > 1. Discussion and Demo
 
 ![S3 Buckets for Build Artifacts | 100x100](./Documentation/Images/S3_Buckets_build_artifacts.PNG)
 
-## 4. Create the Code Build Project
+## 5. Create the Code Build Project
 
 > 1. Discussion and Demo
 
 ![AWS Code Build Project | 100x100](./Documentation/Images/AWS_CodeBuildProject.PNG)
 
-## 5. Start the Build in AWS Code Build Project
+## 6. Start the Build in AWS Code Build Project
 
 > 1. Discussion and Demo
 
 ![AWS Code Build Execution | 100x100](./Documentation/Images/AWS_CodeBuild_Execution_1.PNG)
 
-## 6. Clean, Build and Test the Spring Boot and .NET 8 Application Locally
+## 7. Clean, Build and Test the Spring Boot and .NET 8 Application Locally
 
 > 1. Discussion and Demo
 
@@ -103,7 +114,7 @@
 
 ![Clean Build Locally | 100x100](./Documentation/Images/Clean_Build_Locally.PNG)
 
-## 7. Few Git Commands
+## 8. Few Git Commands
 
 > 1. Discussion and Demo
 
@@ -126,7 +137,7 @@ git commit -m "Added the BuildSpec.yml"
 
 ![Git Commit and Merge | 100x100](./Documentation/Images/Git_Commit_Merge.PNG)
 
-## 6. Create the BuildSpec.yml
+## 9. Create the BuildSpec.yml
 
 > 1. Discussion and Demo
 
@@ -157,27 +168,29 @@ artifacts:
     - target/webapi.war
 ```
 
-## 7. Start the Build
+## 10. Start the Build
 
 > 1. Discussion and Demo
 
 ![Build Succeeds | 100x100](./Documentation/Images/BuildSucceeds.PNG)
 
-## 8. View the Build Logs
+## 11. View the Build Logs
 
 > 1. Discussion and Demo
 
 ![AWS CodeBuild Logs | 100x100](./Documentation/Images/AWS_CodeBuild_Logs.PNG)
 
-## 9. View the Build History
+## 12. View the Build History
 
 > 1. Discussion and Demo
 
 ![AWS CodeBuild History | 100x100](./Documentation/Images/AWS_CodeBuild_History.PNG)
 
-## 10. View the Build Artifacts
+## 13. View the Build Artifacts
 
 > 1. Discussion and Demo
+
+![AWS CodeBuild Artifacts | 100x100](./Documentation/Images/ViewBuildArtifacts.PNG)
 
 ---
 
