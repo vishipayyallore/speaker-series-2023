@@ -101,6 +101,29 @@
 
 ![Clean Build Locally | 100x100](./Documentation/Images/Clean_Build_Locally.PNG)
 
+## 7. Few Git Commands
+
+> 1. Discussion and Demo
+
+```bash
+git checkout main
+git fetch
+git pull
+
+git branch
+
+git checkout swamy/05nov-work
+git merge main
+
+git status
+git diff
+
+git add .
+git commit -m "Added the BuildSpec.yml"
+```
+
+![Git Commit and Merge | 100x100](./Documentation/Images/Git_Commit_Merge.PNG)
+
 ## 6. Create the BuildSpec.yml
 
 > 1. Discussion and Demo
@@ -108,6 +131,28 @@
 Reference(s):
 
 > 1. <https://aws.amazon.com/blogs/devops/building-net-7-applications-with-aws-codebuild/>
+
+```yml
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk17
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn install
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/greetings-api.1.0.1.jar
+```
 
 ## 7. Start the Build
 
