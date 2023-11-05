@@ -34,19 +34,11 @@
 
 ## What are we doing today?
 
-> 1. Generate Git Credentials for AWS Code Commit
-> 1. Create two repositories in AWS Code Commit
-> 1. Clone the repositories to local machine
-> 1. Creating simple Web Api using Java Spring Boot
-> 1. Added a greeting controller and DTO
-> 1. View Commit History in AWS Code Commit
-> 1. Create a Branch in AWS Code Commit
-> 1. Create a Pull Request in AWS Code Commit
-> 1. Merge the Pull Request in AWS Code Commit
+> 1. To be decided
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
-### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/dotnet-6-on-aws/20230930_codecommit) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/vishipayyallore/learn-aws-in-2024) of today's session for more details
 
 ---
 
@@ -54,13 +46,70 @@
 
 ---
 
-## 1. Generate Git Credentials for AWS Code Commit
+## Existing AWS Code Commit Repositories
 
 > 1. Discussion and Demo
-> 1. These credentials are required to clone the repositories from AWS Code Commit to local machine
 
-![AWS Code Commit GIT Credentials | 100x100](./Documentation/Images/AWSCC_GitCredentials_1.PNG)
+![AWS Code Commit Repositories | 100x100](./Documentation/Images/AWS_Code_Commit_Repos.PNG)
 
+## 1. What is AWS Code Build?
+
+> 1. Discussion
+
+**Reference(s):**
+
+> 1. <https://docs.aws.amazon.com/codebuild/>
+> 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html>
+> 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/concepts.html>
+
+## 2. Basic Code Build Workflow
+
+> 1. Developer commits the code to AWS Code Commit
+> 1. AWS Code Build will build the code
+> 1. AWS Code Build will run the tests
+> 1. AWS Code Build will publish the artifacts to S3 Bucket
+
+## 3. Create the S3 Bucket
+
+> 1. Discussion and Demo
+
+![S3 Buckets for Build Artifacts | 100x100](./Documentation/Images/S3_Buckets_build_artifacts.PNG)
+
+## 4. Create the Code Build Project
+
+> 1. Discussion and Demo
+
+## 5. Start the Build
+
+> 1. Discussion and Demo
+
+## 6. Create the BuildSpec.yml
+
+> 1. Discussion and Demo
+
+## 7. Start the Build
+
+> 1. Discussion and Demo
+
+## 8. View the Build Logs
+
+> 1. Discussion and Demo
+
+## 9. View the Build Artifacts
+
+> 1. Discussion and Demo
+
+## 10. View the Build History
+
+> 1. Discussion and Demo
+
+## Create the Build Notification
+
+> 1. Discussion and Demo
+
+## 11. View the Build Notification
+
+> 1. Discussion and Demo
 
 ---
 
