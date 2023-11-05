@@ -61,6 +61,8 @@
 > 1. <https://docs.aws.amazon.com/codebuild/>
 > 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html>
 > 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/concepts.html>
+> 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/trigger-create.html>
+> 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html>
 
 ## 2. Basic Code Build Workflow
 
@@ -131,6 +133,7 @@ git commit -m "Added the BuildSpec.yml"
 Reference(s):
 
 > 1. <https://aws.amazon.com/blogs/devops/building-net-7-applications-with-aws-codebuild/>
+> 1. <https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html>
 
 ```yml
 version: 0.2
@@ -138,7 +141,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk17
+      java: corretto17
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
@@ -151,30 +154,28 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/greetings-api.1.0.1.jar
+    - target/webapi.war
 ```
 
 ## 7. Start the Build
 
 > 1. Discussion and Demo
 
+![Build Succeeds | 100x100](./Documentation/Images/BuildSucceeds.PNG)
+
 ## 8. View the Build Logs
 
 > 1. Discussion and Demo
 
-## 9. View the Build Artifacts
+![AWS CodeBuild Logs | 100x100](./Documentation/Images/AWS_CodeBuild_Logs.PNG)
+
+## 9. View the Build History
 
 > 1. Discussion and Demo
 
-## 10. View the Build History
+![AWS CodeBuild History | 100x100](./Documentation/Images/AWS_CodeBuild_History.PNG)
 
-> 1. Discussion and Demo
-
-## Create the Build Notification
-
-> 1. Discussion and Demo
-
-## 11. View the Build Notification
+## 10. View the Build Artifacts
 
 > 1. Discussion and Demo
 
