@@ -4,7 +4,7 @@
 
 ## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/296075156](https://www.meetup.com/dot-net-learners-house-hyderabad/events/296075156)
 
-## YouTube URL: [https://www.youtube.com/watch?v=h6l1GoE8qfw](https://www.youtube.com/watch?v=h6l1GoE8qfw)
+## YouTube URL: [https://www.youtube.com/watch?v=hS2CTmgVNK4](https://www.youtube.com/watch?v=hS2CTmgVNK4)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
