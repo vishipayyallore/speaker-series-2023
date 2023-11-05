@@ -81,11 +81,25 @@
 
 ![AWS Code Build Project | 100x100](./Documentation/Images/AWS_CodeBuildProject.PNG)
 
-## 5. Start the Build
+## 5. Start the Build in AWS Code Build Project
 
 > 1. Discussion and Demo
 
 ![AWS Code Build Execution | 100x100](./Documentation/Images/AWS_CodeBuild_Execution_1.PNG)
+
+## 6. Clean, Build and Test the Spring Boot and .NET 8 Application Locally
+
+> 1. Discussion and Demo
+
+```bash
+& "c:\GitHub\learn-aws-in-2024\code-for-cicd\greetings-api\mvnw.cmd" clean -f "c:\GitHub\learn-aws-in-2024\code-for-cicd\greetings-api\pom.xml"
+
+& "c:\GitHub\learn-aws-in-2024\code-for-cicd\greetings-api\mvnw.cmd" validate -f "c:\GitHub\learn-aws-in-2024\code-for-cicd\greetings-api\pom.xml"
+
+& "c:\GitHub\learn-aws-in-2024\code-for-cicd\greetings-api\mvnw.cmd" install -f "c:\GitHub\learn-aws-in-2024\code-for-cicd\greetings-api\pom.xml"
+```
+
+![Clean Build Locally | 100x100](./Documentation/Images/Clean_Build_Locally.PNG)
 
 ## 6. Create the BuildSpec.yml
 
