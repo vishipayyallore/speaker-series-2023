@@ -79,13 +79,21 @@
 
 > 1. Discussion and Demo
 
+![AWS Code Build Project | 100x100](./Documentation/Images/AWS_CodeBuildProject.PNG)
+
 ## 5. Start the Build
 
 > 1. Discussion and Demo
 
+![AWS Code Build Execution | 100x100](./Documentation/Images/AWS_CodeBuild_Execution_1.PNG)
+
 ## 6. Create the BuildSpec.yml
 
 > 1. Discussion and Demo
+
+Reference(s):
+
+> 1. <https://aws.amazon.com/blogs/devops/building-net-7-applications-with-aws-codebuild/>
 
 ## 7. Start the Build
 
