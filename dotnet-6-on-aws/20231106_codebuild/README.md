@@ -66,6 +66,16 @@
 ## 2. What is AWS Code Build?
 
 > 1. Discussion
+> 1. Code Build is a fully managed continuous integration service that compiles source code, runs tests, and produces software packages that are ready to deploy.
+> 1. Code build project, is a collection of build configurations settings that AWS CodeBuild uses when running a build.
+> 1. Code build environment, is a representation of operating system, programming language runtime, and tools that AWS CodeBuild uses to run a build.
+> 1. Code build buildspec, is a collection of build commands and related settings, in YAML format, that AWS CodeBuild uses to run a build.
+> 1. Code build build badge, is a small image that you can include in your websites and documentation to indicate the status of a build.
+> 1. Code build build logs, is a record of the events that occurred during a build.
+> 1. Code build build history, is a record of the builds that you have run in AWS CodeBuild.
+> 1. Code build build artifacts, are the files that are generated when AWS CodeBuild runs a build. You can specify the location where AWS CodeBuild stores these files.
+
+![Generic badge](https://codebuild.us-west-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiSHF0UmpxUnV2dEcvbDVHdVptWGZJY1VjamhWb2pnUzhFUE8wZHgyNTRzQUZFMDRrRU9UZlBma1ovVktVT0tPTCt0enpVMjdJazlDaG9tZ2F3eE5tK0NJPSIsIml2UGFyYW1ldGVyU3BlYyI6IlIzckFXVFM0TVJKdUg3R2ciLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
 **Reference(s):**
 
@@ -140,6 +150,8 @@ git commit -m "Added the BuildSpec.yml"
 ## 9. Create the BuildSpec.yml
 
 > 1. Discussion and Demo
+> 1. Version | Phases | Artifacts
+> 1. Install | Pre Build | Build | Post Build
 
 Reference(s):
 
