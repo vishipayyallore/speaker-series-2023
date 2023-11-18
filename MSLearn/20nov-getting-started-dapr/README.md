@@ -60,6 +60,44 @@
 > 1. Hosting environments
 > 1. <https://learn.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/dapr-at-20000-feet>
 
+## 3. Enter into the World of Dapr
+
+> 1. Discussion and Demo
+> 1. Install Dapr CLI <https://docs.dapr.io/getting-started/install-dapr-cli/>
+> 1. Verify Dapr CLI installation
+
+![Verify Dapr Installation | 100x100](./Documentation/Images/Dapr_Installation.PNG)
+
+## 4. Initialize Dapr in your local environment
+
+> 1. Discussion and Demo
+> 1. Install Dapr runtime <https://docs.dapr.io/getting-started/install-dapr-selfhost/>
+> 1. We should execute the commands in elevated command prompt
+
+```bash
+dapr uninstall
+dapr init
+dapr --version
+docker ps
+```
+
+![Dapr Init | 100x100](./Documentation/Images/Dapr_Initialization.PNG)
+
+## 5. Verify components directory has been initialized
+
+> 1. Discussion and Demo
+
+```bash
+%UserProfile%\.dapr
+```
+
+![Verify Dapr Installation | 100x100](./Documentation/Images/Dapr_Installation_1.PNG)
+
+## 6. Viewing the Dapr Dashboard
+
+> 1. Discussion and Demo
+> 1. Install Dapr dashboard <https://docs.dapr.io/getting-started/install-dapr-dashboard/>
+
 ---
 
 ## SUMMARY / RECAP / Q&A
