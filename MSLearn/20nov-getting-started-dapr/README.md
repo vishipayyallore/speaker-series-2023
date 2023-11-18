@@ -81,7 +81,7 @@ dapr
 
 ```bash
 dapr uninstall
-dapr init
+dapr init  # For Standalone mode
 dapr --version
 ```
 
@@ -117,6 +117,36 @@ docker ps
 ## 8. Creating our first Dapr application - (ASP.NET Core Web API)
 
 > 1. Discussion and Demo
+
+### Creating the Project
+
+```bash
+dotnet new webapi -o Hello.DaprWebApi
+
+cd .\Hello.DaprWebApi\
+
+dotnet add package Dapr.AspNetCore --version 1.12.0
+```
+
+### Execute the project
+
+```bash
+dotnet run
+curl https://localhost:7090/weatherforecast
+```
+
+### Modify the code inside Program.cs
+
+```csharp
+// Add services to the container.
+builder.Services.AddControllers().AddDapr();
+
+// app.UseHttpsRedirection();
+
+app.MapControllers();
+
+app.MapSubscribeHandler();
+```
 
 ---
 
