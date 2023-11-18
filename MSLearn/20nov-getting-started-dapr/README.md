@@ -46,11 +46,19 @@
 ## 1. Distributed Systems
 
 > 1. Discussion
+> 1. Monolithic architecture
+> 1. SOA architecture
+> 1. Distributed architecture
 > 1. <https://learn.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/the-world-is-distributed>
 
-## 2. Creating Flask Web API to interact with OpenAI
+## 2. Dapr from 30,000 feet
 
-> 1. Discussion and Demo
+> 1. Discussion
+> 1. Dapr architecture
+> 1. Components
+> 1. Sidecar architecture
+> 1. Hosting environments
+> 1. <https://learn.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/dapr-at-20000-feet>
 
 ---
 
