@@ -66,6 +66,10 @@
 > 1. Install Dapr CLI <https://docs.dapr.io/getting-started/install-dapr-cli/>
 > 1. Verify Dapr CLI installation
 
+```bash
+dapr
+```
+
 ![Verify Dapr Installation | 100x100](./Documentation/Images/Dapr_Installation.PNG)
 
 ## 4. Initialize Dapr in your local environment
@@ -78,7 +82,6 @@
 dapr uninstall
 dapr init
 dapr --version
-docker ps
 ```
 
 ![Dapr Init | 100x100](./Documentation/Images/Dapr_Initialization.PNG)
@@ -93,7 +96,17 @@ docker ps
 
 ![Verify Dapr Installation | 100x100](./Documentation/Images/Dapr_Installation_1.PNG)
 
-## 6. Viewing the Dapr Dashboard
+## 6. Verify containers are running
+
+> 1. Discussion and Demo
+
+```bash
+docker ps
+```
+
+![Dapr Docker Containers | 100x100](./Documentation/Images/Dapr_Docker_Containers.PNG)
+
+## 7. Viewing the Dapr Dashboard
 
 > 1. Discussion and Demo
 > 1. Install Dapr dashboard <https://docs.dapr.io/getting-started/install-dapr-dashboard/>
