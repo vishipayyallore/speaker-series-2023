@@ -64,6 +64,7 @@
 
 > 1. Discussion and Demo
 > 1. Install Dapr CLI <https://docs.dapr.io/getting-started/install-dapr-cli/>
+> 1. <https://github.com/dapr/cli/releases>
 > 1. Verify Dapr CLI installation
 
 ```bash
@@ -111,6 +112,10 @@ docker ps
 > 1. Discussion and Demo
 > 1. Install Dapr dashboard <https://docs.dapr.io/getting-started/install-dapr-dashboard/>
 
+## 9. Creating our first Dapr application - (ASP.NET Core Web API)
+
+> 1. Discussion and Demo
+
 ---
 
 ## SUMMARY / RECAP / Q&A
@@ -123,3 +128,38 @@ docker ps
 ## What is Next? session?
 
 > 1. To be decided
+
+## XX. Creating our first Dapr application - (Console)
+
+> 1. Discussion and Demo
+
+```bash
+dotnet new console -o DaprCounter
+
+cd DaprCounter
+
+dotnet run
+
+dotnet add package Dapr.Client
+
+dapr run --app-id DaprCounter dotnet run
+
+dapr run --app-id DaprCounter dotnet run
+```
+
+```csharp
+using Dapr.Client
+
+const string storeName = "statestore";
+const string key = "counter"
+
+var daprClient = new DaprClientBuilder().Build();
+var counter = await daprClient.GetStateAsync<int>(storeName, key)
+
+while (true)
+{
+    Console.WriteLine($"Counter = {counter++}")
+    await daprClient.SaveStateAsync(storeName, key, counter);
+    await Task.Delay(1000);
+}
+```
