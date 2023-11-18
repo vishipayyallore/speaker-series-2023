@@ -1,6 +1,6 @@
 # Getting started - Dapr (Distributed Application Runtime), .NET 8, and VS Code
 
-## Date Time: 22-Oct-2023 at 09:00 AM IST
+## Date Time: 18-Nov-2023 at 09:00 AM IST
 
 ## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/296030335](https://www.meetup.com/dot-net-learners-house-hyderabad/events/296030335)
 
