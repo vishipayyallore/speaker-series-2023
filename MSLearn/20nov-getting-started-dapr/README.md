@@ -60,7 +60,7 @@
 > 1. Hosting environments
 > 1. <https://learn.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/dapr-at-20000-feet>
 
-## 3. Enter into the World of Dapr
+## 3. Let's enter into the World of Dapr
 
 > 1. Discussion and Demo
 > 1. Install Dapr CLI <https://docs.dapr.io/getting-started/install-dapr-cli/>
@@ -112,7 +112,9 @@ docker ps
 > 1. Discussion and Demo
 > 1. Install Dapr dashboard <https://docs.dapr.io/getting-started/install-dapr-dashboard/>
 
-## 9. Creating our first Dapr application - (ASP.NET Core Web API)
+![Dapr Dashboard | 100x100](./Documentation/Images/Dapr_Dashboard.PNG)
+
+## 8. Creating our first Dapr application - (ASP.NET Core Web API)
 
 > 1. Discussion and Demo
 
