@@ -1,10 +1,10 @@
-# Chat GPT Clone - Python Flask, Azure Open AI, HTML, JavaScript, Bootstrap 5.x
+# Getting started - Dapr (Distributed Application Runtime), .NET 8, and VS Code
 
 ## Date Time: 22-Oct-2023 at 09:00 AM IST
 
-## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456891](https://www.meetup.com/dot-net-learners-house-hyderabad/events/295456891)
+## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/296030335](https://www.meetup.com/dot-net-learners-house-hyderabad/events/296030335)
 
-## YouTube URL: [https://www.youtube.com/watch?v=zvGDbaUfky0](https://www.youtube.com/watch?v=zvGDbaUfky0)
+## YouTube URL: [https://www.youtube.com/watch?v=ToBeDone](https://www.youtube.com/watch?v=ToBeDone)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
