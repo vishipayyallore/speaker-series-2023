@@ -43,6 +43,10 @@
 
 ---
 
+## The Big Picture
+
+![The Big Picture](./Documentation/Images/SessionFirstLook.PNG)
+
 ## 1. Distributed Systems
 
 > 1. Discussion
@@ -148,7 +152,77 @@ app.MapControllers();
 app.MapSubscribeHandler();
 ```
 
----
+### Add HelloWordController.cs
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+
+namespace Hello.DaprWebApi.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class HelloWorldController(ILogger<HelloWorldController> logger) : ControllerBase
+{
+    private readonly ILogger<HelloWorldController> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+
+    // GET http://localhost:5000/api/HelloWorld/Hello
+    [HttpGet("Hello")]
+    public ActionResult<string> Get()
+    {
+        _logger.LogInformation("Hitting Get Hello Method.");
+
+        return "Hello -> DAPR, .NET 8 World !!";
+    }
+
+    // GET http://localhost:5000/api/HelloWorld/Greetings?userName=Sri%20Varu
+    [HttpGet("Greetings")]
+    public ActionResult<string> Greet([FromQuery] string userName)
+    {
+        _logger.LogInformation("Hitting Get Hello Method.");
+
+        return $"Hello -> {userName} !!";
+    }
+
+}
+```
+
+### Execute the project to verify the changes
+
+```bash
+dotnet run
+
+curl http://localhost:5000/api/HelloWorld/Hello
+
+curl http://localhost:5000/api/HelloWorld/Greetings?userName=Sri%20Varu
+```
+
+### Dapr application
+
+```bash
+dapr run --app-id "hello-dapr" --app-port "5000" --dapr-http-port "5010" -- dotnet run --project .\Hello.DaprWebApi.csproj --urls="http://+:5000"
+```
+
+![Dapr Application | 100x100](./Documentation/Images/Dapr_Application.PNG)
+
+### Accessing the endpoints using Dapr and Web API
+
+```bash
+curl http://localhost:5000/api/HelloWorld/Hello
+
+curl http://localhost:5010/v1.0/invoke/hello-dapr/method/api/HelloWorld/Hello
+
+curl http://localhost:5000/api/HelloWorld/Greetings?userName=Sri%20Varu
+
+curl http://localhost:5010/v1.0/invoke/hello-dapr/method/api/HelloWorld/Greetings?userName=Sri%20Varu
+```
+
+![Dapr Application | 100x100](./Documentation/Images/Dapr_Application_Routes.PNG)
+
+### Viewing the Dapr Dashboard
+
+> 1. Discussion and Demo
+
+![Dapr Dashboard | 100x100](./Documentation/Images/Dapr_Dashboard_Apps.PNG)
 
 ## SUMMARY / RECAP / Q&A
 
