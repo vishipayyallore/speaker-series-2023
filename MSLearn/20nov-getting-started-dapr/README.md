@@ -4,7 +4,7 @@
 
 ## Event URL: [https://www.meetup.com/dot-net-learners-house-hyderabad/events/296030335](https://www.meetup.com/dot-net-learners-house-hyderabad/events/296030335)
 
-## YouTube URL: [https://www.youtube.com/watch?v=ToBeDone](https://www.youtube.com/watch?v=ToBeDone)
+## YouTube URL: [https://www.youtube.com/watch?v=U2x_Xj8nPh4](https://www.youtube.com/watch?v=U2x_Xj8nPh4)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -32,10 +32,18 @@
 
 ## What are we doing today?
 
-> 1. To be decided
+> 1. The Big Picture
+> 1. Distributed Systems
+> 1. Dapr from 30,000 feet
+> 1. Let's enter into the World of Dapr
+> 1. Initialize Dapr in your local environment
+> 1. Verify components directory has been initialized
+> 1. Verify containers are running
+> 1. Viewing the Dapr Dashboard
+> 1. Creating our first Dapr application - (ASP.NET Core Web API)
 > 1. SUMMARY / RECAP / Q&A
 
-### Please refer to the [**Source Code**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/vishipayyallore/learn-dapr-in-2024) of today's session for more details
 
 ---
 
@@ -202,6 +210,18 @@ curl http://localhost:5000/api/HelloWorld/Greetings?userName=Sri%20Varu
 dapr run --app-id "hello-dapr" --app-port "5000" --dapr-http-port "5010" -- dotnet run --project .\Hello.DaprWebApi.csproj --urls="http://+:5000"
 ```
 
+### How to formulate the Dapr application URL?
+
+> 1. <https://docs.dapr.io/reference/api/service_invocation_api/>
+
+```bash
+http://localhost:5000/api/HelloWorld/Hello
+
+http://localhost:5010/v1.0/invoke/hello-dapr/method/api/HelloWorld/Hello
+
+http://localhost:<daprPort>/v1.0/invoke/<appID>/method/<method-name>
+```
+
 ![Dapr Application | 100x100](./Documentation/Images/Dapr_Application.PNG)
 
 ### Accessing the endpoints using Dapr and Web API
@@ -224,7 +244,7 @@ curl http://localhost:5010/v1.0/invoke/hello-dapr/method/api/HelloWorld/Greeting
 
 ![Dapr Dashboard | 100x100](./Documentation/Images/Dapr_Dashboard_Apps.PNG)
 
-## SUMMARY / RECAP / Q&A
+## 9. SUMMARY / RECAP / Q&A
 
 > 1. SUMMARY / RECAP / Q&A
 > 2. Any open queries, I will get back through meetup chat/twitter.
