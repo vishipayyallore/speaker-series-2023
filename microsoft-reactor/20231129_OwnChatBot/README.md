@@ -97,9 +97,11 @@ Input: Tell me two jokes on simple people
 
 ## [**Section 6 Documentation**](https://github.com/vishipayyallore/speaker-series-2023/blob/main/AzureOpenAI/2023Jul05_Prompt_Engineering_Part1/README.md)
 
-## 1. Completion Request using C# .NET 8
+## 7. Completion Request using C# .NET 8
 
 > 1. Discussion and Demo
+
+## [**Section 7 Documentation**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai/blob/main/documentation/S2.md)
 
 ## 1. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JS
 
