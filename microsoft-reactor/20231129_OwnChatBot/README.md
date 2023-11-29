@@ -1,10 +1,10 @@
-# Hands-On - Getting Started with Azure OpenAI Studio
+# Hands-On - Own ChatGPT with .NET 8, Python Flask, HTML, CSS, JavaScript
 
-## Date Time: 19-Jul-2023 at 06:00 PM IST
+## Date Time: 29-Nov-2023 at 05:00 PM IST
 
-## Event URL: [https://www.meetup.com/microsoft-reactor-bengaluru/events/294658190](https://www.meetup.com/microsoft-reactor-bengaluru/events/294658190)
+## Event URL: [https://www.meetup.com/microsoft-reactor-bengaluru/events/297192089](https://www.meetup.com/microsoft-reactor-bengaluru/events/297192089)
 
-## YouTube URL: [https://www.youtube.com/watch?v=WXyxnbxbcsQ](https://www.youtube.com/watch?v=WXyxnbxbcsQ)
+## YouTube URL: [https://www.youtube.com/watch?v=Tobedone](https://www.youtube.com/watch?v=Tobedone)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -24,7 +24,7 @@
 
 ## Technology Stack
 
-> 1. .NET 7, Azure, OpenAI
+> 1. .NET 8, Azure, OpenAI, Python Flask, HTML, CSS, JavaScript
 
 ## Information
 
@@ -32,22 +32,20 @@
 
 ## What are we doing today?
 
-> 1. 30,000 foot view of Azure OpenAI
->    - What is Azure OpenAI Service?
->    - Azure OpenAI Service quotas and limits
->    - Azure OpenAI Service models
-> 1. Create Azure OpenAI Service in Azure Portal
-> 1. How to deploy Azure OpenAI Model in Azure AI Studio?
-> 1. 30,000 foot view of Azure AI Studio
->    - What is Azure AI Studio?
->    - Trying couple of Built-in Completion Examples in Azure AI Studio
+> 1. What is Intelligence?
+> 1. Few Terms AI, ML, Auto ML, DL, NLP, GAI
+> 1. ELIZA - The early Natural Language Processing (NLP) Chatbot
+> 1. Azure Open AI, Transformer, and GPT
 > 1. Tokens Tokens Tokens and more Tokens
 > 1. Trying our own Completion Examples in Azure AI Studio
-> 1. Trying our own Completion Examples using Postman
+> 1. Create a .env file and update the Environment Variables
+> 1. Completion Request using C# .NET 8
+> 1. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JS
+> 1. Our Own ChatGPT with Python Flask, Azure Open AI, HTML, CSS, and JS
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
-### Please refer to the [**Source Code**](https://github.com/vishipayyallore/speaker-series-2023/tree/main/AzureOpenAI) of today's session for more details
+### Please refer to the [**Source Code**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai/tree/main) of today's session for more details
 
 ---
 
