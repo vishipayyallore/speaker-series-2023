@@ -79,100 +79,6 @@
 
 > 1. Discussion and Demo
 
-## [**Section 6 Documentation**](https://github.com/vishipayyallore/speaker-series-2023/blob/main/AzureOpenAI/2023Jul05_Prompt_Engineering_Part1/README.md)
-
-## 1. Create a .env file and update the Environment Variables
-
-> 1. Discussion and Demo
->
-## 1. Completion Request using C# .NET 8
-
-> 1. Discussion and Demo
->
-## 1. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JS
-
-> 1. Discussion and Demo
->
-## 1. Our Own ChatGPT with Python Flask, Azure Open AI, HTML, CSS, and JS
-
-> 1. Discussion and Demo
->
-## 5. SUMMARY / RECAP / Q&A
-
-> 1. Discussion and Demo
->
-## 5. What is next ?
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. <https://dev.to/andytechdev/step-by-step-guide-testing-http-endpoints-in-visual-studio-2022-using-endpoints-explorer-fpb>
-
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview)
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits)
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
-
-### 1.1. What is Azure OpenAI Service?
-
-> 1. Discussion and Demo
-
-### 1.2. Azure OpenAI Service quotas and limits
-
-> 1. Discussion and Demo
-
-### 1.3. Azure OpenAI Service models
-
-> 1. Discussion and Demo
-
-## 2. Create Azure OpenAI Service in Azure Portal
-
-> 1. Discussion and Demo
-
-![Azure OpenAI Service | 100x100](./Documentation/Images/AzureOpenAIService.PNG)
-
-![Azure OpenAI Service | 100x100](./Documentation/Images/AzureOpenAIService_1.PNG)
-
-## 3. How to deploy Azure OpenAI Model in Azure AI Studio?
-
-> 1. Discussion and Demo
-
-![Model Deployments | 100x100](./Documentation/Images/ModelDeployments.PNG)
-
-## 4. 30,000 foot view of Azure AI Studio
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=programming-language-studio&tabs=command-line)
-
-### 4.1. What is Azure AI Studio?
-
-> 1. Discussion and Demo
-
-![Azure AI Studio | 100x100](./Documentation/Images/AzureAIStudio.PNG)
-
-### 4.2. Trying a couple of Built-in Completion Examples in Azure AI Studio
-
-> 1. Discussion and Demo
-
-![Azure AI Studio Translation | 100x100](./Documentation/Images/AzureAIStudio_Translation.PNG)
-
-## 5. Tokens Tokens Tokens and more Tokens
-
-> 1. Discussion and Demo
-
-**References:**
-
-> 1. [https://platform.openai.com/tokenizer](https://platform.openai.com/tokenizer)
-
-![Tokenizer | 100x100](./Documentation/Images/Tokenizer.PNG)
-
-## 6. Trying our own Completion Examples in Azure AI Studio
-
-> 1. Discussion and Demo
-
 ```text
 Input: Happy Birthday
 
@@ -189,15 +95,27 @@ Input: Tell me two jokes on simple people
 
 ![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
 
-## 7. Trying our own Completion Examples using Postman
+## [**Section 6 Documentation**](https://github.com/vishipayyallore/speaker-series-2023/blob/main/AzureOpenAI/2023Jul05_Prompt_Engineering_Part1/README.md)
+
+## 1. Completion Request using C# .NET 8
 
 > 1. Discussion and Demo
 
-![Own Completion Requests Postman| 100x100](./Documentation/Images/OwnCompletionRequest_Postman.PNG)
+## 1. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JS
+
+> 1. Discussion and Demo
+
+## 1. Create a .env file and update the Environment Variables
+
+> 1. Discussion and Demo
+
+## 1. Our Own ChatGPT with Python Flask, Azure Open AI, HTML, CSS, and JS
+
+> 1. Discussion and Demo
 
 ---
 
-## 8. SUMMARY / RECAP / Q&A
+## X. SUMMARY / RECAP / Q&A
 
 > 1. SUMMARY / RECAP / Q&A
 > 2. Any open queries, I will get back through meetup chat/twitter.
@@ -206,8 +124,4 @@ Input: Tell me two jokes on simple people
 
 ## What is Next? session?
 
-> 1. Trying our own Completion Examples using Postman
-> 1. Trying our own Completion Examples using Python Notebook
-> 1. Trying our own Completion Examples using Python
-> 1. Trying our own Completion Examples using C# .NET 7
-> 1. SUMMARY / RECAP / Q&A
+> 1. Discussion
