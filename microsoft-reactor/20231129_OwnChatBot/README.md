@@ -53,11 +53,61 @@
 
 ---
 
-## 1. 30,000 foot view of Azure OpenAI
+## 1. What is Intelligence?
+
+> 1. Discussion
+
+## 2. Few Terms AI, ML, Auto ML, DL, NLP, GAI
+
+> 1. Discussion
+
+## 3. ELIZA - The early Natural Language Processing (NLP) Chatbot
+
+> 1. Discussion
+
+## 4. Azure Open AI, Transformer, and GPT
+
+> 1. Discussion
+
+## 5. Tokens Tokens Tokens and more Tokens
+
+> 1. Discussion and Demo
+
+## [**Section 1 to 5 Documentation**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai/blob/main/documentation/S2.md)
+
+## 6. Trying our own Completion Examples in Azure AI Studio
+
+> 1. Discussion and Demo
+
+## [**Section 6 Documentation**](https://github.com/vishipayyallore/speaker-series-2023/blob/main/AzureOpenAI/2023Jul05_Prompt_Engineering_Part1/README.md)
+
+## 1. Create a .env file and update the Environment Variables
+
+> 1. Discussion and Demo
+>
+## 1. Completion Request using C# .NET 8
+
+> 1. Discussion and Demo
+>
+## 1. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JS
+
+> 1. Discussion and Demo
+>
+## 1. Our Own ChatGPT with Python Flask, Azure Open AI, HTML, CSS, and JS
+
+> 1. Discussion and Demo
+>
+## 5. SUMMARY / RECAP / Q&A
+
+> 1. Discussion and Demo
+>
+## 5. What is next ?
 
 > 1. Discussion and Demo
 
 **References:**
+
+> 1. <https://dev.to/andytechdev/step-by-step-guide-testing-http-endpoints-in-visual-studio-2022-using-endpoints-explorer-fpb>
 
 > 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview)
 > 1. [https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits)
