@@ -81,13 +81,27 @@
 
 ![Python Flask Web API Project Structure | 100x100](./Documentation/Images/PythonFlaskAPI_Structure.PNG)
 
-## 10. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JavaScript
+### 1.3. How to execute the Python Flask API?
+
+```python
+flask --app app run
+
+python .\app.py
+```
+
+![Execute Python Flask API | 100x100](./Documentation/Images/Executing_Flask_App.PNG)
+
+## 2. Testing Python Flask Web API using Postman
 
 > 1. Discussion and Demo
 
-## [**Section 8, and 9 Documentation**](https://github.com/vishipayyallore/speaker-series-2023/blob/main/On.NETLiveShows/20231030_BuildYourOwnChatGPT/README.md)
+![Execute Python Flask API | 100x100](./Documentation/Images/SessionFirstLook.PNG)
 
-## 1. Our Own ChatGPT with Python Flask, Azure Open AI, HTML, CSS, and JavaScript - **`Stretch Goal`**
+## 3. Creating a Blazor Server Admin Application
+
+> 1. Discussion and Demo
+
+## 4. Integrate Blazor Server Admin Application with Python Flask API
 
 > 1. Discussion and Demo
 
