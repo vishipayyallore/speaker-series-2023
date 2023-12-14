@@ -4,7 +4,7 @@
 
 ## Event URL: [https://www.meetup.com/microsoft-reactor-bengaluru/events/297372481](https://www.meetup.com/microsoft-reactor-bengaluru/events/297372481)
 
-## YouTube URL: [https://www.youtube.com/watch?v=ToBeDone](https://www.youtube.com/watch?v=ToBeDone)
+## YouTube URL: [https://www.youtube.com/watch?v=9L_ebd9P-xM](https://www.youtube.com/watch?v=9L_ebd9P-xM)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -50,6 +50,8 @@
 ## The Big Picture
 
 > 1. Discussion on what we are going to do today.
+
+**Note:** The diagram is wrong.
 
 ![Architecture | 100x100](./Documentation/Images/Architecture_V1.PNG)
 
