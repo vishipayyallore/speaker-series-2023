@@ -4,7 +4,7 @@
 
 ## Event URL: [https://www.meetup.com/microsoft-reactor-bengaluru/events/297372481](https://www.meetup.com/microsoft-reactor-bengaluru/events/297372481)
 
-## YouTube URL: [https://www.youtube.com/watch?v=ToBeDone](https://www.youtube.com/watch?v=ToBeDone)
+## YouTube URL: [https://www.youtube.com/watch?v=9L_ebd9P-xM](https://www.youtube.com/watch?v=9L_ebd9P-xM)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -51,6 +51,8 @@
 
 > 1. Discussion on what we are going to do today.
 
+**Note:** The diagram is wrong.
+
 ![Architecture | 100x100](./Documentation/Images/Architecture_V1.PNG)
 
 ## 1. Creating a Python Flask API to Interact with Azure Open AI
@@ -81,13 +83,27 @@
 
 ![Python Flask Web API Project Structure | 100x100](./Documentation/Images/PythonFlaskAPI_Structure.PNG)
 
-## 10. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JavaScript
+### 1.3. How to execute the Python Flask API?
+
+```python
+flask --app app run
+
+python .\app.py
+```
+
+![Execute Python Flask API | 100x100](./Documentation/Images/Executing_Flask_App.PNG)
+
+## 2. Testing Python Flask Web API using Postman
 
 > 1. Discussion and Demo
 
-## [**Section 8, and 9 Documentation**](https://github.com/vishipayyallore/speaker-series-2023/blob/main/On.NETLiveShows/20231030_BuildYourOwnChatGPT/README.md)
+![Execute Python Flask API | 100x100](./Documentation/Images/SessionFirstLook.PNG)
 
-## 1. Our Own ChatGPT with Python Flask, Azure Open AI, HTML, CSS, and JavaScript - **`Stretch Goal`**
+## 3. Creating a Blazor Server Admin Application
+
+> 1. Discussion and Demo
+
+## 4. Integrate Blazor Server Admin Application with Python Flask API
 
 > 1. Discussion and Demo
 
