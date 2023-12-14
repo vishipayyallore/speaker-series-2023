@@ -1,10 +1,10 @@
-# Hands-On - Own ChatGPT with .NET 8, Python Flask, HTML, CSS, JavaScript
+# Azure OpenAI - Travels Solution using AOAI, Python Flask, .NET Blazor Server
 
-## Date Time: 29-Nov-2023 at 05:00 PM IST
+## Date Time: 14-Dec-2023 at 05:00 PM IST
 
-## Event URL: [https://www.meetup.com/microsoft-reactor-bengaluru/events/297192089](https://www.meetup.com/microsoft-reactor-bengaluru/events/297192089)
+## Event URL: [https://www.meetup.com/microsoft-reactor-bengaluru/events/297372481](https://www.meetup.com/microsoft-reactor-bengaluru/events/297372481)
 
-## YouTube URL: [https://www.youtube.com/watch?v=kWarjsg6PfM](https://www.youtube.com/watch?v=kWarjsg6PfM)
+## YouTube URL: [https://www.youtube.com/watch?v=ToBeDone](https://www.youtube.com/watch?v=ToBeDone)
 
 ![Viswanatha Swamy P K |150x150](./Documentation/Images/ViswanathaSwamyPK.PNG)
 
@@ -32,17 +32,10 @@
 
 ## What are we doing today?
 
-> 1. What is Intelligence?
-> 1. Few Terms AI, ML, Auto ML, DL, NLP, GAI
-> 1. ELIZA - The early Natural Language Processing (NLP) Chatbot
-> 1. Azure Open AI, Transformer, and GPT
-> 1. Tokens Tokens Tokens and more Tokens
-> 1. Trying our own Completion Examples in Azure AI Studio
-> 1. Completion Request using C# .NET 8
-> 1. Few .NET and .NET 8 Features
-> 1. Create a .env file and update the Environment Variables
-> 1. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JS
-> 1. Our Own ChatGPT with Python Flask, Azure Open AI, HTML, CSS, and JS
+> 1. Creating a Python Flask API to Interact with Azure Open AI
+> 1. Test Python Flask API using Postman
+> 1. Creating a Blazor Server Admin Application
+> 1. Integrate Blazor Server Admin Application with Python Flask API
 > 1. SUMMARY / RECAP / Q&A
 > 1. What is next ?
 
@@ -54,70 +47,39 @@
 
 ---
 
-## 1. What is Intelligence?
+## The Big Picture
 
-> 1. Discussion
+> 1. Discussion on what we are going to do today.
 
-## 2. Few Terms AI, ML, Auto ML, DL, NLP, GAI
+![Architecture | 100x100](./Documentation/Images/Architecture_V1.PNG)
 
-> 1. Discussion
+## 1. Creating a Python Flask API to Interact with Azure Open AI
 
-## 3. ELIZA - The early Natural Language Processing (NLP) Chatbot
+> 1. Python Flask API
+> 1. Python Flask Web API Project Structure
 
-> 1. Discussion
+### 1.1 Python Flask API
 
-## 4. Azure Open AI, Transformer, and GPT
+#### Lightweight and Easy to Use
 
-> 1. Discussion
+> 1. Flask is a lightweight web framework for Python that is designed to be simple and easy to use. It provides the essentials needed for building web applications without unnecessary complexity. This simplicity makes it an excellent choice for beginners and for projects where a minimalistic approach is preferred.
 
-## 5. Tokens Tokens Tokens and more Tokens
+#### Extensible and Modular
 
-> 1. Discussion and Demo
+> 1. Flask follows a modular design, allowing developers to use only the components they need. It is extensible, meaning that you can add various extensions to enhance its functionality, such as authentication, database integration, and more. This modular and extensible nature makes Flask flexible and adaptable to different project requirements.
 
-## [**Section 1 to 5 Documentation**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai/blob/main/documentation/S2.md)
+### 1.2. Python Flask Web API Project Structure
 
-## 6. Trying our own Completion Examples in Azure AI Studio
+> 1. `api_routes.py`: This file contains API routes and handling for adding country information.
+> 1. `models.py`: This file defines the SQLAlchemy database model for the CountryInfoDto table.
+> 1. `db_config.py`: This file contains the SQLAlchemy database configuration using the db object.
+> 1. `env_config.py`: This file handles loading environment variables from the .env file.
+> 1. `error_handling.py`: This file contains the utility function for handling error responses.
+> 1. `GetCountryInfoFromAzureOpenAI.py`: This file handles integration with Azure OpenAI to fetch country information.
+> 1. `logging_config.py`: This file configures logging settings for the Flask app.
+> 1. `app.py`: This file is the entry point of the Flask application and sets up the app with configurations.
 
-> 1. Discussion and Demo
-
-```text
-Input: Happy Birthday
-
-Input: Give the top 5 food items from South India
-
-Input: Give the top 5 Populated states in India
-
-Inputs: 
-1. Which is the tallest building in the world 
-2. Which is the tallest building in Hyderabad
-
-Input: Tell me two jokes on simple people
-```
-
-![Own Completion Requests | 100x100](./Documentation/Images/OwnCompletionRequest.PNG)
-
-## [**Section 6 Documentation**](https://github.com/vishipayyallore/speaker-series-2023/blob/main/AzureOpenAI/2023Jul05_Prompt_Engineering_Part1/README.md)
-
-## 7. Completion Request using C# .NET 8
-
-> 1. Discussion and Demo
-
-## [**Section 7 Documentation**](https://github.com/ViswanathaSwamy-PK-TechSkillz-Academy/learn-azure-openai/blob/main/documentation/S2.md)
-
-## 8. Few .NET and .NET 8 Features
-
-> 1. JIT Compilation [Source Code (.cs, and .vb) -> Roslyn Compiler -> Intermediate Language -> JIT Compiler -> Machine Code]
-> 1. Dependency Injection
-> 1. Http Request pipeline
-> 1. Implicit usings and Global using
-> 1. File Scoped Namespaces
-> 1. ShortCircuiting
-> 1. Debugging Improvements
-> 1. .http files
-
-## 9. Create a appsettings.json / .env file and update the Environment Variables
-
-> 1. Discussion and Demo
+![Python Flask Web API Project Structure | 100x100](./Documentation/Images/PythonFlaskAPI_Structure.PNG)
 
 ## 10. Our Own ChatGPT with .NET 8, Azure Open AI, HTML, CSS, and JavaScript
 
